@@ -1,0 +1,232 @@
+[
+  {
+    "review_id": 1,
+    "user_id": 1,
+    "teacher_id": 1,
+    "course_id": 5,
+    "comment": "Muy buen profesor, explica claramente.",
+    "date": "2025-05-29",
+    "visible": true,
+    "calificacion_general": 5
+  },
+  {
+    "review_id": 2,
+    "user_id": 1,
+    "teacher_id": 1,
+    "course_id": 3,
+    "comment": "Le falta mejorar ejemplos prácticos.",
+    "date": "2025-05-20",
+    "visible": true,
+    "calificacion_general": 5
+  },
+  {
+    "review_id": 3,
+    "user_id": 2,
+    "teacher_id": 2,
+    "course_id": 4,
+    "comment": "Excelente dominio del tema y buena actitud.",
+    "date": "2025-05-21",
+    "visible": true,
+    "calificacion_general": 5
+  },
+  {
+    "review_id": 4,
+    "user_id": 3,
+    "teacher_id": 3,
+    "course_id": 2,
+    "comment": "Muy paciente, resuelve todas las dudas.",
+    "date": "2025-05-23",
+    "visible": true,
+    "calificacion_general": 5
+  },
+  {
+    "review_id": 5,
+    "user_id": 2,
+    "teacher_id": 1,
+    "course_id": 5,
+    "comment": "Las clases son algo monótonas, pero efectivas.",
+    "date": "2025-05-25",
+    "visible": true,
+    "calificacion_general": 5
+  },
+  {
+    "review_id": 6,
+    "user_id": 4,
+    "teacher_id": 4,
+    "course_id": 1,
+    "comment": "Inspira mucho con su pasión por enseñar.",
+    "date": "2025-05-28",
+    "visible": true,
+    "calificacion_general": 5
+  },
+  {
+    "review_id": 7,
+    "user_id": 5,
+    "teacher_id": 2,
+    "course_id": 4,
+    "comment": "Utiliza muchos recursos interactivos, muy útil.",
+    "date": "2025-05-26",
+    "visible": true,
+    "calificacion_general": 5
+  },
+  {
+    "review_id": 8,
+    "user_id": 6,
+    "teacher_id": 5,
+    "course_id": 2,
+    "comment": "Explicaciones claras y material actualizado.",
+    "date": "2025-05-22",
+    "visible": true,
+    "calificacion_general": 5
+  },
+  {
+    "review_id": 9,
+    "user_id": 7,
+    "teacher_id": 6,
+    "course_id": 3,
+    "comment": "Muy estricto con los tiempos, pero justo.",
+    "date": "2025-05-19",
+    "visible": true,
+    "calificacion_general": 5
+  },
+  {
+    "review_id": 10,
+    "user_id": 8,
+    "teacher_id": 7,
+    "course_id": 5,
+    "comment": "Hace las clases dinámicas y divertidas.",
+    "date": "2025-05-24",
+    "visible": true,
+    "calificacion_general": 5
+  },
+  {
+    "review_id": 11,
+    "user_id": 9,
+    "teacher_id": 8,
+    "course_id": 1,
+    "comment": "Domina muy bien el contenido del curso.",
+    "date": "2025-05-27",
+    "visible": true,
+    "calificacion_general": 5
+  },
+  {
+    "review_id": 12,
+    "user_id": 10,
+    "teacher_id": 9,
+    "course_id": 2,
+    "comment": "Las explicaciones pueden ser más detalladas.",
+    "date": "2025-05-30",
+    "visible": true,
+    "calificacion_general": 5
+  },
+  {
+    "review_id": 13,
+    "user_id": 11,
+    "teacher_id": 10,
+    "course_id": 4,
+    "comment": "Muy buena disposición para ayudar.",
+    "date": "2025-05-18",
+    "visible": true,
+    "calificacion_general": 5
+  },
+  {
+    "review_id": 14,
+    "user_id": 12,
+    "teacher_id": 11,
+    "course_id": 3,
+    "comment": "Debería usar más ejemplos en clase.",
+    "date": "2025-05-31",
+    "visible": true,
+    "calificacion_general": 5
+  },
+  {
+    "review_id": 15,
+    "user_id": 13,
+    "teacher_id": 12,
+    "course_id": 1,
+    "comment": "Muy profesional y empática.",
+    "date": "2025-05-20",
+    "visible": true,
+    "calificacion_general": 5
+  },
+  {
+    "review_id": 16,
+    "user_id": 14,
+    "teacher_id": 13,
+    "course_id": 2,
+    "comment": "Promueve la participación en clase.",
+    "date": "2025-05-22",
+    "visible": true,
+    "calificacion_general": 5
+  },
+  {
+    "review_id": 17,
+    "user_id": 15,
+    "teacher_id": 14,
+    "course_id": 5,
+    "comment": "Le falta un poco de energía al exponer.",
+    "date": "2025-05-23",
+    "visible": true,
+    "calificacion_general": 5
+  },
+  {
+    "review_id": 18,
+    "user_id": 16,
+    "teacher_id": 15,
+    "course_id": 4,
+    "comment": "Excelente trato con los estudiantes.",
+    "date": "2025-05-21",
+    "visible": true,
+    "calificacion_general": 5
+  },
+  {
+    "review_id": 19,
+    "user_id": 17,
+    "teacher_id": 16,
+    "course_id": 3,
+    "comment": "Muy claro y organizado.",
+    "date": "2025-05-25",
+    "visible": true,
+    "calificacion_general": 5
+  },
+  {
+    "review_id": 20,
+    "user_id": 18,
+    "teacher_id": 17,
+    "course_id": 1,
+    "comment": "Siempre dispuesto a resolver dudas.",
+    "date": "2025-05-28",
+    "visible": true,
+    "calificacion_general": 5
+  },
+  {
+    "review_id": 21,
+    "user_id": 19,
+    "teacher_id": 18,
+    "course_id": 2,
+    "comment": "Transmite bien los conocimientos.",
+    "date": "2025-05-30",
+    "visible": true,
+    "calificacion_general": 5
+  },
+  {
+    "review_id": 22,
+    "user_id": 20,
+    "teacher_id": 19,
+    "course_id": 4,
+    "comment": "Las evaluaciones son justas y claras.",
+    "date": "2025-05-26",
+    "visible": true,
+    "calificacion_general": 5
+  },
+  {
+    "review_id": 23,
+    "user_id": 21,
+    "teacher_id": 20,
+    "course_id": 5,
+    "comment": "Muy motivador y didáctico.",
+    "date": "2025-05-29",
+    "visible": true,
+    "calificacion_general": 5
+  }
+]

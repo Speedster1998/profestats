@@ -1,0 +1,170 @@
+[
+  {
+    "user_id": 1,
+    "username": "Alvaro Mendoza",
+    "email": "alvaro.mendoza@example.com",
+    "password": "123456",
+    "college_id": 1,
+    "image_url": "assets/images/users/alvaro.png"
+  },
+  {
+    "user_id": 2,
+    "username": "Paulina torres",
+    "email": "paulina.torres@example.com",
+    "password": "abcdef",
+    "college_id": 2,
+    "image_url": "assets/images/users/paulina.png"
+  },
+  {
+    "user_id": 3,
+    "username": "Diego Alvarez",
+    "email": "diego.alvarez@example.com",
+    "password": "qwerty",
+    "college_id": 1,
+    "image_url": "assets/images/profileDefault.png"
+  },
+  {
+    "user_id": 4,
+    "username": "veronicaramirez",
+    "email": "veronica.ramirez@example.com",
+    "password": "123abc",
+    "college_id": 3,
+    "image_url": "assets/images/profileDefault.png"
+  },
+  {
+    "user_id": 5,
+    "username": "fernandosalazar",
+    "email": "fernando.salazar@example.com",
+    "password": "lopez456",
+    "college_id": 2,
+    "image_url": "assets/images/profileDefault.png"
+  },
+  {
+    "user_id": 6,
+    "username": "camila.lopez",
+    "email": "camila.lopez@example.com",
+    "password": "pass123",
+    "college_id": 3,
+    "image_url": "assets/images/profileDefault.png"
+  },
+  {
+    "user_id": 7,
+    "username": "mario.garcia",
+    "email": "mario.garcia@example.com",
+    "password": "secure456",
+    "college_id": 1,
+    "image_url": "assets/images/profileDefault.png"
+  },
+  {
+    "user_id": 8,
+    "username": "luciana.martinez",
+    "email": "luciana.martinez@example.com",
+    "password": "mypassword",
+    "college_id": 4,
+    "image_url": "assets/images/profileDefault.png"
+  },
+  {
+    "user_id": 9,
+    "username": "jose.luna",
+    "email": "jose.luna@example.com",
+    "password": "luna2025",
+    "college_id": 2,
+    "image_url": "assets/images/profileDefault.png"
+  },
+  {
+    "user_id": 10,
+    "username": "sofia.paredes",
+    "email": "sofia.paredes@example.com",
+    "password": "paredes789",
+    "college_id": 3,
+    "image_url": "assets/images/profileDefault.png"
+  },
+  {
+    "user_id": 11,
+    "username": "ricardo.fernandez",
+    "email": "ricardo.fernandez@example.com",
+    "password": "12345678",
+    "college_id": 4,
+    "image_url": "assets/images/profileDefault.png"
+  },
+  {
+    "user_id": 12,
+    "username": "daniela.santos",
+    "email": "daniela.santos@example.com",
+    "password": "abcdefg",
+    "college_id": 1,
+    "image_url": "assets/images/profileDefault.png"
+  },
+  {
+    "user_id": 13,
+    "username": "sebastian.rios",
+    "email": "sebastian.rios@example.com",
+    "password": "riospass",
+    "college_id": 5,
+    "image_url": "assets/images/profileDefault.png"
+  },
+  {
+    "user_id": 14,
+    "username": "valentina.quispe",
+    "email": "valentina.quispe@example.com",
+    "password": "quispe456",
+    "college_id": 4,
+    "image_url": "assets/images/profileDefault.png"
+  },
+  {
+    "user_id": 15,
+    "username": "cristian.mejia",
+    "email": "cristian.mejia@example.com",
+    "password": "mejiapass",
+    "college_id": 3,
+    "image_url": "assets/images/profileDefault.png"
+  },
+  {
+    "user_id": 16,
+    "username": "mariana.flores",
+    "email": "mariana.flores@example.com",
+    "password": "flores123",
+    "college_id": 2,
+    "image_url": "assets/images/profileDefault.png"
+  },
+  {
+    "user_id": 17,
+    "username": "andres.vargas",
+    "email": "andres.vargas@example.com",
+    "password": "vargaspass",
+    "college_id": 1,
+    "image_url": "assets/images/profileDefault.png"
+  },
+  {
+    "user_id": 18,
+    "username": "laura.castro",
+    "email": "laura.castro@example.com",
+    "password": "castro789",
+    "college_id": 2,
+    "image_url": "assets/images/profileDefault.png"
+  },
+  {
+    "user_id": 19,
+    "username": "julio.reyes",
+    "email": "julio.reyes@example.com",
+    "password": "julio456",
+    "college_id": 4,
+    "image_url": "assets/images/profileDefault.png"
+  },
+  {
+    "user_id": 20,
+    "username": "martina.silva",
+    "email": "martina.silva@example.com",
+    "password": "silva123",
+    "college_id": 5,
+    "image_url": "assets/images/profileDefault.png"
+  },
+  {
+    "user_id": 21,
+    "username": "luis.cardenas",
+    "email": "luis.cardenas@example.com",
+    "password": "cardenaspass",
+    "college_id": 3,
+    "image_url": "assets/images/profileDefault.png"
+  }
+]

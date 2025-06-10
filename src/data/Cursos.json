@@ -1,0 +1,272 @@
+[
+  {
+    "course_id": 1,
+    "name": "Matemática Básica",
+    "faculty_id": 1,
+    "ciclo": 1
+  },
+  {
+    "course_id": 2,
+    "name": "Taller de Comunicación",
+    "faculty_id": 1,
+    "ciclo": 1
+  },
+  {
+    "course_id": 3,
+    "name": "Fundamentos de Programación",
+    "faculty_id": 1,
+    "ciclo": 1
+  },
+  {
+    "course_id": 4,
+    "name": "Química",
+    "faculty_id": 1,
+    "ciclo": 1
+  },
+  {
+    "course_id": 5,
+    "name": "Introducción a la Ingeniería de Sistemas",
+    "faculty_id": 1,
+    "ciclo": 1
+  },
+  {
+    "course_id": 6,
+    "name": "Cálculo I",
+    "faculty_id": 1,
+    "ciclo": 2
+  },
+  {
+    "course_id": 7,
+    "name": "Física I",
+    "faculty_id": 1,
+    "ciclo": 2
+  },
+  {
+    "course_id": 8,
+    "name": "Programación Orientada a Objetos",
+    "faculty_id": 1,
+    "ciclo": 2
+  },
+  {
+    "course_id": 9,
+    "name": "Lengua",
+    "faculty_id": 1,
+    "ciclo": 2
+  },
+  {
+    "course_id": 10,
+    "name": "Habilidades Directivas",
+    "faculty_id": 1,
+    "ciclo": 2
+  },
+  {
+    "course_id": 11,
+    "name": "Cálculo II",
+    "faculty_id": 1,
+    "ciclo": 3
+  },
+  {
+    "course_id": 12,
+    "name": "Física II",
+    "faculty_id": 1,
+    "ciclo": 3
+  },
+  {
+    "course_id": 13,
+    "name": "Estructura de Datos",
+    "faculty_id": 1,
+    "ciclo": 3
+  },
+  {
+    "course_id": 14,
+    "name": "Contabilidad General",
+    "faculty_id": 1,
+    "ciclo": 3
+  },
+  {
+    "course_id": 15,
+    "name": "Estadística Descriptiva",
+    "faculty_id": 1,
+    "ciclo": 3
+  },
+  {
+    "course_id": 16,
+    "name": "Matemática Discreta",
+    "faculty_id": 1,
+    "ciclo": 4
+  },
+  {
+    "course_id": 17,
+    "name": "Arquitectura de Computadoras",
+    "faculty_id": 1,
+    "ciclo": 4
+  },
+  {
+    "course_id": 18,
+    "name": "Análisis y Diseño de Sistemas I",
+    "faculty_id": 1,
+    "ciclo": 4
+  },
+  {
+    "course_id": 19,
+    "name": "Administración",
+    "faculty_id": 1,
+    "ciclo": 4
+  },
+  {
+    "course_id": 20,
+    "name": "Estadística Inferencial",
+    "faculty_id": 1,
+    "ciclo": 4
+  },
+  {
+    "course_id": 21,
+    "name": "Sistemas Operativos",
+    "faculty_id": 1,
+    "ciclo": 5
+  },
+  {
+    "course_id": 22,
+    "name": "Ingeniería de Requerimientos",
+    "faculty_id": 1,
+    "ciclo": 5
+  },
+  {
+    "course_id": 23,
+    "name": "Análisis y Diseño de Sistemas II",
+    "faculty_id": 1,
+    "ciclo": 5
+  },
+  {
+    "course_id": 24,
+    "name": "Base de Datos I",
+    "faculty_id": 1,
+    "ciclo": 5
+  },
+  {
+    "course_id": 25,
+    "name": "Economía",
+    "faculty_id": 1,
+    "ciclo": 5
+  },
+  {
+    "course_id": 26,
+    "name": "Redes y Comunicaciones",
+    "faculty_id": 1,
+    "ciclo": 6
+  },
+  {
+    "course_id": 27,
+    "name": "Diseño y Arquitectura de Software",
+    "faculty_id": 1,
+    "ciclo": 6
+  },
+  {
+    "course_id": 28,
+    "name": "Base de Datos II",
+    "faculty_id": 1,
+    "ciclo": 6
+  },
+  {
+    "course_id": 29,
+    "name": "Desarrollo de Aplicaciones Web",
+    "faculty_id": 1,
+    "ciclo": 6
+  },
+  {
+    "course_id": 30,
+    "name": "Simulación de Sistemas",
+    "faculty_id": 1,
+    "ciclo": 6
+  },
+  {
+    "course_id": 31,
+    "name": "Gestión de Proyectos de Software",
+    "faculty_id": 1,
+    "ciclo": 7
+  },
+  {
+    "course_id": 32,
+    "name": "Seguridad Informática",
+    "faculty_id": 1,
+    "ciclo": 7
+  },
+  {
+    "course_id": 33,
+    "name": "Interacción Humano Computador",
+    "faculty_id": 1,
+    "ciclo": 7
+  },
+  {
+    "course_id": 34,
+    "name": "Desarrollo de Aplicaciones Móviles",
+    "faculty_id": 1,
+    "ciclo": 7
+  },
+  {
+    "course_id": 35,
+    "name": "Investigación Aplicada I",
+    "faculty_id": 1,
+    "ciclo": 7
+  },
+  {
+    "course_id": 36,
+    "name": "Sistemas Distribuidos",
+    "faculty_id": 1,
+    "ciclo": 8
+  },
+  {
+    "course_id": 37,
+    "name": "Inteligencia Artificial",
+    "faculty_id": 1,
+    "ciclo": 8
+  },
+  {
+    "course_id": 38,
+    "name": "Big Data",
+    "faculty_id": 1,
+    "ciclo": 8
+  },
+  {
+    "course_id": 39,
+    "name": "Gestión de Servicios de TI",
+    "faculty_id": 1,
+    "ciclo": 8
+  },
+  {
+    "course_id": 40,
+    "name": "Investigación Aplicada II",
+    "faculty_id": 1,
+    "ciclo": 8
+  },
+  {
+    "course_id": 41,
+    "name": "Auditoría Informática",
+    "faculty_id": 1,
+    "ciclo": 9
+  },
+  {
+    "course_id": 42,
+    "name": "Arquitectura Empresarial",
+    "faculty_id": 1,
+    "ciclo": 9
+  },
+  {
+    "course_id": 43,
+    "name": "Formulación y Evaluación de Proyectos",
+    "faculty_id": 1,
+    "ciclo": 9
+  },
+  {
+    "course_id": 44,
+    "name": "Trabajo de Investigación",
+    "faculty_id": 1,
+    "ciclo": 10
+  },
+  {
+    "course_id": 45,
+    "name": "Desarrollo de Startups Tecnológicas",
+    "faculty_id": 1,
+    "ciclo": 10
+  }
+]

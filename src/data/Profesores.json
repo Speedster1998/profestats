@@ -1,0 +1,191 @@
+[
+  {
+    "teacher_id": 1,
+    "name": "Daniel Enrique Cardenas Salas",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/12787578/7596.jpg?w=320&f=webp",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 2,
+    "name": "Jose Manuel Castillo Cara",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/19339051/ManuelCastillo_Cara_rec.jpg?w=320&f=webp",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 3,
+    "name": "Oscar Eduardo Castillo Ruiz",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/19346475/CARNET_ARCHIVO_castillo.jpg?w=320&f=webp",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 4,
+    "name": "Guillermo Antonio Dávila Calle",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/19321532/davila_calle.jpg?w=320&f=webp",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 5,
+    "name": "Raul Diaz Parra",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/19466248/rd.jpg?w=320&f=webp",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 6,
+    "name": "Edwin Jonathan Escobedo Cardenas",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/40822754/EEscobedo.jpg?w=320&f=webp",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 7,
+    "name": "Billy Grados Licham",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/19077851/me2.jpg?w=320&f=webp",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 8,
+    "name": "Juan Manuel Gutierrez Cardenas",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/12789239/229309.jpg?w=320&f=webp",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 9,
+    "name": "Rosario Marybel Guzman Jimenez",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/18592982/19229.jpg?w=320&f=webp",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 10,
+    "name": "Jose Alfredo Herrera Quispe",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/25368840/JoseHErrera.jpg?w=320&f=webp",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 11,
+    "name": "Ludwin Misael León Hilario",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/19075109/Le_n_Hilario_Misael.png?w=320&f=webp",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 12,
+    "name": "Angela Mayhua Quispe",
+    "image_url": "",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 13,
+    "name": "Francisco Rolando Montero Cordova",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/12787175/103799.jpg?w=320&f=webp",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 14,
+    "name": "Hernan Nina Hanco",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/24695965/Hernan1.jpg?w=320&f=webp",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 15,
+    "name": "Hernan Alejandro Quintana Cruz",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/12788855/135713.jpg?w=320&f=webp",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 16,
+    "name": "Henry Eustaquio Quintanilla Cárdenas",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/33053986/MI_FOTO.jpeg?w=320&f=webp",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 17,
+    "name": "Lennin Paul Quiroz Villalobos",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/12789498/250079.jpg?w=320&f=webp",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 18,
+    "name": "Lourdes Ramírez Cerna",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/41097254/foto_luli.png?w=320&f=webp",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 19,
+    "name": "José A. Rodríguez Melquiades",
+    "image_url": "",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 20,
+    "name": "Pablo Alberto Rojas Jaén",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/19230968/rojas_jaen.jpg?w=320&f=webp",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 21,
+    "name": "Paulo Nazareno Sampaio Maia",
+    "image_url": "assets/images/teachers/profile22.png",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 22,
+    "name": "Franci Suni Lopez",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/26099875/70616223Foto.jpg?w=320&f=webp",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 23,
+    "name": "José Antonio Taquía Gutiérrez",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/19021087/JATG.png?w=320&f=webp",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 24,
+    "name": "Alonso Tenorio Trigoso",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/19358853/tenorio.jpg?w=320&f=webp",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 25,
+    "name": "Jean Pierre Tincopa Flores",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/60620043/perfil_cti.png?w=320&f=webp",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 26,
+    "name": "Carlos Martin Torres Paredes",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/19436004/52127.jpg?w=320&f=webp",
+    "college_id": 1,
+    "description": ""
+  },
+  {
+    "teacher_id": 27,
+    "name": "Olga Zumarán Alayo",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/26035388/Olga_Zumar_n.png?w=320&f=webp",
+    "college_id": 1,
+    "description": ""
+  }
+]

@@ -1,0 +1,5 @@
+[
+  { "teacher_course_id": 1, "teacher_id": 16, "course_id": 3 },
+  { "teacher_course_id": 2, "teacher_id": 16, "course_id": 29 },
+  { "teacher_course_id": 3, "teacher_id": 16, "course_id": 34 }
+]
