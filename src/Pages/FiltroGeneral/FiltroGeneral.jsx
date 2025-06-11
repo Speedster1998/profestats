@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useNavigate } from "react-router-dom";
 import universitiesData from '../../data/Universidades.json';
 
 const FiltroGeneral = () => {
   const [universities, setUniversities] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
   setUniversities(universitiesData);
@@ -33,7 +35,7 @@ const FiltroGeneral = () => {
 
       <div className="overflow-auto" style={{ maxHeight: '70vh' }}>
         {universities.map((u) => (
-          <button key={u.college_id} className="card mb-2 bg-transparent text-white border-success text-start w-100" style={{ border: '1px solid #198754' }}>
+          <button key={u.college_id} className="card mb-2 bg-transparent text-white border-success text-start w-100" style={{ border: '1px solid #198754' }} onClick={() => navigate(`/filtrouniversidad`)}>
             <div className="card-body d-flex align-items-center">
               <img src={u.image_url} alt={u.name} className="me-3 rounded" style={{ width: '50px', height: '50px', objectFit: 'cover' }} />
               <div>
