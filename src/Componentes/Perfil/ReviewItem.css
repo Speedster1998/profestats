@@ -1,0 +1,96 @@
+.review-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: #43BF98;
+  padding: 16px;
+  border-radius: 5px;
+  margin: 10px 0;
+  color: #0f172a;
+  font-family: 'Inter', sans-serif;
+  align-items: flex-start;
+}
+
+.left-section {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+}
+
+.profile-pic {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.student-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.name-time {
+  font-weight: 600;
+  font-size: 15px;
+  display: flex;
+  gap: 8px;
+}
+
+.time {
+  color: #475569;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.course-grade {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.comment-bubble {
+  background-color: #d1fae5;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 15px;
+  max-width: 400px;
+}
+
+.labels {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.chip-label {
+  background-color: white;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #334155;
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 16px;
+}
+
+.emoji {
+  font-size: 32px;
+}
+
+.rating-label {
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+.vote-icons {
+  font-size: 18px;
+  margin-top: 10px;
+}
