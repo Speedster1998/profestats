@@ -34,29 +34,5 @@
     "name": "Universidad Nacional de Trujillo",
     "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo-teRUlBUWINfwycZRLFvwmxrGxVnnsrqbg&s",
     "teachers_amount":120
-  },
-  {
-    "college_id": 7,
-     "name": "Universidad Nacional Mayor de San Marcos",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxf49uTNFrTn-j01GqhHYJBd0XIc5IgNKAtg&s",
-    "teachers_amount":120
-  },
-  {
-    "college_id": 8,
-    "name": "Universidad ESAN",
-    "image_url": "https://carrerasuniversitarias.pe/logos/original/logo-universidad-esan.webp",
-    "teachers_amount":120
-  },
-  {
-    "college_id": 9,
-    "name": "Universidad del Pacífico",
-    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIC0AeNPiyXIht6eyDqTTRFL1gMNWC0GnGlQ&s",
-    "teachers_amount":120
-  },
-  {
-    "college_id": 10,
-    "name": "Universidad Nacional ",
-    "image_url": "https://dondeestudiar.pe/wp-content/uploads/2023/01/Unsaac.jpg",
-    "teachers_amount":120
   }
 ]
