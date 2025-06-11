@@ -1,18 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import ReviewItem from '../../Componentes/Perfil/ReviewItem';
 import ProfileImage from '../../Componentes/Perfil/ProfileImage';
 import './Perfil.css';
 import Boton from '../../Componentes/Boton/Boton';
 import { useTeacherProfile } from '../../Pages/Perfil/useTeacherProfile';
+const MAX_LENGTH = 150;
 
 const Perfil = () => {
     const navigate = useNavigate();
     const { idTeacher } = useParams();
     const { teacherProfile: teacher, loading } = useTeacherProfile(parseInt(idTeacher));
+        const [showFullDescription, setShowFullDescription] = useState(false);
 
     if (loading || !teacher) return <p className="text-center mt-5">Cargando...</p>;
 
+     const toggleDescription = () => setShowFullDescription(prev => !prev);
+
+    const getDescriptionText = () => {
+        if (showFullDescription || teacher.description.length <= MAX_LENGTH) {
+            return teacher.description;
+        }
+        return teacher.description.slice(0, MAX_LENGTH) + '...';
+    };
+    
     return (
         <div className="container profile-main">
             <div className="profile-card my-4 mx-auto">
@@ -23,8 +34,16 @@ const Perfil = () => {
                 <div className="right-column">
                     <h3 className="text-success">Facilidad: {teacher.facilidad}</h3>
                     <h3 className="text-success">Calidad: {teacher.calidad}</h3>
-                    <p>{teacher.description}</p>
-                    <Boton texto="Ver más" width="150px" height="40px" onClick={() => console.log('Mostrar más')} />
+
+                    <p>{getDescriptionText()}</p>
+                    {teacher.description.length > MAX_LENGTH && (
+                        <Boton
+                            texto={showFullDescription ? 'Ver menos' : 'Ver más'}
+                            width="150px"
+                            height="40px"
+                            onClick={toggleDescription}
+                        />
+                    )}
                 </div>
             </div>
 
