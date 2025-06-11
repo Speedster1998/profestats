@@ -7,8 +7,8 @@ const ReviewItem = ({ review, showCourse }) => {
         <img className="profile-pic" src={review.image || '/default-avatar.png'} alt="profile" />
         <div className="student-info">
           <div className="name-time">
-            <span className="name">{review.studentName}</span>
-            <span className="time">{review.timeAgo}</span>
+            <span className="name">{review.username}</span>
+            <span className="time">{review.date}</span>
           </div>
           <div className="course-grade">
             {showCourse && (

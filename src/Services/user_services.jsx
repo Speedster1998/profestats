@@ -7,5 +7,9 @@ export const UserService = {
     );
 
     return matchingUser !== undefined;
+  },
+
+  loadUsersFromJson: () => {
+    return users;
   }
 };

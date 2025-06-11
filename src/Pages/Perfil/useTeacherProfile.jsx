@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { TeacherService } from '../../Services/teacher_service';
 import { CollegeService } from '../../Services/college_service';
-import { ReviewService } from '../../Services/review_service';
+import ReviewService from '../../Services/review_service';
 import { CourseService } from '../../Services/course_service';
 
 const teacherId = 1
@@ -17,6 +17,8 @@ export const useTeacherProfile = () => {
         const colleges = await CollegeService.getCollegesByTeacherId(teacherId);
         const courses = await CourseService.getCoursesByTeacherId(teacherId);
         const { reviews, usedLabelNames } = await ReviewService.getReviewsForTeacher(teacherId);
+        console.log('📋 Reviews obtenidas:', reviews);
+        console.log('💬 Primer comentario:', reviews[0]?.review?.comment);
 
         const profile = {
           name: teacher.name,

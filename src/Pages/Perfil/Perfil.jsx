@@ -62,9 +62,24 @@ const Perfil = () => {
 
                 <div className="section">
                     <h3 className="text-success fs-5">Reseñas</h3>
-                    {teacher.reviews.map((review, i) => (
-                        <ReviewItem key={i} review={review} showCourse={true} />
+                    {teacher.reviews.map((r, i) => (
+                        <ReviewItem
+                            key={i}
+                            review={{
+                                image: r.user.image_url || '/default-avatar.png',
+                                username: r.user.username,
+                                date: r.review.date,
+                                course: r.courseName,
+                                grade: r.review.calificacion_general,
+                                comment: r.review.comment,
+                                labels: r.labels,
+                                emoji: r.emoji,
+                                ratingLabel: '',
+                            }}
+                            showCourse={true}
+                        />
                     ))}
+
                 </div>
             </div>
         </div>
