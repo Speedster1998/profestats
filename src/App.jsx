@@ -18,7 +18,7 @@ function App() {
             <Route path="/signin" element={<Signin/>}/>
             <Route path="/perfil" element={<Perfil/>}/>
             <Route path="/evaluacion" element={<Evaluacion/>}/>
-            <Route path="/filtrouniversidad" element={<FiltroUniversidad/>}/>
+            <Route path="/filtrouniversidad/:id" element={<FiltroUniversidad/>}/>
             <Route path="/filtrogeneral" element={<FiltroGeneral/>}/>
         </Routes>
     </FondoDecorativo>
