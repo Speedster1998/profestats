@@ -5,7 +5,7 @@ import ReviewService from '../../Services/review_service';
 import { CourseService } from '../../Services/course_service';
 
 const teacherId = 1
-export const useTeacherProfile = () => {
+export const ControladorPerfilProfesor = () => {
   const [teacherProfile, setTeacherProfile] = useState(null);
   const [loading, setLoading] = useState(true);
 

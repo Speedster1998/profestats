@@ -8,6 +8,7 @@ import Signin from "./Pages/SignIn/Signin";
 import Perfil from "./Pages/Perfil/Perfil";
 import FiltroUniversidad from "./Pages/FiltroUniversidad/FiltroUniversidad";
 import FiltroGeneral from "./Pages/FiltroGeneral/FiltroGeneral";
+import PerfilProfesor from "./Pages/PerfilProfesor/PerfilProfesor";
 
 function App() {
     return <FondoDecorativo>
@@ -17,6 +18,7 @@ function App() {
             <Route path="/login" element={<Login/>}/>
             <Route path="/signin" element={<Signin/>}/>
             <Route path="/perfil" element={<Perfil/>}/>
+             <Route path="/perfilProfesor" element={<PerfilProfesor/>}/>
             <Route path="/evaluacion" element={<Evaluacion/>}/>
             <Route path="/filtrouniversidad/:id" element={<FiltroUniversidad/>}/>
             <Route path="/filtrogeneral" element={<FiltroGeneral/>}/>

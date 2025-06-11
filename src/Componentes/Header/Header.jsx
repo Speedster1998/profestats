@@ -14,7 +14,7 @@ const Header = () => {
       </div>
       <nav className="nav">
         <a href="/filtrogeneral">BUSCAR</a>
-        <a href="/perfil">PERFIL</a>
+        <a href="/perfilProfesor">PERFIL</a>
       </nav>
       <button className="logout-btn">CERRAR SESIÓN</button>
     </header>
