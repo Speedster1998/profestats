@@ -1,8 +1,6 @@
 .btn-primary {
   display: flex;
   width: 472px;
-  height: 75px;
-  padding: 0px 20px;
   justify-content: center;
   align-items: center;
   gap: 8px;

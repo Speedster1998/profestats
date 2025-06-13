@@ -1,4 +1,5 @@
 import './ReviewItem.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const ReviewItem = ({ review, showCourse }) => {
   return (
@@ -13,12 +14,12 @@ const ReviewItem = ({ review, showCourse }) => {
           <div className="course-grade">
             {showCourse && (
               <span className="course">
-                📘 <strong>Curso:</strong> {review.course}
+                <strong>Curso:</strong> {review.course}
               </span>
             )}
             {review.grade && (
               <span className="grade">
-                🧾 <strong>Nota recibida:</strong> {review.grade}
+                <strong>Nota recibida:</strong> {review.grade}
               </span>
             )}
           </div>
@@ -35,7 +36,11 @@ const ReviewItem = ({ review, showCourse }) => {
       <div className="right-section">
         <div className="emoji">{review.emoji || '😊'}</div>
         <div className="rating-label">{review.ratingLabel}</div>
-        <div className="vote-icons">👍 🔁</div>
+        <div className="vote-icons">
+          <i className="bi bi-hand-thumbs-up"></i>
+          <i className="bi bi-hand-thumbs-down ms-3"></i>
+        </div>
+
       </div>
     </div>
   );
