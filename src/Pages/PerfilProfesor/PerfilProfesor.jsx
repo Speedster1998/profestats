@@ -77,12 +77,12 @@ const PerfilProfesor = () => {
                         ))}
                     </div>
                 </div>
+                
+                <hr className="my-4 dashed" />
 
-                <div className="d-flex justify-content-center mt-5">
+                <div className="d-flex justify-content-center">
                     <Boton texto="Calificar profesor" onClick={() => navigate(`/rate-teacher/${idTeacher}`)} />
                 </div>
-
-                <hr className="my-4 dashed" />
 
                 <div className="section">
                     <h3 className="section-title fs-5">Reseñas</h3>
