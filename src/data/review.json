@@ -9,7 +9,9 @@
     "visible": true,
     "calificacion_general": 3,
     "facilidad": 4,
-    "nota": 7
+    "nota": 7,
+    "likes": 10,
+    "dislikes": 1
   },
   {
     "review_id": 2,
@@ -21,7 +23,9 @@
     "visible": true,
     "calificacion_general": 2,
     "facilidad": 3,
-    "nota": 8
+    "nota": 8,
+    "likes": 5,
+    "dislikes": 4
   },
   {
     "review_id": 3,
@@ -33,7 +37,9 @@
     "visible": true,
     "calificacion_general": 3,
     "facilidad": 5,
-    "nota": 8
+    "nota": 8,
+    "likes": 0,
+    "dislikes": 0
   },
   {
     "review_id": 4,
@@ -45,7 +51,9 @@
     "visible": true,
     "calificacion_general": 5,
     "facilidad": 5,
-    "nota": 10
+    "nota": 10,
+    "likes": 0,
+    "dislikes": 0
   },
   {
     "review_id": 5,
@@ -57,7 +65,9 @@
     "visible": true,
     "calificacion_general": 2,
     "facilidad": 3,
-    "nota": 6
+    "nota": 6,
+    "likes": 0,
+    "dislikes": 0
   },
   {
     "review_id": 6,
@@ -69,7 +79,9 @@
     "visible": true,
     "calificacion_general": 2,
     "facilidad": 5,
-    "nota": 7
+    "nota": 7,
+    "likes": 0,
+    "dislikes": 0
   },
   {
     "review_id": 7,
@@ -81,7 +93,9 @@
     "visible": true,
     "calificacion_general": 3,
     "facilidad": 4,
-    "nota": 7
+    "nota": 7,
+    "likes": 0,
+    "dislikes": 0
   },
   {
     "review_id": 8,
@@ -93,7 +107,9 @@
     "visible": true,
     "calificacion_general": 1,
     "facilidad": 5,
-    "nota": 6
+    "nota": 6,
+    "likes": 0,
+    "dislikes": 0
   },
   {
     "review_id": 9,
@@ -105,7 +121,9 @@
     "visible": true,
     "calificacion_general": 4,
     "facilidad": 3,
-    "nota": 7
+    "nota": 7,
+    "likes": 0,
+    "dislikes": 0
   },
   {
     "review_id": 10,
@@ -117,7 +135,9 @@
     "visible": true,
     "calificacion_general": 4,
     "facilidad": 5,
-    "nota": 9
+    "nota": 9,
+    "likes": 0,
+    "dislikes": 0
   },
   {
     "review_id": 11,
@@ -129,7 +149,9 @@
     "visible": true,
     "calificacion_general": 5,
     "facilidad": 4,
-    "nota": 9
+    "nota": 9,
+    "likes": 0,
+    "dislikes": 0
   },
   {
     "review_id": 12,
@@ -141,7 +163,9 @@
     "visible": true,
     "calificacion_general": 5,
     "facilidad": 3,
-    "nota": 8
+    "nota": 8,
+    "likes": 0,
+    "dislikes": 0
   },
   {
     "review_id": 13,
@@ -153,7 +177,9 @@
     "visible": true,
     "calificacion_general": 3,
     "facilidad": 4,
-    "nota": 7
+    "nota": 7,
+    "likes": 0,
+    "dislikes": 0
   },
   {
     "review_id": 14,
@@ -165,7 +191,9 @@
     "visible": true,
     "calificacion_general": 2,
     "facilidad": 3,
-    "nota": 5
+    "nota": 5,
+    "likes": 0,
+    "dislikes": 0
   },
   {
     "review_id": 15,
@@ -177,7 +205,9 @@
     "visible": true,
     "calificacion_general": 5,
     "facilidad": 5,
-    "nota": 10
+    "nota": 10,
+    "likes": 0,
+    "dislikes": 0
   },
   {
     "review_id": 16,
@@ -189,7 +219,9 @@
     "visible": true,
     "calificacion_general": 4,
     "facilidad": 4,
-    "nota": 8
+    "nota": 8,
+    "likes": 0,
+    "dislikes": 0
   },
   {
     "review_id": 17,
@@ -201,7 +233,9 @@
     "visible": true,
     "calificacion_general": 5,
     "facilidad": 3,
-    "nota": 8
+    "nota": 8,
+    "likes": 0,
+    "dislikes": 0
   },
   {
     "review_id": 18,
@@ -213,7 +247,9 @@
     "visible": true,
     "calificacion_general": 3,
     "facilidad": 5,
-    "nota": 8
+    "nota": 8,
+    "likes": 0,
+    "dislikes": 0
   },
   {
     "review_id": 19,
@@ -225,7 +261,9 @@
     "visible": true,
     "calificacion_general": 3,
     "facilidad": 5,
-    "nota": 8
+    "nota": 8,
+    "likes": 0,
+    "dislikes": 0
   },
   {
     "review_id": 20,
@@ -237,7 +275,9 @@
     "visible": true,
     "calificacion_general": 5,
     "facilidad": 5,
-    "nota": 10
+    "nota": 10,
+    "likes": 0,
+    "dislikes": 0
   },
   {
     "review_id": 21,
@@ -249,7 +289,9 @@
     "visible": true,
     "calificacion_general": 2,
     "facilidad": 4,
-    "nota": 6
+    "nota": 6,
+    "likes": 0,
+    "dislikes": 0
   },
   {
     "review_id": 22,
@@ -261,7 +303,9 @@
     "visible": true,
     "calificacion_general": 5,
     "facilidad": 4,
-    "nota": 9
+    "nota": 9,
+    "likes": 0,
+    "dislikes": 0
   },
   {
     "review_id": 23,
@@ -273,6 +317,8 @@
     "visible": true,
     "calificacion_general": 4,
     "facilidad": 5,
-    "nota": 9
+    "nota": 9,
+    "likes": 0,
+    "dislikes": 0
   }
 ]

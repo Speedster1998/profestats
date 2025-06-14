@@ -98,6 +98,8 @@ const PerfilProfesor = ({idTeacher}) => {
                                 labels: r.labels,
                                 emoji: r.emoji,
                                 ratingLabel: '',
+                                likes: r.review.likes,
+                                dislikes: r.review.dislikes
                             }}
                             showCourse={true}
                         />

@@ -14,12 +14,12 @@ const ReviewItem = ({ review, showCourse }) => {
           <div className="course-grade">
             {showCourse && (
               <span className="course">
-                <strong>Curso:</strong> {review.course}
+                <strong>📚 Curso:</strong> {review.course}
               </span>
             )}
             {review.nota && (
               <span className="grade">
-                <strong>Nota recibida:</strong> {review.nota}
+                <strong>📝 Nota recibida:</strong> {review.nota}
               </span>
             )}
           </div>
@@ -37,8 +37,14 @@ const ReviewItem = ({ review, showCourse }) => {
         <div className="emoji">{review.emoji || '😊'}</div>
         <div className="rating-label">{review.ratingLabel}</div>
         <div className="vote-icons">
-          <i className="bi bi-hand-thumbs-up"></i>
-          <i className="bi bi-hand-thumbs-down ms-3"></i>
+          <div className="vote-item">
+            <i className="bi bi-hand-thumbs-up"></i>
+            <span className="vote-count">{review.likes ?? 0}</span>
+          </div>
+          <div className="vote-item ms-3">
+            <i className="bi bi-hand-thumbs-down"></i>
+            <span className="vote-count">{review.dislikes ?? 0}</span>
+          </div>
         </div>
 
       </div>
