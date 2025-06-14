@@ -75,7 +75,7 @@ const PerfilProfesor = ({idTeacher}) => {
                 </div>
 
                 <div className="my-4">
-                    <Boton texto="Calificar profesor" onClick={() => navigate(`/rate-teacher/${idTeacher}`)} />
+                    <Boton texto="Calificar profesor" onClick={() => navigate(`/evaluacion/${idTeacher}`)} />
                 </div>
 
                 <div className="section">
