@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import universitiesData from '../../data/Universidades.json';
 import teacher_colleges from '../../data/teachers_colleges.json'
 import teachersData from '../../data/Profesores.json'
+import coursesData from '../../data/Cursos.json'
+import facultyData from '../../data/Facultad.json'
 
 const FiltroComponente = ({id, changeTeacherId}) => {
     
     const [uniersity, setUniversity] = useState({});
     const [teachers, setTeachers] = useState([]);
+    const [courses, setCourses] = useState([]);
+    const [faculties, setFaculties] = useState([]);
 
     useEffect(() => {
         const foundUniversity = universitiesData.find(u => u.college_id === id);
@@ -14,6 +18,8 @@ const FiltroComponente = ({id, changeTeacherId}) => {
         const teachers_ids = teacher_colleges.filter(u => u.college_id === id).map(t => teachersData.find(x => x.teacher_id === t.teacher_id))
         console.log(teachers_ids)
         setTeachers(teachers_ids)
+        setCourses(coursesData)
+        setFaculties(facultyData.filter(x => x.college_id === id))
     }, []);
 
     return <div className="container py-4 text-white">
@@ -37,15 +43,22 @@ const FiltroComponente = ({id, changeTeacherId}) => {
       <div className="d-flex flex-wrap gap-2 mb-4">
         <select className="form-select bg-dark text-white" style={{ width: '48%' }}>
           <option>Facultad</option>
+          {faculties.map((facultie,index) => (
+            <option>{facultie.name}</option>
+          ))}
         </select>
         <select className="form-select bg-dark text-white" style={{ width: '48%' }}>
           <option>Ciclo</option>
+          {[1,2,3,4,5,6,7,8,9,10].map(x => <option>{x}</option>)}
         </select>
         <select className="form-select bg-dark text-white" style={{ width: '48%' }}>
           <option>Habilidades</option>
         </select>
         <select className="form-select bg-dark text-white" style={{ width: '48%' }}>
           <option>Cursos</option>
+          {courses.map((course,index) => (
+            <option>{course.name}</option>
+          ))}
         </select>
       </div>
 
