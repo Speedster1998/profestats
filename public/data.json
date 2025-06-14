@@ -1,0 +1,29 @@
+[
+  {
+    "anon": "Anónimo SMAL",
+    "curso": "Fundamentos",
+    "nota": 7,
+    "comentario": "Es un profe que le apasiona el software.",
+    "tags": ["Enseña bien", "Asistencia obligatoria", "Didáctico"],
+    "emoji": "😊",
+    "emojiText": "Bueno"
+  },
+  {
+    "anon": "Anónimo AMSL",
+    "curso": "Fundamentos",
+    "nota": 7,
+    "comentario": "Siempre está dispuesto a apoyar a los alumnos.",
+    "tags": ["Enseña bien", "Asistencia obligatoria", "Didáctico"],
+    "emoji": "💡",
+    "emojiText": "Excelente"
+  },
+  {
+    "anon": "Anónimo AMSL",
+    "curso": "Administración de Bases de Datos",
+    "nota": 9,
+    "comentario": "Excelente dominio del tema y muy claro.",
+    "tags": ["Exigente", "Didáctico"],
+    "emoji": "💡",
+    "emojiText": "Excelente"
+  }
+]
