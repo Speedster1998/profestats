@@ -20,6 +20,7 @@ const FiltroComponente = ({id, changeTeacherId}) => {
         setTeachers(teachers_ids)
         setCourses(coursesData)
         setFaculties(facultyData.filter(x => x.college_id === id))
+        changeTeacherId(teachers_ids[0].teacher_id)
     }, []);
 
     return <div className="container py-4 text-white">
