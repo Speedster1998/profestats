@@ -123,7 +123,7 @@ body {
   padding: 10px 14px;
   border-radius: 12px;
   font-size: 15px;
-  max-width: 400px;
+  max-width: 80%;
 }
 
 .tags {
@@ -159,7 +159,7 @@ body {
   position: absolute;
   top: 10px;
   right: 12px;
-  font-size: 12px;
+  font-size: 14px;
   background: rgb(0, 120, 120);
   color: white;
   border: none;
