@@ -50,13 +50,26 @@ const FiltroComponente = ({id}) => {
       </div>
 
       {teachers.map((profesor, index) => (
-        <div key={index} className="d-flex align-items-center border rounded mb-2 p-2" style={{ borderColor: '#28a745' }}>
-          <img src={profesor.image_url} alt={profesor.name} className="rounded-circle me-3" width="50" height="50" />
+        <button
+          key={index}
+          onClick={() => handleClick(profesor)}
+          className="d-flex align-items-center border rounded mb-2 p-2 w-100 text-start"
+          style={{ borderColor: '#28a745', background: 'transparent', borderWidth: '1px', cursor: 'pointer' }}
+        >
+          <img
+            src={profesor.image_url}
+            alt={profesor.name}
+            className="rounded-circle me-3"
+            width="50"
+            height="50"
+          />
           <div>
-            <div className="fw-bold text-white">{profesor.name.length > 15 ? profesor.name.slice(0, 15) + '...' : profesor.name}</div>
+            <div className="fw-bold text-white">
+              {profesor.name.length > 15 ? profesor.name.slice(0, 15) + '...' : profesor.name}
+            </div>
             <div className="text-light">{120} calificaciones</div>
           </div>
-        </div>
+        </button>
       ))}
     </div>
 }
