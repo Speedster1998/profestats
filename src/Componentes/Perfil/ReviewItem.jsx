@@ -17,9 +17,9 @@ const ReviewItem = ({ review, showCourse }) => {
                 <strong>Curso:</strong> {review.course}
               </span>
             )}
-            {review.grade && (
+            {review.nota && (
               <span className="grade">
-                <strong>Nota recibida:</strong> {review.grade}
+                <strong>Nota recibida:</strong> {review.nota}
               </span>
             )}
           </div>

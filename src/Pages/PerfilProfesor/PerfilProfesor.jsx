@@ -93,7 +93,7 @@ const PerfilProfesor = ({idTeacher}) => {
                                 username: r.user.username,
                                 date: r.review.date,
                                 course: r.courseName,
-                                grade: r.review.calificacion_general,
+                                nota: r.review.nota,
                                 comment: r.review.comment,
                                 labels: r.labels,
                                 emoji: r.emoji,
