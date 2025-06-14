@@ -87,5 +87,6 @@
 }
 
 hr.dashed {
-  border-top: 2px solid #28a745; 
+  border-top: 1px solid #44D293; 
+  margin-top: 20px;
 }
