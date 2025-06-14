@@ -9,7 +9,7 @@ const Perfil = () => {
   const [editNota, setEditNota] = useState("");
 
   useEffect(() => {
-    fetch("/data.json")
+    fetch("./src/data/dataPerfil.json")
       .then((res) => res.json())
       .then((data) => setReviews(data))
       .catch((err) => console.error("Error cargando datos:", err));
