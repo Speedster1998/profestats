@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-//import ReviewItem from '../../Componentes/Perfil/ReviewItem';
+import ReviewItem from '../../Componentes/Perfil/ReviewItem';
 import "./Perfil.css";
 
 const Perfil = () => {
@@ -54,11 +54,10 @@ const Perfil = () => {
               <img src="https://i.pravatar.cc/100?img=13" alt="anon" className="mini-avatar" />
               <div className="contenido">
                 <p className="anon">{rev.anon} · 4d</p>
-                <p>📘 <strong>Curso:</strong> {rev.curso}</p>
 
                 {editIndex === index ? (
                   <>
-                    <p>📝 <strong>Nota:</strong> <input type="number" value={editNota} onChange={(e) => setEditNota(e.target.value)} /></p>
+                    <p>📘 <strong>Curso:</strong> {rev.curso} 📝 <strong>Nueva nota:</strong> <input type="number" value={editNota} onChange={(e) => setEditNota(e.target.value)} /></p>
                     <p><strong>Comentario:</strong></p>
                     <textarea
                       rows={3}
@@ -72,7 +71,7 @@ const Perfil = () => {
                   </>
                 ) : (
                   <>
-                    <p>📝 <strong>Nota recibida:</strong> {rev.nota}</p>
+                    <p>📘 <strong>Curso:</strong> {rev.curso} 📝 <strong>Nota recibida:</strong> {rev.nota}</p>
                     <p className="comentario">{rev.comentario}</p>
                   </>
                 )}
@@ -83,9 +82,10 @@ const Perfil = () => {
                   ))}
                 </div>
               </div>
-              <div className="emoji">
-                <span>{rev.emoji}</span>
-                <span>{rev.emojiText}</span>
+              <div className="perfil-contenido-right-section">
+                <div className="emoji">{rev.emoji}</div>
+                <div className="rating-label">{rev.ratingLabel}</div>
+                <div className="vote-icons">👍 🔁</div>
               </div>
             </div>
 
