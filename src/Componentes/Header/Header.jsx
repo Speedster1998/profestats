@@ -1,8 +1,15 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 import "./Header.css";
 import logo from "../../Images/logo.png"; // Cambia la ruta si usas otra ubicación
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const CerrarSesion = () => {
+    navigate('/')
+  }
+
   return (
     <header className="header">
       <div className="header-left">
@@ -16,7 +23,7 @@ const Header = () => {
         <a href="/filtrogeneral">BUSCAR</a>
         <a href="/perfil">PERFIL</a>
       </nav>
-      <button className="logout-btn">CERRAR SESIÓN</button>
+      <button className="logout-btn" onClick={CerrarSesion}>CERRAR SESIÓN</button>
     </header>
   );
 };
