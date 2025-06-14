@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from "react-router-dom";
 import universitiesData from '../../data/Universidades.json';
+import teachers_colleges from '../../data/teachers_colleges.json'
 
 const FiltroGeneral = () => {
   const [universities, setUniversities] = useState([]);
@@ -10,8 +11,12 @@ const FiltroGeneral = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    setUniversities(universitiesData);
-    setFilteredUniversities(universitiesData);
+    const universitiesHeads = universitiesData.map(x => {return {
+      ...x,
+      profesores_cantidad: teachers_colleges.filter(r => r.college_id === x.college_id).length
+    }})
+    setUniversities(universitiesHeads);
+    setFilteredUniversities(universitiesHeads);
   }, []);
 
   useEffect(() => {
@@ -60,7 +65,7 @@ const FiltroGeneral = () => {
                 <h5 className="card-title mb-1">
                   {u.name.length > 50 ? u.name.slice(0, 30) + "..." : u.name}
                 </h5>
-                <p className="card-text text-light">{u.teachers_amount} profesores</p>
+                <p className="card-text text-light">{u.profesores_cantidad} profesores</p>
               </div>
             </div>
           </button>

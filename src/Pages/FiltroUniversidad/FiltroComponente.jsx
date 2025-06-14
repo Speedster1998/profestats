@@ -25,9 +25,15 @@ const FiltroComponente = ({id, changeTeacherId}) => {
     const [selectedCourse, setSelectedCourse] = useState('');
 
     useEffect(() => {
+  filterTeachers();
+}, [searchText, selectedFaculty, selectedCycle, selectedLabel, selectedCourse]);
+
+    useEffect(() => {
         const foundUniversity = universitiesData.find(u => u.college_id === id);
   setUniversity(foundUniversity);
-        const teachers_ids = teacher_colleges.filter(u => u.college_id === id).map(t => teachersData.find(x => x.teacher_id === t.teacher_id))
+        const teachers_ids = teacher_colleges.filter(u => u.college_id === id).map(t => teachersData.find(x => x.teacher_id === t.teacher_id)).map(x => {return {...x,
+          calificaciones: reviews.filter(c => c.teacher_id === x.teacher_id).length
+        }});
         
         setTeachers(teachers_ids)
         setFilteredTeachers(teachers_ids)
@@ -41,9 +47,7 @@ const FiltroComponente = ({id, changeTeacherId}) => {
         changeTeacherId(teachers_ids[0].teacher_id)
     }, []);
 
-    useEffect(() => {
-  filterTeachers();
-}, [searchText, selectedFaculty, selectedCycle, selectedLabel, selectedCourse]);
+    
 
     const updateSearchText = (e) => {
       setSearchText(e.target.value);
@@ -192,7 +196,7 @@ const FiltroComponente = ({id, changeTeacherId}) => {
             <div className="fw-bold text-white">
               {profesor.name.length > 15 ? profesor.name.slice(0, 15) + '...' : profesor.name}
             </div>
-            <div className="text-light">{120} calificaciones</div>
+            <div className="text-light">{profesor.calificaciones} calificaciones</div>
           </div>
         </button>
       ))}
