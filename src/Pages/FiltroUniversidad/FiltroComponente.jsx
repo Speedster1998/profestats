@@ -4,6 +4,7 @@ import teacher_colleges from '../../data/teachers_colleges.json'
 import teachersData from '../../data/Profesores.json'
 import coursesData from '../../data/Cursos.json'
 import facultyData from '../../data/Facultad.json'
+import labelData from '../../data/labels.json'
 
 const FiltroComponente = ({id, changeTeacherId}) => {
     
@@ -11,15 +12,21 @@ const FiltroComponente = ({id, changeTeacherId}) => {
     const [teachers, setTeachers] = useState([]);
     const [courses, setCourses] = useState([]);
     const [faculties, setFaculties] = useState([]);
+    const [labels, setLabels] = useState([]);
 
     useEffect(() => {
         const foundUniversity = universitiesData.find(u => u.college_id === id);
   setUniversity(foundUniversity);
         const teachers_ids = teacher_colleges.filter(u => u.college_id === id).map(t => teachersData.find(x => x.teacher_id === t.teacher_id))
-        console.log(teachers_ids)
+        
         setTeachers(teachers_ids)
+        setLabels(labelData.filter(x => x.label_id>4))
         setCourses(coursesData)
         setFaculties(facultyData.filter(x => x.college_id === id))
+        console.log(labels)
+        
+
+        //Asginar primer perfil de profesor
         changeTeacherId(teachers_ids[0].teacher_id)
     }, []);
 
@@ -54,11 +61,14 @@ const FiltroComponente = ({id, changeTeacherId}) => {
         </select>
         <select className="form-select bg-dark text-white" style={{ width: '48%' }}>
           <option>Habilidades</option>
+          {labels.map((label, index) => (
+            <option key={index}>{label.name}</option>
+          ))}
         </select>
         <select className="form-select bg-dark text-white" style={{ width: '48%' }}>
           <option>Cursos</option>
           {courses.map((course,index) => (
-            <option>{course.name}</option>
+            <option key={index}>{course.name}</option>
           ))}
         </select>
       </div>
