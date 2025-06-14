@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from "react";
 import universitiesData from '../../data/Universidades.json';
 import teacher_colleges from '../../data/teachers_colleges.json'
+import teacher_courses from '../../data/Relacion_Profesor_Curso.json'
 import teachersData from '../../data/Profesores.json'
 import coursesData from '../../data/Cursos.json'
 import facultyData from '../../data/Facultad.json'
 import labelData from '../../data/labels.json'
+import reviews from '../../data/review.json';
+import review_labels from '../../data/review_labels.json';
 
 const FiltroComponente = ({id, changeTeacherId}) => {
     
     const [uniersity, setUniversity] = useState({});
     const [teachers, setTeachers] = useState([]);
+    const [filteredTeachers, setFilteredTeachers] = useState([]);
     const [courses, setCourses] = useState([]);
     const [faculties, setFaculties] = useState([]);
     const [labels, setLabels] = useState([]);
@@ -26,6 +30,7 @@ const FiltroComponente = ({id, changeTeacherId}) => {
         const teachers_ids = teacher_colleges.filter(u => u.college_id === id).map(t => teachersData.find(x => x.teacher_id === t.teacher_id))
         
         setTeachers(teachers_ids)
+        setFilteredTeachers(teachers_ids)
         setLabels(labelData.filter(x => x.label_id>4))
         setCourses(coursesData)
         setFaculties(facultyData.filter(x => x.college_id === id))
@@ -36,18 +41,20 @@ const FiltroComponente = ({id, changeTeacherId}) => {
         changeTeacherId(teachers_ids[0].teacher_id)
     }, []);
 
+    useEffect(() => {
+  filterTeachers();
+}, [searchText, selectedFaculty, selectedCycle, selectedLabel, selectedCourse]);
+
     const updateSearchText = (e) => {
       setSearchText(e.target.value);
     }
 
     const updateFaculty = (e) => {
       setSelectedFaculty(e.target.value);
-      console.log(selectedFaculty)
     }
 
     const updateCycle = (e) => {
       setSelectedCycle(e.target.value);
-      console.log(selectedCycle)
     }
 
     const updateLabel = (e) => {
@@ -56,6 +63,68 @@ const FiltroComponente = ({id, changeTeacherId}) => {
 
     const updateCourse = (e) => {
       setSelectedCourse(e.target.value);
+    }
+
+    const filterTeachers = () => {
+      let filtered = [...teachers];
+
+  // Filtro por texto (nombre del profesor)
+  if (searchText.trim() !== '') {
+    filtered = filtered.filter(t =>
+      t.name.toLowerCase().includes(searchText.trim().toLowerCase())
+    );
+  }
+
+  // Filtro por facultad
+  if (selectedFaculty) {
+    const facultyIds = facultyData
+      .filter(f => f.name === selectedFaculty && f.college_id === id)
+      .map(f => f.faculty_id);
+
+    const courseIds = coursesData
+      .filter(c => facultyIds.includes(c.faculty_id))
+      .map(c => c.course_id);
+
+    const teacherIds = teacher_colleges
+      .filter(tc => tc.college_id === id)
+      .map(tc => tc.teacher_id);
+
+    const relatedTeacherIds = teacher_courses
+      .filter(tc => courseIds.includes(tc.course_id))
+      .map(tc => tc.teacher_id);
+
+    filtered = filtered.filter(t => relatedTeacherIds.includes(t.teacher_id));
+  }
+
+  // Filtro por ciclo
+  if (selectedCycle > 0) {
+    const courseIds = coursesData
+      .filter(c => c.ciclo === parseInt(selectedCycle))
+      .map(c => c.course_id);
+
+    const relatedTeacherIds = teacher_courses
+      .filter(tc => courseIds.includes(tc.course_id))
+      .map(tc => tc.teacher_id);
+
+    filtered = filtered.filter(t => relatedTeacherIds.includes(t.teacher_id));
+  }
+
+  // Filtro por curso
+  if (selectedCourse) {
+    const course = coursesData.find(c => c.name === selectedCourse);
+    if (course) {
+      const relatedTeacherIds = teacher_courses
+        .filter(tc => tc.course_id === course.course_id)
+        .map(tc => tc.teacher_id);
+
+      filtered = filtered.filter(t => relatedTeacherIds.includes(t.teacher_id));
+    }
+  }
+
+  // Filtro por habilidades (labels) — opcional si tienes los datos de reviews
+  // Esto solo funcionará si más adelante agregas los archivos: `reviews.json` y `review_labels.json`
+
+  setFilteredTeachers(filtered);
     }
 
     return <div className="container py-4 text-white">
@@ -105,7 +174,7 @@ const FiltroComponente = ({id, changeTeacherId}) => {
         </select>
       </div>
 
-      {teachers.map((profesor, index) => (
+      {filteredTeachers.map((profesor, index) => (
         <button
           key={index}
           onClick={() => changeTeacherId(profesor.teacher_id)}
