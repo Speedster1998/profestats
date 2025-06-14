@@ -1,23 +1,19 @@
 import React, { useEffect, useState } from "react";
 import universitiesData from '../../data/Universidades.json';
-
-const profesores = [
-  { nombre: 'Ana Lopez', calificaciones: 300000, imagen: 'https://randomuser.me/api/portraits/women/1.jpg' },
-  { nombre: 'Luis Hernandez', calificaciones: 300000, imagen: 'https://randomuser.me/api/portraits/men/1.jpg' },
-  { nombre: 'Susan Quiroz', calificaciones: 300000, imagen: 'https://randomuser.me/api/portraits/women/2.jpg' },
-  { nombre: 'Ana Lopez', calificaciones: 300000, imagen: 'https://randomuser.me/api/portraits/women/1.jpg' },
-  { nombre: 'Luis Hernandez', calificaciones: 300000, imagen: 'https://randomuser.me/api/portraits/men/1.jpg' },
-  { nombre: 'Ana Lopez', calificaciones: 300000, imagen: 'https://randomuser.me/api/portraits/women/1.jpg' },
-];
-
+import teacher_colleges from '../../data/teachers_colleges.json'
+import teachersData from '../../data/Profesores.json'
 
 const FiltroComponente = ({id}) => {
     
     const [uniersity, setUniversity] = useState({});
+    const [teachers, setTeachers] = useState([]);
 
     useEffect(() => {
         const foundUniversity = universitiesData.find(u => u.college_id === id);
   setUniversity(foundUniversity);
+        const teachers_ids = teacher_colleges.filter(u => u.college_id === id).map(t => teachersData.find(x => x.teacher_id === t.teacher_id))
+        console.log(teachers_ids)
+        setTeachers(teachers_ids)
     }, []);
 
     return <div className="container py-4 text-white">
@@ -53,12 +49,12 @@ const FiltroComponente = ({id}) => {
         </select>
       </div>
 
-      {profesores.map((profesor, index) => (
+      {teachers.map((profesor, index) => (
         <div key={index} className="d-flex align-items-center border rounded mb-2 p-2" style={{ borderColor: '#28a745' }}>
-          <img src={profesor.imagen} alt={profesor.nombre} className="rounded-circle me-3" width="50" height="50" />
+          <img src={profesor.image_url} alt={profesor.name} className="rounded-circle me-3" width="50" height="50" />
           <div>
-            <div className="fw-bold text-white">{profesor.nombre.length > 15 ? profesor.nombre.slice(0, 15) + '...' : profesor.nombre}</div>
-            <div className="text-muted">{profesor.calificaciones.toLocaleString()} calificaciones</div>
+            <div className="fw-bold text-white">{profesor.name.length > 15 ? profesor.name.slice(0, 15) + '...' : profesor.name}</div>
+            <div className="text-light">{120} calificaciones</div>
           </div>
         </div>
       ))}

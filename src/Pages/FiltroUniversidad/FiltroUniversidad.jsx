@@ -12,7 +12,9 @@ const FiltroUniversidad = () => {
                 <FiltroComponente id={idNum}/>
             </div>
             <div className="col-md">
+                <div className="overflow-auto">
                 <PerfilProfesor/>
+                </div>
             </div>
         </div>
     </div>
