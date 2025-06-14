@@ -11,7 +11,7 @@ const FiltroUniversidad = () => {
     return <div className="container">
         <div className="row">
             <div className="col-md-3">
-                <FiltroComponente id={collegeIdNum}/>
+                <FiltroComponente id={collegeIdNum} changeTeacherId={setTeacherId}/>
             </div>
             <div className="col-md">
                 <div className="overflow-auto">

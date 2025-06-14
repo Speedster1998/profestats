@@ -3,7 +3,7 @@ import universitiesData from '../../data/Universidades.json';
 import teacher_colleges from '../../data/teachers_colleges.json'
 import teachersData from '../../data/Profesores.json'
 
-const FiltroComponente = ({id}) => {
+const FiltroComponente = ({id, changeTeacherId}) => {
     
     const [uniersity, setUniversity] = useState({});
     const [teachers, setTeachers] = useState([]);
@@ -52,7 +52,7 @@ const FiltroComponente = ({id}) => {
       {teachers.map((profesor, index) => (
         <button
           key={index}
-          onClick={() => handleClick(profesor)}
+          onClick={() => changeTeacherId(profesor.teacher_id)}
           className="d-flex align-items-center border rounded mb-2 p-2 w-100 text-start"
           style={{ borderColor: '#28a745', background: 'transparent', borderWidth: '1px', cursor: 'pointer' }}
         >
