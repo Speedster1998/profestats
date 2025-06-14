@@ -1,19 +1,30 @@
 .review-item {
+  width: 100%;
+  max-width: 700px;
   display: flex;
   justify-content: space-between;
   background-color: #43BF98;
   padding: 16px;
-  border-radius: 5px;
+  border-radius: 12px;
   margin: 10px 0;
   color: #0f172a;
   font-family: 'Inter', sans-serif;
   align-items: flex-start;
+  gap: 20px;
+  box-sizing: border-box;
 }
 
 .left-section {
   display: flex;
   gap: 12px;
   flex: 1;
+}
+
+.student-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .profile-pic {
@@ -49,11 +60,11 @@
 }
 
 .comment-bubble {
-  background-color: #d1fae5;
-  padding: 10px 14px;
+  background-color: #89C2B0;
+  padding: 10px 10px;
   border-radius: 12px;
   font-size: 15px;
-  max-width: 400px;
+  max-width: 100%;
 }
 
 .labels {
@@ -76,12 +87,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding-left: 16px;
+  justify-content: center;
+  padding: 15px 15px;
 }
 
 .emoji {
-  font-size: 32px;
+  font-size: 48px;
 }
 
 .rating-label {
@@ -91,6 +102,26 @@
 }
 
 .vote-icons {
-  font-size: 18px;
+  font-size: 20px;
+  color: #ffffff;
+  display: flex;
   margin-top: 10px;
+  cursor: pointer;
+}
+
+.vote-icons i:hover {
+  color: #0f172a;
+  transform: scale(1.2);
+  transition: 0.2s ease;
+}
+
+.vote-item {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #3f5a3f;
+}
+
+.vote-count {
+  font-weight: bold;
 }

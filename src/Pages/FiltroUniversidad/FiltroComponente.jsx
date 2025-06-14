@@ -15,6 +15,11 @@ const FiltroComponente = ({id, changeTeacherId}) => {
     const [labels, setLabels] = useState([]);
     const [searchText, setSearchText] = useState('');
 
+    const [selectedFaculty, setSelectedFaculty] = useState('');
+    const [selectedCycle, setSelectedCycle] = useState(0);
+    const [selectedLabel, setSelectedLabel] = useState('');
+    const [selectedCourse, setSelectedCourse] = useState('');
+
     useEffect(() => {
         const foundUniversity = universitiesData.find(u => u.college_id === id);
   setUniversity(foundUniversity);
@@ -33,6 +38,24 @@ const FiltroComponente = ({id, changeTeacherId}) => {
 
     const updateSearchText = (e) => {
       setSearchText(e.target.value);
+    }
+
+    const updateFaculty = (e) => {
+      setSelectedFaculty(e.target.value);
+      console.log(selectedFaculty)
+    }
+
+    const updateCycle = (e) => {
+      setSelectedCycle(e.target.value);
+      console.log(selectedCycle)
+    }
+
+    const updateLabel = (e) => {
+      setSelectedLabel(e.target.value);
+    }
+
+    const updateCourse = (e) => {
+      setSelectedCourse(e.target.value);
     }
 
     return <div className="container py-4 text-white">
@@ -57,26 +80,27 @@ const FiltroComponente = ({id, changeTeacherId}) => {
       </div>
 
       <div className="d-flex flex-wrap gap-2 mb-4">
-        <select className="form-select bg-dark text-white" style={{ width: '48%' }}>
-          <option>Facultad</option>
+        <select className="form-select bg-dark text-white" style={{ width: '48%' }} value={selectedFaculty}
+  onChange={updateFaculty}>
+          <option key={0} value={''}>Facultad</option>
           {faculties.map((facultie,index) => (
-            <option>{facultie.name}</option>
+            <option key={index} value={facultie.name}>{facultie.name}</option>
           ))}
         </select>
-        <select className="form-select bg-dark text-white" style={{ width: '48%' }}>
-          <option>Ciclo</option>
-          {[1,2,3,4,5,6,7,8,9,10].map(x => <option>{x}</option>)}
+        <select className="form-select bg-dark text-white" style={{ width: '48%' }} value={selectedCycle} onChange={updateCycle}>
+          <option key={0} value={0}>Ciclo</option>
+          {[1,2,3,4,5,6,7,8,9,10].map(x => <option key={x} value={x}>{x}</option>)}
         </select>
-        <select className="form-select bg-dark text-white" style={{ width: '48%' }}>
-          <option>Habilidades</option>
+        <select className="form-select bg-dark text-white" style={{ width: '48%' }} value={selectedLabel} onChange={updateLabel}>
+          <option value={''}>Habilidades</option>
           {labels.map((label, index) => (
-            <option key={index}>{label.name}</option>
+            <option key={index} value={label.name}>{label.name}</option>
           ))}
         </select>
-        <select className="form-select bg-dark text-white" style={{ width: '48%' }}>
-          <option>Cursos</option>
+        <select className="form-select bg-dark text-white" style={{ width: '48%' }} value={selectedCourse} onChange={updateCourse}>
+          <option value={''}>Cursos</option>
           {courses.map((course,index) => (
-            <option key={index}>{course.name}</option>
+            <option key={index} value={course.name}>{course.name}</option>
           ))}
         </select>
       </div>

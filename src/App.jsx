@@ -19,7 +19,7 @@ function App() {
             <Route path="/signin" element={<Signin/>}/>
             <Route path="/perfil" element={<Perfil/>}/>
              <Route path="/perfilProfesor" element={<PerfilProfesor/>}/>
-            <Route path="/evaluacion" element={<Evaluacion/>}/>
+            <Route path="/evaluacion/:teacherId" element={<Evaluacion/>}/>
             <Route path="/filtrouniversidad/:collegeId" element={<FiltroUniversidad/>}/>
             <Route path="/filtrogeneral" element={<FiltroGeneral/>}/>
         </Routes>
