@@ -72,64 +72,79 @@ const FiltroComponente = ({id, changeTeacherId}) => {
     const filterTeachers = () => {
       let filtered = [...teachers];
 
-  // Filtro por texto (nombre del profesor)
-  if (searchText.trim() !== '') {
-    filtered = filtered.filter(t =>
-      t.name.toLowerCase().includes(searchText.trim().toLowerCase())
-    );
-  }
+      // Filtro por texto (nombre del profesor)
+      if (searchText.trim() !== '') {
+        filtered = filtered.filter(t =>
+          t.name.toLowerCase().includes(searchText.trim().toLowerCase())
+        );
+      }
 
-  // Filtro por facultad
-  if (selectedFaculty) {
-    const facultyIds = facultyData
-      .filter(f => f.name === selectedFaculty && f.college_id === id)
-      .map(f => f.faculty_id);
+      // Filtro por facultad
+      if (selectedFaculty) {
+        const facultyIds = facultyData
+          .filter(f => f.name === selectedFaculty && f.college_id === id)
+          .map(f => f.faculty_id);
 
-    const courseIds = coursesData
-      .filter(c => facultyIds.includes(c.faculty_id))
-      .map(c => c.course_id);
+        const courseIds = coursesData
+          .filter(c => facultyIds.includes(c.faculty_id))
+          .map(c => c.course_id);
 
-    const teacherIds = teacher_colleges
-      .filter(tc => tc.college_id === id)
-      .map(tc => tc.teacher_id);
+        const teacherIds = teacher_colleges
+          .filter(tc => tc.college_id === id)
+          .map(tc => tc.teacher_id);
 
-    const relatedTeacherIds = teacher_courses
-      .filter(tc => courseIds.includes(tc.course_id))
-      .map(tc => tc.teacher_id);
+        const relatedTeacherIds = teacher_courses
+          .filter(tc => courseIds.includes(tc.course_id))
+          .map(tc => tc.teacher_id);
 
-    filtered = filtered.filter(t => relatedTeacherIds.includes(t.teacher_id));
-  }
+        filtered = filtered.filter(t => relatedTeacherIds.includes(t.teacher_id));
+      }
 
-  // Filtro por ciclo
-  if (selectedCycle > 0) {
-    const courseIds = coursesData
-      .filter(c => c.ciclo === parseInt(selectedCycle))
-      .map(c => c.course_id);
+      // Filtro por ciclo
+      if (selectedCycle > 0) {
+        const courseIds = coursesData
+          .filter(c => c.ciclo === parseInt(selectedCycle))
+          .map(c => c.course_id);
 
-    const relatedTeacherIds = teacher_courses
-      .filter(tc => courseIds.includes(tc.course_id))
-      .map(tc => tc.teacher_id);
+        const relatedTeacherIds = teacher_courses
+          .filter(tc => courseIds.includes(tc.course_id))
+          .map(tc => tc.teacher_id);
 
-    filtered = filtered.filter(t => relatedTeacherIds.includes(t.teacher_id));
-  }
+        filtered = filtered.filter(t => relatedTeacherIds.includes(t.teacher_id));
+      }
 
-  // Filtro por curso
-  if (selectedCourse) {
-    const course = coursesData.find(c => c.name === selectedCourse);
-    if (course) {
-      const relatedTeacherIds = teacher_courses
-        .filter(tc => tc.course_id === course.course_id)
-        .map(tc => tc.teacher_id);
+      // Filtro por curso
+      if (selectedCourse) {
+        const course = coursesData.find(c => c.name === selectedCourse);
+        if (course) {
+          const relatedTeacherIds = teacher_courses
+            .filter(tc => tc.course_id === course.course_id)
+            .map(tc => tc.teacher_id);
 
-      filtered = filtered.filter(t => relatedTeacherIds.includes(t.teacher_id));
+          filtered = filtered.filter(t => relatedTeacherIds.includes(t.teacher_id));
+        }
+      }
+
+      // Filtro por habilidades (labels) — opcional si tienes los datos de reviews
+      // Esto solo funcionará si más adelante agregas los archivos: `reviews.json` y `review_labels.json`
+
+      if (selectedLabel) {
+    const labelObj = labelData.find(l => l.name === selectedLabel);
+    if (labelObj) {
+      const reviewIds = review_labels
+        .filter(rl => rl.label_id === labelObj.label_id)
+        .map(rl => rl.review_id);
+
+      const teacherIds = reviews
+        .filter(r => reviewIds.includes(r.review_id))
+        .map(r => r.teacher_id);
+
+      filtered = filtered.filter(t => teacherIds.includes(t.teacher_id));
     }
   }
 
-  // Filtro por habilidades (labels) — opcional si tienes los datos de reviews
-  // Esto solo funcionará si más adelante agregas los archivos: `reviews.json` y `review_labels.json`
-
-  setFilteredTeachers(filtered);
-    }
+      setFilteredTeachers(filtered);
+    };
 
     return <div className="container py-4 text-white">
       <div className="mb-4">
