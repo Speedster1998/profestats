@@ -76,11 +76,9 @@ const PerfilProfesor = ({idTeacher}) => {
                         ))}
                     </div>
                 </div>
-                
-                <hr className="my-4 dashed" />
 
-                <div className="d-flex justify-content-center">
-                    <Boton texto="Calificar profesor" onClick={() => navigate(`/rate-teacher/${idTeacher}`)} />
+                <div className="my-4">
+                    <Boton texto="Calificar profesor" onClick={() => navigate(`/evaluacion/${idTeacher}`)} />
                 </div>
 
                 <div className="section">
