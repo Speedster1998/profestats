@@ -66,7 +66,7 @@ const FiltroComponente = ({id, changeTeacherId}) => {
         </h3>
       </div>
 
-      <div className="d-flex align-items-center px-3 py-2 rounded-pill mb-3" style={{ width: '100%', maxWidth: '500px', backgroundColor: '#43BF98'}}>
+      <div className="d-flex align-items-center px-3 py-2 rounded-pill mb-3" style={{ width: '100%', backgroundColor: '#43BF98'}}>
         <i className="bi bi-list text-white me-3" style={{ fontSize: '1.2rem' }}></i>
         <input
           type="text"
