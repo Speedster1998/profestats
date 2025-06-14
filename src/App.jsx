@@ -20,7 +20,7 @@ function App() {
             <Route path="/perfil" element={<Perfil/>}/>
              <Route path="/perfilProfesor" element={<PerfilProfesor/>}/>
             <Route path="/evaluacion" element={<Evaluacion/>}/>
-            <Route path="/filtrouniversidad/:id" element={<FiltroUniversidad/>}/>
+            <Route path="/filtrouniversidad/:collegeId" element={<FiltroUniversidad/>}/>
             <Route path="/filtrogeneral" element={<FiltroGeneral/>}/>
         </Routes>
     </FondoDecorativo>

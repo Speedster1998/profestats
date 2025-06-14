@@ -1,23 +1,26 @@
 import React, { useEffect, useState } from "react";
 import universitiesData from '../../data/Universidades.json';
+import teacher_colleges from '../../data/teachers_colleges.json'
+import teachersData from '../../data/Profesores.json'
+import coursesData from '../../data/Cursos.json'
+import facultyData from '../../data/Facultad.json'
 
-const profesores = [
-  { nombre: 'Ana Lopez', calificaciones: 300000, imagen: 'https://randomuser.me/api/portraits/women/1.jpg' },
-  { nombre: 'Luis Hernandez', calificaciones: 300000, imagen: 'https://randomuser.me/api/portraits/men/1.jpg' },
-  { nombre: 'Susan Quiroz', calificaciones: 300000, imagen: 'https://randomuser.me/api/portraits/women/2.jpg' },
-  { nombre: 'Ana Lopez', calificaciones: 300000, imagen: 'https://randomuser.me/api/portraits/women/1.jpg' },
-  { nombre: 'Luis Hernandez', calificaciones: 300000, imagen: 'https://randomuser.me/api/portraits/men/1.jpg' },
-  { nombre: 'Ana Lopez', calificaciones: 300000, imagen: 'https://randomuser.me/api/portraits/women/1.jpg' },
-];
-
-
-const FiltroComponente = ({id}) => {
+const FiltroComponente = ({id, changeTeacherId}) => {
     
     const [uniersity, setUniversity] = useState({});
+    const [teachers, setTeachers] = useState([]);
+    const [courses, setCourses] = useState([]);
+    const [faculties, setFaculties] = useState([]);
 
     useEffect(() => {
         const foundUniversity = universitiesData.find(u => u.college_id === id);
   setUniversity(foundUniversity);
+        const teachers_ids = teacher_colleges.filter(u => u.college_id === id).map(t => teachersData.find(x => x.teacher_id === t.teacher_id))
+        console.log(teachers_ids)
+        setTeachers(teachers_ids)
+        setCourses(coursesData)
+        setFaculties(facultyData.filter(x => x.college_id === id))
+        changeTeacherId(teachers_ids[0].teacher_id)
     }, []);
 
     return <div className="container py-4 text-white">
@@ -41,26 +44,46 @@ const FiltroComponente = ({id}) => {
       <div className="d-flex flex-wrap gap-2 mb-4">
         <select className="form-select bg-dark text-white" style={{ width: '48%' }}>
           <option>Facultad</option>
+          {faculties.map((facultie,index) => (
+            <option>{facultie.name}</option>
+          ))}
         </select>
         <select className="form-select bg-dark text-white" style={{ width: '48%' }}>
           <option>Ciclo</option>
+          {[1,2,3,4,5,6,7,8,9,10].map(x => <option>{x}</option>)}
         </select>
         <select className="form-select bg-dark text-white" style={{ width: '48%' }}>
           <option>Habilidades</option>
         </select>
         <select className="form-select bg-dark text-white" style={{ width: '48%' }}>
           <option>Cursos</option>
+          {courses.map((course,index) => (
+            <option>{course.name}</option>
+          ))}
         </select>
       </div>
 
-      {profesores.map((profesor, index) => (
-        <div key={index} className="d-flex align-items-center border rounded mb-2 p-2" style={{ borderColor: '#28a745' }}>
-          <img src={profesor.imagen} alt={profesor.nombre} className="rounded-circle me-3" width="50" height="50" />
+      {teachers.map((profesor, index) => (
+        <button
+          key={index}
+          onClick={() => changeTeacherId(profesor.teacher_id)}
+          className="d-flex align-items-center border rounded mb-2 p-2 w-100 text-start"
+          style={{ borderColor: '#28a745', background: 'transparent', borderWidth: '1px', cursor: 'pointer' }}
+        >
+          <img
+            src={profesor.image_url}
+            alt={profesor.name}
+            className="rounded-circle me-3"
+            width="50"
+            height="50"
+          />
           <div>
-            <div className="fw-bold text-white">{profesor.nombre.length > 15 ? profesor.nombre.slice(0, 15) + '...' : profesor.nombre}</div>
-            <div className="text-muted">{profesor.calificaciones.toLocaleString()} calificaciones</div>
+            <div className="fw-bold text-white">
+              {profesor.name.length > 15 ? profesor.name.slice(0, 15) + '...' : profesor.name}
+            </div>
+            <div className="text-light">{120} calificaciones</div>
           </div>
-        </div>
+        </button>
       ))}
     </div>
 }

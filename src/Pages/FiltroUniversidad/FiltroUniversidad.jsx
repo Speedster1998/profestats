@@ -2,17 +2,21 @@ import { useParams } from "react-router-dom";
 import { ControladorPerfilProfesor } from "../PerfilProfesor/ControladorPerfilProfesor"
 import PerfilProfesor from "../PerfilProfesor/PerfilProfesor"
 import FiltroComponente from "./FiltroComponente"
+import { useState } from "react";
 
 const FiltroUniversidad = () => {
-    const { id } = useParams();
-    const idNum = parseInt(id, 10);
+    const { collegeId } = useParams();
+    const collegeIdNum = parseInt(collegeId, 10);
+    const [teacher_id, setTeacherId] = useState(1)
     return <div className="container">
         <div className="row">
             <div className="col-md-3">
-                <FiltroComponente id={idNum}/>
+                <FiltroComponente id={collegeIdNum} changeTeacherId={setTeacherId}/>
             </div>
             <div className="col-md">
-                <PerfilProfesor/>
+                <div className="overflow-auto">
+                <PerfilProfesor idTeacher={teacher_id}/>
+                </div>
             </div>
         </div>
     </div>

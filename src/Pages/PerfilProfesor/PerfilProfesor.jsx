@@ -7,11 +7,10 @@ import Boton from '../../Componentes/Boton/Boton';
 import { ControladorPerfilProfesor } from './ControladorPerfilProfesor';
 const MAX_LENGTH = 150;
 
-const PerfilProfesor = () => {
+const PerfilProfesor = ({idTeacher}) => {
     const navigate = useNavigate();
-    const { idTeacher } = useParams();
-    const { teacherProfile: teacher, loading } = ControladorPerfilProfesor(parseInt(idTeacher));
-    const [showFullDescription, setShowFullDescription] = useState(false);
+    const { teacherProfile: teacher, loading } = ControladorPerfilProfesor(idTeacher);
+        const [showFullDescription, setShowFullDescription] = useState(false);
 
     if (loading || !teacher) return <p className="text-center mt-5">Cargando...</p>;
 

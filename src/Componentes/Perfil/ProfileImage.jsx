@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const ProfileImage = ({ src, size = 140 }) => {
   const [imgSrc, setImgSrc] = useState(src || '../../../src/images/profileDefault.png');
+
+  useEffect(() => {
+    setImgSrc(src || '../../../src/images/profileDefault.png');
+  }, [src]);
 
   const handleError = () => {
     setImgSrc('../../../src/images/profileDefault.png');
