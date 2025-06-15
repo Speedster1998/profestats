@@ -52,20 +52,21 @@ const Perfil = () => {
             <div className="review-info">
               <img src="https://i.pravatar.cc/100?img=13" alt="anon" className="mini-avatar" />
               <div className="contenido">
-                <p className="anon">{rev.anon} · 4d</p>
+                <p className="perfil-anon"><strong>{rev.anon}</strong> · 4d</p>
 
                 {editIndex === index ? (
                   <>
-                    <p>📘 <strong>Curso:</strong> {rev.curso} 🧾 <strong>Nueva nota:</strong> <input type="number" value={editNota} onChange={(e) => setEditNota(e.target.value)} /></p>
+                    <p>📘 <strong>Curso:</strong> {rev.curso} 🧾 <strong>Nueva nota:</strong> <input className="perfil-numberbox" type="number" value={editNota} onChange={(e) => setEditNota(e.target.value)} /></p>
                     <p><strong>Comentario:</strong></p>
                     <textarea
-                      rows={3}
+                      className="perfil-textbox"
+                      rows={2}
                       value={editComentario}
                       onChange={(e) => setEditComentario(e.target.value)}
                     />
                     <div style={{ marginTop: "10px" }}>
-                      <button onClick={saveChanges}>Guardar</button>
-                      <button onClick={cancelEdit} style={{ marginLeft: "10px" }}>Cancelar</button>
+                      <button className="perfil-guardar" onClick={saveChanges}>Guardar</button>
+                      <button className="perfil-cancelar" onClick={cancelEdit} style={{ marginLeft: "10px" }}>Cancelar</button>
                     </div>
                   </>
                 ) : (
@@ -82,14 +83,16 @@ const Perfil = () => {
                 </div>
               </div>
               <div className="perfil-contenido-right-section">
-                <div className="emoji">{rev.emoji}</div>
+                <div className="perfil-emoji">{rev.emoji}</div>
                 <div className="rating-label">{rev.ratingLabel}</div>
                 <div className="vote-icons">👍 🔁</div>
               </div>
             </div>
 
             {editIndex !== index && (
-              <button className="editar" onClick={() => startEditing(index)}>✏️ Editar</button>
+              <button className="editar" onClick={() => startEditing(index)}>
+                <img src="./src/Images/pencil.png" alt="pencil" id="pencil"/> Editar
+              </button>
             )}
           </div>
         ))}
