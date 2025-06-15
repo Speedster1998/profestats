@@ -1,7 +1,7 @@
-import reviewJson from '../data/review.json';
+import reviewJson from '../data/Resena.json';
 import reviewLabelsJson from '../data/review_labels.json';
-import labelsJson from '../data/labels.json';
-import usersJson from '../data/users.json';
+import labelsJson from '../data/PreguntasContenido.json';
+import usersJson from '../data/Usuarios.json';
 import coursesJson from '../data/Cursos.json';
 import teachersJson from '../data/Profesores.json';
 

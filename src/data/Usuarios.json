@@ -1,0 +1,48 @@
+[
+  {
+    "user_id": 1,
+    "username": "Alumno",
+    "email": "anonimo@aloe.ulima.edu.pe",
+    "image_url": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fabqsa.com%2Fanonimo%2F&psig=AOvVaw2Q0clQgPxVzvIMClpXb5yg&ust=1750033674303000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJCn4NGV8o0DFQAAAAAdAAAAABAE"
+  },
+  {
+    "user_id": 2,
+    "username": "Alvaro Mendoza",
+    "email": "alvaro.mendoza@example.com",
+    "password": "123456",
+    "college_id": 1,
+    "image_url": "https://cris.ulima.edu.pe/files-asset/40822754/EEscobedo.jpg?w=320&f=webp"
+  },
+  {
+    "user_id": 1,
+    "username": "Alvaro Mendoza",
+    "email": "alvaro.mendoza@example.com",
+    "password": "123456",
+    "college_id": 1,
+    "image_url": "https://cris.ulima.edu.pe/files-asset/40822754/EEscobedo.jpg?w=320&f=webp"
+  },
+  {
+    "user_id": 1,
+    "username": "Alvaro Mendoza",
+    "email": "alvaro.mendoza@example.com",
+    "password": "123456",
+    "college_id": 1,
+    "image_url": "https://cris.ulima.edu.pe/files-asset/40822754/EEscobedo.jpg?w=320&f=webp"
+  },
+  {
+    "user_id": 1,
+    "username": "Alvaro Mendoza",
+    "email": "alvaro.mendoza@example.com",
+    "password": "123456",
+    "college_id": 1,
+    "image_url": "https://cris.ulima.edu.pe/files-asset/40822754/EEscobedo.jpg?w=320&f=webp"
+  },
+  {
+    "user_id": 1,
+    "username": "Alvaro Mendoza",
+    "email": "alvaro.mendoza@example.com",
+    "password": "123456",
+    "college_id": 1,
+    "image_url": "https://cris.ulima.edu.pe/files-asset/40822754/EEscobedo.jpg?w=320&f=webp"
+  }
+]

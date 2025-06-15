@@ -10,6 +10,8 @@ import FiltroUniversidad from "./Pages/FiltroUniversidad/FiltroUniversidad";
 import FiltroGeneral from "./Pages/FiltroGeneral/FiltroGeneral";
 import PerfilProfesor from "./Pages/PerfilProfesor/PerfilProfesor";
 
+import ErrorPage from "./Pages/Error/Error";
+
 function App() {
     return <FondoDecorativo>
         <Header/>
@@ -22,6 +24,8 @@ function App() {
             <Route path="/evaluacion" element={<Evaluacion/>}/>
             <Route path="/filtrouniversidad/:id" element={<FiltroUniversidad/>}/>
             <Route path="/filtrogeneral" element={<FiltroGeneral/>}/>
+            <Route path="/error" element={<ErrorPage/>}/>
+            
         </Routes>
     </FondoDecorativo>
 }

@@ -1,11 +1,27 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.fondo-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 .fondo-decorativo {
   background-color: #0e1e1b;
   background-image: url('../../Images/fondo.png'); /* Cambia la ruta si es necesario */
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  min-height: 100vh;
+  background-position: top;
   width: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
 }

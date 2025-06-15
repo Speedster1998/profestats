@@ -1,8 +1,14 @@
-import React from "react";
 import "./Fondo.css";
 
 const Fondo = ({ children }) => {
-  return <div className="fondo-decorativo">{children}</div>;
+  return (
+    <div className="fondo-wrapper">
+      <div className="fondo-decorativo">
+        {children}
+      </div>
+    </div>
+  );
 };
 
 export default Fondo;
+

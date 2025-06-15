@@ -1,0 +1,57 @@
+[
+  {
+    "group_id": 1,
+    "name": "curso",
+    "text": "Elige tu curso"
+  },
+  {
+    "group_id": 2,
+    "name": "claridad",
+    "text": "Claridad"
+  },
+  {
+    "group_id": 3,
+    "name": "ayuda",
+    "text": "Ayuda"
+  },
+  {
+    "group_id": 4,
+    "name": "facilidad",
+    "text": "Facilidad"
+  },
+  {
+    "group_id": 5,
+    "name": "interes",
+    "text": "Tu interés en clase"
+  },
+  {
+    "group_id": 6,
+    "name": "recomienda",
+    "text": "¿Lo recomiendas?"
+  },
+  {
+    "group_id": 7,
+    "name": "asistencia",
+    "text": "Asistencia a clase"
+  },
+  {
+    "group_id": 8,
+    "name": "calificacion",
+    "text": "¿Qué calificación le das al profesor?"
+  },
+  {
+    "group_id": 9,
+    "name": "caracteristicas",
+    "text": "¿Cuáles de estas frases describen mejor al profesor?"
+  },
+  {
+    "group_id": 10,
+    "name": "comentario",
+    "text": "Añadir un comentario (opcional)"
+  },
+  {
+    "group_id": 11,
+    "name": "anonimo",
+    "text": "¿Quieres que tu calificación sea anónima?"
+  }
+]

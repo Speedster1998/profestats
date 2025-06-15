@@ -1,30 +1,25 @@
 .evaluacion-container {
-  background: radial-gradient(
-    600px circle at center,
-    #19554D 0%,
-    #07060D 100%
-  );
+  background: radial-gradient(600px circle at center, #19554d 0%, #07060d 100%);
   color: white;
   font-family: sans-serif;
-  padding: 50px 40px;
-  max-width: 1100px;
-  width: calc(100% - 80px);
-  margin: 60px auto;
-  border-radius: 30px;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
-  text-align: left; /* vuelve a su forma normal */
+  padding: 40px 24px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 40px auto;
+  border-radius: 24px;
+  text-align: left;
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 28px;
   margin-bottom: 20px;
   font-weight: bold;
-  text-align: left; /* alineado a la izquierda */
+  text-align: left;
 }
 
 h2 {
-  font-size: 22px;
-  margin-top: 30px;
+  font-size: 20px;
+  margin-top: 28px;
   margin-bottom: 12px;
   font-weight: bold;
 }
@@ -32,12 +27,12 @@ h2 {
 .select {
   width: 100%;
   padding: 12px;
-  background-color: #13342e;
-  border: none;
+  background-color: #1a3b36;
+  border: 1px solid #295f57;
   color: white;
   border-radius: 8px;
   font-size: 16px;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .button-group {
@@ -48,7 +43,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-.btn {
+.button-group .btn {
   padding: 10px 20px;
   border: 1px solid white;
   background-color: transparent;
@@ -56,17 +51,18 @@ h2 {
   border-radius: 8px;
   cursor: pointer;
   font-weight: 500;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-.btn:hover {
+.button-group .btn:hover {
   background-color: #1e4e3c;
+  color: white;
 }
 
-.selected {
+.button-group .btn.selected {
   background-color: white;
   color: #0e1e1b;
-  font-weight: bold;
+  border: 1px solid white;
 }
 
 .emoji-group {
@@ -86,11 +82,17 @@ h2 {
   width: 100px;
   text-align: center;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .emoji-btn:hover {
-  background-color: #1e4e3c;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
+}
+
+.emoji-btn:active {
+  transform: scale(0.96);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .emoji {
@@ -101,20 +103,17 @@ h2 {
 
 .textarea {
   width: 100%;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+  max-width: 960px;
   height: 120px;
   background-color: #13342e;
   color: white;
   padding: 14px;
   border-radius: 8px;
-  border: none;
+  border: 1px solid #295f57;
   resize: none;
+  font-size: 16px;
   margin-top: 8px;
   margin-bottom: 24px;
-  font-size: 16px;
 }
 
 .submit-btn {
@@ -151,24 +150,17 @@ h2 {
   display: none;
 }
 
-.section-block {
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 24px;
-  border-radius: 16px;
-  margin-bottom: 30px;
-  text-align: center;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-}
-
 .likert-row {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
 }
 
 .likert-label {
-  width: 150px;
+  width: 160px;
+  min-width: 140px;
   flex-shrink: 0;
   text-align: left;
   font-weight: 500;
@@ -177,17 +169,35 @@ h2 {
 .likert-options {
   display: flex;
   gap: 8px;
+  flex-wrap: nowrap;
 }
 
 .likert-options .btn {
   padding: 8px 12px;
   min-width: 40px;
+  color: white;
+  border: 1px solid white;
+  background-color: transparent;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  font-weight: 500;
+}
+
+.likert-options .btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
+}
+
+.likert-options .btn:active {
+  transform: scale(0.96);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .likert-description {
   margin-left: 16px;
   font-size: 14px;
   color: #ccc;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .inline-row {
@@ -195,6 +205,7 @@ h2 {
   align-items: center;
   gap: 16px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .inline-label {
@@ -206,6 +217,54 @@ h2 {
 
 .inline-options {
   display: flex;
-  gap: 8px;
+  gap: 12px;
   flex-wrap: wrap;
+}
+
+/* Botones generales */
+button,
+.btn,
+.checkbox-group .btn,
+.inline-options .btn,
+.likert-options .btn,
+.emoji-btn
+.button-group {
+  padding: 10px 20px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+button:hover,
+.btn:hover,
+.checkbox-group .btn:hover,
+.inline-options .btn:hover,
+.likert-options .btn:hover,
+.emoji-btn:hover,
+.button-group:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
+}
+
+button:active,
+.btn:active,
+.checkbox-group .btn:active,
+.inline-options .btn:active,
+.likert-options .btn:active,
+.emoji-btn:active, 
+.button-group:active{
+  transform: scale(0.96);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Estilo para seleccionado */
+.selected {
+  background-color: white !important;
+  color: #0e1e1b !important;
+  font-weight: bold;
+  border: 1px solid white;
 }

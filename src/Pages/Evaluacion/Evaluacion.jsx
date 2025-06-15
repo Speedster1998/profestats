@@ -4,7 +4,9 @@ import Header from "../../Componentes/Header/Header.jsx";
 import FondoDecorativo from "../../Componentes/Fondo/Fondo.jsx";
 import profesores from "../../data/Profesores.json";
 import cursosData from "../../data/Cursos.json";
-import relaciones from "../../data/Relación_Profesor_Curso.json copy.json";
+import relaciones from "../../data/Relacion_Profesor_Curso.json";
+import usuarios from "../../data/Usuarios.json";
+import preguntas from "../../data/Preguntas.json";
 import "./Evaluacion.css";
 
 const Evaluacion = () => {
@@ -64,13 +66,32 @@ const Evaluacion = () => {
   const descriptorInteres = (v) =>
     ["Casi nada", "Poco interesado", "Más o menos interesado", "Interesado", "Súper interesado"][v - 1] || "";
 
+  const calcularPromedio = (...valores) => {
+    const nums = valores.map(Number).filter((v) => !isNaN(v));
+    return nums.length ? (nums.reduce((a, b) => a + b, 0) / nums.length).toFixed(2) : null;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const calificacionGeneral = calcularPromedio(claridad, ayuda, facilidad);
+
+    const usuario = anonimo
+      ? usuarios.find((u) => u.user_id === 1)
+      : {
+          user_id: "actual",
+          username: "Usuario Actual",
+          email: "usuario@ulima.edu.pe",
+          image_url: "https://cris.ulima.edu.pe/files-asset/40822754/EEscobedo.jpg?w=320&f=webp"
+        };
+
     const datos = {
+      profesorId,
       curso,
       claridad,
       ayuda,
       facilidad,
+      calificacionGeneral,
       interes,
       recomienda,
       asistencia,
@@ -78,8 +99,27 @@ const Evaluacion = () => {
       comentario,
       anonimo,
       caracteristicas,
+      fecha: new Date().toISOString(),
+      usuario
     };
-    console.log("Formulario enviado:", datos);
+
+    const reseñasGuardadas = JSON.parse(localStorage.getItem("reseñas")) || [];
+    reseñasGuardadas.push(datos);
+    localStorage.setItem("reseñas", JSON.stringify(reseñasGuardadas));
+
+    alert("¡Gracias por tu evaluación!");
+
+    setCurso("");
+    setClaridad("");
+    setAyuda("");
+    setFacilidad("");
+    setInteres("");
+    setRecomienda(null);
+    setAsistencia(null);
+    setCalificacion("");
+    setComentario("");
+    setAnonimo(null);
+    setCaracteristicas([]);
   };
 
   return (
@@ -98,6 +138,7 @@ const Evaluacion = () => {
         ))}
       </select>
 
+      {/* Claridad */}
       <div className="likert-row">
         <div className="likert-label">Claridad</div>
         <div className="likert-options">
@@ -114,6 +155,7 @@ const Evaluacion = () => {
         <div className="likert-description">{descriptorClaridad(claridad)}</div>
       </div>
 
+      {/* Ayuda */}
       <div className="likert-row">
         <div className="likert-label">Ayuda</div>
         <div className="likert-options">
@@ -130,6 +172,7 @@ const Evaluacion = () => {
         <div className="likert-description">{descriptorAyuda(ayuda)}</div>
       </div>
 
+      {/* Facilidad */}
       <div className="likert-row">
         <div className="likert-label">Facilidad</div>
         <div className="likert-options">
@@ -146,6 +189,7 @@ const Evaluacion = () => {
         <div className="likert-description">{descriptorFacilidad(facilidad)}</div>
       </div>
 
+      {/* Interés */}
       <div className="likert-row">
         <div className="likert-label">Tu interés en clase</div>
         <div className="likert-options">
@@ -162,6 +206,7 @@ const Evaluacion = () => {
         <div className="likert-description">{descriptorInteres(interes)}</div>
       </div>
 
+      {/* Recomienda */}
       <div className="inline-row">
         <div className="inline-label">¿Lo recomiendas?</div>
         <div className="inline-options">
@@ -177,6 +222,7 @@ const Evaluacion = () => {
         </div>
       </div>
 
+      {/* Asistencia */}
       <div className="inline-row">
         <div className="inline-label">Asistencia a clase</div>
         <div className="inline-options">
@@ -192,6 +238,7 @@ const Evaluacion = () => {
         </div>
       </div>
 
+      {/* Emoji rating */}
       <h2>¿Qué calificación le das al profesor?</h2>
       <div className="emoji-group">
         {[
@@ -211,34 +258,29 @@ const Evaluacion = () => {
         ))}
       </div>
 
+      {/* Características */}
       <h2>¿Cuáles de estas frases describen mejor al profesor?</h2>
       <div className="checkbox-group">
         {opcionesCaracteristicas.map((carac, index) => {
           const selected = caracteristicas.includes(carac);
           return (
-            <label
+            <button
               key={index}
               className={`btn ${selected ? "selected" : ""}`}
               onClick={() => {
                 setCaracteristicas((prev) =>
-                  selected
-                    ? prev.filter((c) => c !== carac)
-                    : [...prev, carac]
+                  selected ? prev.filter((c) => c !== carac) : [...prev, carac]
                 );
               }}
             >
-              <input
-                type="checkbox"
-                value={carac}
-                checked={selected}
-                readOnly
-              />
+              <input type="checkbox" value={carac} checked={selected} readOnly />
               {carac}
-            </label>
+            </button>
           );
         })}
       </div>
 
+      {/* Comentario */}
       <h2>Añadir un comentario (opcional)</h2>
       <textarea
         className="textarea"
@@ -248,6 +290,7 @@ const Evaluacion = () => {
         maxLength={300}
       />
 
+      {/* Anonimato */}
       <h2>¿Quieres que tu calificación sea anónima?</h2>
       <div className="button-group">
         {["Sí", "No"].map((op, i) => (
