@@ -38,6 +38,7 @@ function App() {
 
     return <FondoDecorativo>
         {logged && <Header/>}
+        {logged !== undefined &&
         <Routes>
             {unloggedRoutes.map(({ path, element }, index) => (
                 <Route key={index} path={path} element={<CheckRoute loggedIn={false} elseRoute="/perfil">{element}</CheckRoute>} />
@@ -47,6 +48,7 @@ function App() {
             ))}
             <Route path="*" element={<Navigate to="/" />} />
         </Routes>
+        }
     </FondoDecorativo>
 }
 
