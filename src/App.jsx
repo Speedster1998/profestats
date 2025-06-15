@@ -1,4 +1,5 @@
-import { Route, Routes } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Header from "./Componentes/Header/Header";
 import Landing from "./Pages/Landing/Landing";
 import FondoDecorativo from "./Componentes/Fondo/Fondo";
@@ -11,17 +12,37 @@ import FiltroGeneral from "./Pages/FiltroGeneral/FiltroGeneral";
 import PerfilProfesor from "./Pages/PerfilProfesor/PerfilProfesor";
 
 function App() {
+    const [logged, setLogged] = useState()
+
+    const unloggedRoutes = [
+        { path: "/", element: <Landing/> },
+        { path: "/login", element: <Login/> },
+        { path: "/signin", element: <Signin/> }
+    ];
+
+    const loggedRoutes = [
+        { path: "/perfil", element: <Perfil/> },
+        { path: "/perfilProfesor", element: <PerfilProfesor/> },
+        { path: "/evaluacion/:teacherId", element: <Evaluacion/> },
+        { path: "/filtrouniversidad/:collegeId", element: <FiltroUniversidad/> },
+        { path: "/filtrogeneral", element: <FiltroGeneral/> }
+    ];
+    
+    const CheckRoute = ({ children, loggedIn, elseRoute }) => {
+        const IsLoggedIn = () => localStorage.getItem("logged") === "true";
+        return IsLoggedIn() === loggedIn ? children : <Navigate to={elseRoute} />;
+    };
+
     return <FondoDecorativo>
-        <Header/>
+        {logged && <Header/>}
         <Routes>
-            <Route path="/" element={<Landing/>}/>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/signin" element={<Signin/>}/>
-            <Route path="/perfil" element={<Perfil/>}/>
-             <Route path="/perfilProfesor" element={<PerfilProfesor/>}/>
-            <Route path="/evaluacion/:teacherId" element={<Evaluacion/>}/>
-            <Route path="/filtrouniversidad/:collegeId" element={<FiltroUniversidad/>}/>
-            <Route path="/filtrogeneral" element={<FiltroGeneral/>}/>
+            {unloggedRoutes.map(({ path, element }, index) => (
+                <Route key={index} path={path} element={<CheckRoute loggedIn={false} elseRoute="/perfil">{element}</CheckRoute>} />
+            ))}
+            {loggedRoutes.map(({ path, element }, index) => (
+                <Route key={index} path={path} element={<CheckRoute loggedIn={true} elseRoute="/login">{element}</CheckRoute>} />
+            ))}
+            <Route path="*" element={<Navigate to="/" />} />
         </Routes>
     </FondoDecorativo>
 }
