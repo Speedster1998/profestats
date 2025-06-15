@@ -21,8 +21,8 @@ function App() {
             <Route path="/signin" element={<Signin/>}/>
             <Route path="/perfil" element={<Perfil/>}/>
              <Route path="/perfilProfesor" element={<PerfilProfesor/>}/>
-            <Route path="/evaluacion" element={<Evaluacion/>}/>
-            <Route path="/filtrouniversidad/:id" element={<FiltroUniversidad/>}/>
+            <Route path="/evaluacion/:teacherId" element={<Evaluacion/>}/>
+            <Route path="/filtrouniversidad/:collegeId" element={<FiltroUniversidad/>}/>
             <Route path="/filtrogeneral" element={<FiltroGeneral/>}/>
             <Route path="/error" element={<ErrorPage/>}/>
             

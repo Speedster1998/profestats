@@ -21,6 +21,7 @@ class ReviewService {
     return {
       reviews: reviewList,
       usedLabelNames: Array.from(labelNames),
+      promedios: this._getCalidadFacilidadPromedio(teacherId)
     };
   }
 
@@ -41,6 +42,32 @@ class ReviewService {
       userMap: Object.fromEntries(usersJson.map(u => [u.user_id, u])),
       courseMap: Object.fromEntries(coursesJson.map(c => [c.course_id, c])),
       teacherMap: Object.fromEntries(teachersJson.map(t => [t.teacher_id, t])),
+    };
+  }
+
+  _getCalidadFacilidadPromedio(teacherId) {
+    const data = this._loadAllData();
+    const teacherReviews = data.reviews.filter(r => r.teacher_id === teacherId);
+
+    let sumaCalidad = 0;
+    let sumaFacilidad = 0;
+    let contador = 0;
+
+    for (const review of teacherReviews) {
+      if (typeof review.calificacion_general === 'number' && typeof review.facilidad === 'number') {
+        sumaCalidad += review.calificacion_general;
+        sumaFacilidad += review.facilidad;
+        contador++;
+      }
+    }
+
+    if (contador === 0) {
+      return { calidad: 0, facilidad: 0 };
+    }
+
+    return {
+      calidad: parseFloat((sumaCalidad / contador).toFixed(2)),
+      facilidad: parseFloat((sumaFacilidad / contador).toFixed(2))
     };
   }
 

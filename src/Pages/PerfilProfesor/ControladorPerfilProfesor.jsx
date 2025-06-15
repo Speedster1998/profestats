@@ -4,8 +4,7 @@ import { CollegeService } from '../../Services/college_service';
 import ReviewService from '../../Services/review_service';
 import { CourseService } from '../../Services/course_service';
 
-const teacherId = 1
-export const ControladorPerfilProfesor = () => {
+export const ControladorPerfilProfesor = (teacherId) => {
   const [teacherProfile, setTeacherProfile] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -16,15 +15,15 @@ export const ControladorPerfilProfesor = () => {
         const teacher = await TeacherService.getTeacherById(teacherId);
         const colleges = await CollegeService.getCollegesByTeacherId(teacherId);
         const courses = await CourseService.getCoursesByTeacherId(teacherId);
-        const { reviews, usedLabelNames } = await ReviewService.getReviewsForTeacher(teacherId);
-        console.log('📋 Reviews obtenidas:', reviews);
-        console.log('💬 Primer comentario:', reviews[0]?.review?.comment);
+        const { reviews, usedLabelNames, promedios } = await ReviewService.getReviewsForTeacher(teacherId);
+        console.log('Reviews obtenidas:', reviews);
+        console.log('Primer comentario:', reviews[0]?.review?.comment);
 
         const profile = {
           name: teacher.name,
           image: teacher.image_url,
-          facilidad: teacher.facilidad,
-          calidad: teacher.calidad,
+          facilidad: promedios.facilidad, 
+          calidad: promedios.calidad,   
           description: teacher.description,
           colleges: colleges.map(c => ({ id: c.college_id, name: c.name })),
           courses: courses.map(c => c.name),

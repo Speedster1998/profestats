@@ -11,14 +11,14 @@
     "name": "Jose Manuel Castillo Cara",
     "image_url": "https://cris.ulima.edu.pe/files-asset/19339051/ManuelCastillo_Cara_rec.jpg?w=320&f=webp",
     "college_id": 1,
-    "description": ""
+    "description": "Especialista en análisis de datos y optimización de sistemas informáticos. Ha trabajado en proyectos de automatización y se enfoca en la enseñanza práctica."
   },
   {
     "teacher_id": 3,
     "name": "Oscar Eduardo Castillo Ruiz",
     "image_url": "https://cris.ulima.edu.pe/files-asset/19346475/CARNET_ARCHIVO_castillo.jpg?w=320&f=webp",
     "college_id": 1,
-    "description": ""
+    "description": "Ingeniero con trayectoria en desarrollo de aplicaciones empresariales. Apasionado por la integración de nuevas tecnologías en el sector educativo."
   },
   {
     "teacher_id": 4,
@@ -32,35 +32,35 @@
     "name": "Raul Diaz Parra",
     "image_url": "https://cris.ulima.edu.pe/files-asset/19466248/rd.jpg?w=320&f=webp",
     "college_id": 1,
-    "description": ""
+    "description": "Consultor y profesor en áreas de inteligencia de negocios y ciencia de datos. Fomenta el pensamiento crítico en sus alumnos."
   },
   {
     "teacher_id": 6,
     "name": "Edwin Jonathan Escobedo Cardenas",
     "image_url": "https://cris.ulima.edu.pe/files-asset/40822754/EEscobedo.jpg?w=320&f=webp",
     "college_id": 1,
-    "description": ""
+    "description": "Ingeniero de software con interés en el diseño de experiencias de usuario. Promueve el aprendizaje basado en proyectos."
   },
   {
     "teacher_id": 7,
     "name": "Billy Grados Licham",
     "image_url": "https://cris.ulima.edu.pe/files-asset/19077851/me2.jpg?w=320&f=webp",
     "college_id": 1,
-    "description": ""
+    "description": "Profesor con amplia experiencia en sistemas distribuidos y metodologías ágiles. Le apasiona ver cómo los estudiantes aplican la teoría en la práctica."
   },
   {
     "teacher_id": 8,
     "name": "Juan Manuel Gutierrez Cardenas",
     "image_url": "https://cris.ulima.edu.pe/files-asset/12789239/229309.jpg?w=320&f=webp",
     "college_id": 1,
-    "description": ""
+    "description": "Enfocado en bases de datos y minería de datos. Destaca por su atención personalizada a cada estudiante."
   },
   {
     "teacher_id": 9,
     "name": "Rosario Marybel Guzman Jimenez",
     "image_url": "https://cris.ulima.edu.pe/files-asset/18592982/19229.jpg?w=320&f=webp",
     "college_id": 1,
-    "description": ""
+    "description": "Especialista en sistemas empresariales y procesos digitales. Ha capacitado a profesionales en transformación digital."
   },
   {
     "teacher_id": 10,
@@ -74,63 +74,63 @@
     "name": "Ludwin Misael León Hilario",
     "image_url": "https://cris.ulima.edu.pe/files-asset/19075109/Le_n_Hilario_Misael.png?w=320&f=webp",
     "college_id": 1,
-    "description": ""
+    "description": "Docente con experiencia en tecnologías web y móviles. Combina su formación técnica con un enfoque innovador de enseñanza."
   },
   {
     "teacher_id": 12,
     "name": "Angela Mayhua Quispe",
     "image_url": "",
     "college_id": 1,
-    "description": ""
+    "description": "Apasionada por la educación y la tecnología. Experta en diseño instruccional y herramientas de aprendizaje digital."
   },
   {
     "teacher_id": 13,
     "name": "Francisco Rolando Montero Cordova",
     "image_url": "https://cris.ulima.edu.pe/files-asset/12787175/103799.jpg?w=320&f=webp",
     "college_id": 1,
-    "description": ""
+    "description": "Amplia trayectoria en docencia universitaria y gestión académica. Con experiencia en evaluación de programas educativos."
   },
   {
     "teacher_id": 14,
     "name": "Hernan Nina Hanco",
     "image_url": "https://cris.ulima.edu.pe/files-asset/24695965/Hernan1.jpg?w=320&f=webp",
     "college_id": 1,
-    "description": ""
+    "description": "Ingeniero de sistemas con especialización en ciberseguridad. Brinda una enseñanza basada en problemas reales del sector."
   },
   {
     "teacher_id": 15,
     "name": "Hernan Alejandro Quintana Cruz",
     "image_url": "https://cris.ulima.edu.pe/files-asset/12788855/135713.jpg?w=320&f=webp",
     "college_id": 1,
-    "description": ""
+    "description": "Desarrollador de software orientado a sistemas financieros. Le interesa la aplicación de IA en procesos empresariales."
   },
   {
     "teacher_id": 16,
     "name": "Henry Eustaquio Quintanilla Cárdenas",
     "image_url": "https://cris.ulima.edu.pe/files-asset/33053986/MI_FOTO.jpeg?w=320&f=webp",
     "college_id": 1,
-    "description": ""
+    "description": "Docente con vocación por la educación superior. Ha participado en proyectos de investigación sobre accesibilidad digital."
   },
   {
     "teacher_id": 17,
     "name": "Lennin Paul Quiroz Villalobos",
     "image_url": "https://cris.ulima.edu.pe/files-asset/12789498/250079.jpg?w=320&f=webp",
     "college_id": 1,
-    "description": ""
+    "description": "Ingeniero informático con experiencia en aplicaciones móviles. Crea entornos de aprendizaje dinámicos y retadores."
   },
   {
     "teacher_id": 18,
     "name": "Lourdes Ramírez Cerna",
     "image_url": "https://cris.ulima.edu.pe/files-asset/41097254/foto_luli.png?w=320&f=webp",
     "college_id": 1,
-    "description": ""
+    "description": "Especialista en sistemas de información y dirección de proyectos. Fomenta el trabajo colaborativo en sus cursos."
   },
   {
     "teacher_id": 19,
     "name": "José A. Rodríguez Melquiades",
     "image_url": "",
     "college_id": 1,
-    "description": ""
+    "description": "Consultor en sistemas de gestión empresarial. Combina experiencia en industria y academia para una enseñanza integral."
   },
   {
     "teacher_id": 20,
@@ -144,48 +144,48 @@
     "name": "Paulo Nazareno Sampaio Maia",
     "image_url": "assets/images/teachers/profile22.png",
     "college_id": 1,
-    "description": ""
+    "description": "Profesor internacional con enfoque en inteligencia artificial y ética tecnológica. Promueve la reflexión crítica."
   },
   {
     "teacher_id": 22,
     "name": "Franci Suni Lopez",
     "image_url": "https://cris.ulima.edu.pe/files-asset/26099875/70616223Foto.jpg?w=320&f=webp",
     "college_id": 1,
-    "description": ""
+    "description": "Docente con experiencia en visualización de datos y desarrollo front-end. Le interesa el diseño centrado en el usuario."
   },
   {
     "teacher_id": 23,
     "name": "José Antonio Taquía Gutiérrez",
     "image_url": "https://cris.ulima.edu.pe/files-asset/19021087/JATG.png?w=320&f=webp",
     "college_id": 1,
-    "description": ""
+    "description": "Líder académico con experiencia en metodologías activas. Enfocado en el desarrollo de competencias digitales en educación."
   },
   {
     "teacher_id": 24,
     "name": "Alonso Tenorio Trigoso",
     "image_url": "https://cris.ulima.edu.pe/files-asset/19358853/tenorio.jpg?w=320&f=webp",
     "college_id": 1,
-    "description": ""
+    "description": "Investigador y desarrollador en software educativo. Explora el uso de simuladores y entornos interactivos en sus clases."
   },
   {
     "teacher_id": 25,
     "name": "Jean Pierre Tincopa Flores",
     "image_url": "https://cris.ulima.edu.pe/files-asset/60620043/perfil_cti.png?w=320&f=webp",
     "college_id": 1,
-    "description": ""
+    "description": "Profesor joven e innovador. Creador de aplicaciones enfocadas en la mejora del aprendizaje colaborativo."
   },
   {
     "teacher_id": 26,
     "name": "Carlos Martin Torres Paredes",
     "image_url": "https://cris.ulima.edu.pe/files-asset/19436004/52127.jpg?w=320&f=webp",
     "college_id": 1,
-    "description": ""
+    "description": "Ingeniero con sólida base matemática. Apasionado por la ciencia de datos y la enseñanza basada en evidencia."
   },
   {
     "teacher_id": 27,
     "name": "Olga Zumarán Alayo",
     "image_url": "https://cris.ulima.edu.pe/files-asset/26035388/Olga_Zumar_n.png?w=320&f=webp",
     "college_id": 1,
-    "description": ""
+    "description": "Profesora con experiencia en innovación educativa y TIC. Desarrolla contenido para ambientes virtuales de aprendizaje."
   }
 ]

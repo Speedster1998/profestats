@@ -1,6 +1,6 @@
 import '../Boton/Boton.css';
 
-const Boton = ({ texto, tipo = 'button', onClick, width = '460px', height = '55px' }) => {
+const Boton = ({ texto, tipo = 'button', onClick, width = '440px', height = '65px' }) => {
   const style = {
     width,
     height,
