@@ -14,6 +14,10 @@ import PerfilProfesor from "./Pages/PerfilProfesor/PerfilProfesor";
 function App() {
     const [logged, setLogged] = useState()
 
+    useEffect(() => {
+        setLogged(localStorage.getItem("logged") === "true")
+    }, [])
+
     const unloggedRoutes = [
         { path: "/", element: <Landing/> },
         { path: "/login", element: <Login/> },
@@ -29,8 +33,7 @@ function App() {
     ];
     
     const CheckRoute = ({ children, loggedIn, elseRoute }) => {
-        const IsLoggedIn = () => localStorage.getItem("logged") === "true";
-        return IsLoggedIn() === loggedIn ? children : <Navigate to={elseRoute} />;
+        return logged === loggedIn ? children : <Navigate to={elseRoute} />;
     };
 
     return <FondoDecorativo>
