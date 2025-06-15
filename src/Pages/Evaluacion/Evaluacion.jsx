@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Header from "../../Componentes/Header/Header.jsx";
 import FondoDecorativo from "../../Componentes/Fondo/Fondo.jsx";
 import profesores from "../../data/Profesores.json";
@@ -10,8 +10,11 @@ import preguntas from "../../data/Preguntas.json";
 import "./Evaluacion.css";
 
 const Evaluacion = () => {
-  const location = useLocation();
-  const { profesorId } = location.state || {};
+  const { teacherId } = useParams();
+  const parsedProfesorId = parseInt(teacherId);
+
+  const profesor = profesores.find((p) => p.teacher_id === parsedProfesorId);
+  if (!profesor) return <div>Profesor no encontrado.</div>;
 
   const [curso, setCurso] = useState("");
   const [claridad, setClaridad] = useState("");
@@ -26,7 +29,7 @@ const Evaluacion = () => {
   const [caracteristicas, setCaracteristicas] = useState([]);
 
   const cursosDelProfesor = relaciones
-    .filter((rel) => rel.profesor_id === profesorId)
+    .filter((rel) => rel.teacher_id === parsedProfesorId)
     .map((rel) => cursosData.find((c) => c.course_id === rel.course_id))
     .filter(Boolean);
 
@@ -58,7 +61,13 @@ const Evaluacion = () => {
     ["Muy confuso", "Confuso", "Algo claro", "Bastante claro", "Súper claro"][v - 1] || "";
 
   const descriptorAyuda = (v) =>
-    ["No ayuda nada", "Le tienes que rogar por algo de ayuda", "Si le pides ayuda, te la da", "Lo más probable es que te ayude", "Ayuda bastante"][v - 1] || "";
+    [
+      "No ayuda nada",
+      "Le tienes que rogar por algo de ayuda",
+      "Si le pides ayuda, te la da",
+      "Lo más probable es que te ayude",
+      "Ayuda bastante"
+    ][v - 1] || "";
 
   const descriptorFacilidad = (v) =>
     ["Muy difícil", "Difícil", "Lo usual", "Fácil", "Súper fácil"][v - 1] || "";
@@ -74,10 +83,23 @@ const Evaluacion = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const cursoValido = cursosDelProfesor.some((c) => c.name === curso);
+    if (!cursoValido) {
+      alert("El curso seleccionado no pertenece al profesor.");
+      return;
+    }
+
     const calificacionGeneral = calcularPromedio(claridad, ayuda, facilidad);
 
     const usuario = anonimo
-      ? usuarios.find((u) => u.user_id === 1)
+      ? {
+          user_id: 1,
+          username: "Alumno",
+          email: "alumno@aloe.ulima.edu.pe",
+          password: "123456",
+          college_id: 1,
+          image_url: require("../../Images/profileDefault.png")
+        }
       : {
           user_id: "actual",
           username: "Usuario Actual",
@@ -86,7 +108,7 @@ const Evaluacion = () => {
         };
 
     const datos = {
-      profesorId,
+      profesorId: parsedProfesorId,
       curso,
       claridad,
       ayuda,
@@ -124,6 +146,8 @@ const Evaluacion = () => {
 
   return (
     <div className="evaluacion-container">
+      <h6>Evaluando a: {profesor.name}</h6>
+      <br/>
       <h1>Elige tu curso</h1>
       <select
         value={curso}

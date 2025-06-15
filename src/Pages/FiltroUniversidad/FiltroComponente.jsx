@@ -5,8 +5,8 @@ import teacher_courses from '../../data/Relacion_Profesor_Curso.json'
 import teachersData from '../../data/Profesores.json'
 import coursesData from '../../data/Cursos.json'
 import facultyData from '../../data/Facultad.json'
-import labelData from '../../data/labels.json'
-import reviews from '../../data/review.json';
+import labelData from '../../data/PreguntasContenido.json'
+import reviews from '../../data/Resena.json';
 import review_labels from '../../data/review_labels.json';
 
 const FiltroComponente = ({id, changeTeacherId}) => {
