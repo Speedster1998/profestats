@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ReviewItem from '../../Componentes/Perfil/ReviewItem';
 import "./Perfil.css";
 
 const Perfil = () => {
@@ -57,7 +56,7 @@ const Perfil = () => {
 
                 {editIndex === index ? (
                   <>
-                    <p>📘 <strong>Curso:</strong> {rev.curso} 📝 <strong>Nueva nota:</strong> <input type="number" value={editNota} onChange={(e) => setEditNota(e.target.value)} /></p>
+                    <p>📘 <strong>Curso:</strong> {rev.curso} 🧾 <strong>Nueva nota:</strong> <input type="number" value={editNota} onChange={(e) => setEditNota(e.target.value)} /></p>
                     <p><strong>Comentario:</strong></p>
                     <textarea
                       rows={3}
@@ -65,13 +64,13 @@ const Perfil = () => {
                       onChange={(e) => setEditComentario(e.target.value)}
                     />
                     <div style={{ marginTop: "10px" }}>
-                      <button onClick={saveChanges}>💾 Guardar</button>
-                      <button onClick={cancelEdit} style={{ marginLeft: "10px" }}>❌ Cancelar</button>
+                      <button onClick={saveChanges}>Guardar</button>
+                      <button onClick={cancelEdit} style={{ marginLeft: "10px" }}>Cancelar</button>
                     </div>
                   </>
                 ) : (
                   <>
-                    <p>📘 <strong>Curso:</strong> {rev.curso} 📝 <strong>Nota recibida:</strong> {rev.nota}</p>
+                    <p>📘 <strong>Curso:</strong> {rev.curso} 🧾 <strong>Nota recibida:</strong> {rev.nota}</p>
                     <p className="comentario">{rev.comentario}</p>
                   </>
                 )}
