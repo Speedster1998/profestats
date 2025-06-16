@@ -8,7 +8,7 @@ const Perfil = () => {
   const [editNota, setEditNota] = useState("");
 
   useEffect(() => {
-    fetch("./src/data/dataPerfil.json")
+    fetch("./src/data/reviews-Perfil.json")
       .then((res) => res.json())
       .then((data) => setReviews(data))
       .catch((err) => console.error("Error cargando datos:", err));
@@ -50,9 +50,9 @@ const Perfil = () => {
         {reviews.map((rev, index) => (
           <div className="review" key={index}>
             <div className="review-info">
-              <img src="https://i.pravatar.cc/100?img=13" alt="anon" className="mini-avatar" />
+              <img src={rev["image-url"]} alt="profe" className="mini-avatar" />
               <div className="contenido">
-                <p className="perfil-anon"><strong>{rev.anon}</strong> · 4d</p>
+                <p className="perfil-nombreProfesor"><strong>{rev.nombreProfesor}</strong> · {rev.dia}</p>
 
                 {editIndex === index ? (
                   <>
