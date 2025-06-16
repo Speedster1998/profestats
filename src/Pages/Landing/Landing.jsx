@@ -1,8 +1,18 @@
+import { useNavigate } from 'react-router-dom';
+import profeLanding from "@/Images/profeLanding.png";
 import "./landing.css";
-import profeLanding from "@/Images/profeLanding.png"
+import HeaderLanding from "@/Componentes/Header/HeaderLanding.jsx"
 
 const Landing = () => {
+    const navigate = useNavigate();
+
+    const Registarse = () => {
+        navigate('/signin')
+    }
+
     return (
+    <>
+    <HeaderLanding onRegisterClick={Registarse}/>
     <section>
         <div className="text-section">
             <h1>
@@ -14,7 +24,7 @@ const Landing = () => {
                 ¿Tuviste un profesor increíble que hizo más fácil aprender? ¿O uno que podría mejorar su forma de enseñar?<br/>
                 Calificar y comentar sobre tus profesores no solo te permite expresar tu experiencia, sino que también ayuda a cientos de estudiantes como tú a tomar mejores decisiones académicas.
             </p>
-            <button className="register-button">REGISTRARSE<span className="arrow">→</span></button>
+            <button className="register-button" onClick={Registarse}>REGISTRARSE<span className="arrow">→</span></button>
         </div>
         <div className="image-section">
             <img src={profeLanding} alt="Profesor" />
@@ -23,6 +33,7 @@ const Landing = () => {
             <button className="help-button">?</button>
         </div>
     </section>
+    </>
     )
 }
 
