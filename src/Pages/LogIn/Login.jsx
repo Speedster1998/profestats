@@ -14,16 +14,22 @@ const Login = () => {
         e.preventDefault();
         console.log("email:", email);
         console.log("contraseña:", password);
-        // lógica de autenticación aquí
-        const response = UserService.login(email,password);
-        if (response !== null){
-            // Ingresar pagina
-            navigate('/filtrogeneral');
-            console.log(response)
+        
+         const usuarioGuardado = JSON.parse(localStorage.getItem("usuario"));
+
+        if (
+            usuarioGuardado &&
+            usuarioGuardado.email === email &&
+            usuarioGuardado.password === password
+        ) {
+            console.log("Inicio de sesión exitoso");
+            localStorage.setItem("logged", "true");
+            navigate("/perfil");
         } else {
-            // Rebotar restriccion  
-            setWarning('Usuario o cnotraseña equivocados')
+            console.log("Credenciales incorrectas");
+            setWarning("Correo o contraseña incorrectos");
         }
+
     };
 
     return (

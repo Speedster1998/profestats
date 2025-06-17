@@ -6,7 +6,9 @@ const Header = () => {
   const navigate = useNavigate();
 
   const CerrarSesion = () => {
+    localStorage.setItem("logged", "false");
     navigate('/')
+    
   }
 
   return (

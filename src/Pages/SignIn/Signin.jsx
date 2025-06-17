@@ -30,19 +30,13 @@ const Signin = () => {
         }else{
             setWarning("")
 
-            // Leer usuarios actuales (si hay)
-            const usuariosGuardados = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-            // Crear nuevo usuario
             const nuevoUsuario = {
                 username,
                 email,
                 password
             };
 
-            // Guardar en el array y luego en localStorage
-            usuariosGuardados.push(nuevoUsuario);
-            localStorage.setItem("usuarios", JSON.stringify(usuariosGuardados));
+            localStorage.setItem("usuario", JSON.stringify(nuevoUsuario));
 
             // Opcional: limpiar el formulario
             setUsername("");
