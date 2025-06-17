@@ -10,13 +10,14 @@ import Perfil from "./Pages/Perfil/Perfil";
 import FiltroUniversidad from "./Pages/FiltroUniversidad/FiltroUniversidad";
 import FiltroGeneral from "./Pages/FiltroGeneral/FiltroGeneral";
 import PerfilProfesor from "./Pages/PerfilProfesor/PerfilProfesor";
+import LoginTest from "./Pages/Login2/LoginTest";
 
 function App() {
-    const [logged, setLogged] = useState(true)
+    const [logged, setLogged] = useState(null)
 
-    /*useEffect(() => {
+    useEffect(() => {
         setLogged(localStorage.getItem("logged") === "true")
-    }, [])*/
+    }, [])
 
     const unloggedRoutes = [
         { path: "/", element: <Landing/> },
@@ -38,7 +39,7 @@ function App() {
 
     return <FondoDecorativo>
         {logged && <Header/>}
-        {logged !== undefined &&
+        {logged !== null &&
         <Routes>
             {unloggedRoutes.map(({ path, element }, index) => (
                 <Route key={index} path={path} element={<CheckRoute loggedIn={false} elseRoute="/perfil">{element}</CheckRoute>} />
