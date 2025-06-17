@@ -12,11 +12,11 @@ import FiltroGeneral from "./Pages/FiltroGeneral/FiltroGeneral";
 import PerfilProfesor from "./Pages/PerfilProfesor/PerfilProfesor";
 
 function App() {
-    const [logged, setLogged] = useState()
+    const [logged, setLogged] = useState(true)
 
-    useEffect(() => {
+    /*useEffect(() => {
         setLogged(localStorage.getItem("logged") === "true")
-    }, [])
+    }, [])*/
 
     const unloggedRoutes = [
         { path: "/", element: <Landing/> },
@@ -26,7 +26,7 @@ function App() {
 
     const loggedRoutes = [
         { path: "/perfil", element: <Perfil/> },
-        { path: "/perfilProfesor", element: <PerfilProfesor/> },
+        { path: "/perfilProfesor/:teacherId", element: <PerfilProfesor/> },
         { path: "/evaluacion/:teacherId", element: <Evaluacion/> },
         { path: "/filtrouniversidad/:collegeId", element: <FiltroUniversidad/> },
         { path: "/filtrogeneral", element: <FiltroGeneral/> }
