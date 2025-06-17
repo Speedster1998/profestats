@@ -5,17 +5,17 @@ import { UserService } from "../../Services/user_services.jsx";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [warning, setWarning] = useState("");
     const navigate = useNavigate()
 
     const handleLogin = (e) => {
         e.preventDefault();
-        console.log("usuario:", username);
+        console.log("email:", email);
         console.log("contraseña:", password);
         // lógica de autenticación aquí
-        const response = UserService.login(username,password);
+        const response = UserService.login(email,password);
         if (response !== null){
             // Ingresar pagina
             navigate('/filtrogeneral');
@@ -36,8 +36,8 @@ const Login = () => {
                 href="/signin"
                 footer2="Regístrate ahora"
                 onSubmit={handleLogin}
-                emailText={username}
-                setEmail={setUsername}
+                emailText={email}
+                setEmail={setEmail}
                 passwordText={password}
                 setPassword={setPassword}
                 warningText={warning}

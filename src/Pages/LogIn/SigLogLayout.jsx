@@ -15,6 +15,8 @@ const SigLogLayout = ({
     setPassword,
     repeatPassword,
     setRepeat,
+    username,
+    setUsername,
     warningText = ''
 }) => {
     const InputGroup = ({ type, placeholder, icon, value, onChange }) => (
@@ -37,6 +39,18 @@ const SigLogLayout = ({
             {subtitle !== "" && <p className={styles.subtitle}>{subtitle}</p>}
 
             <form className={styles.form} onSubmit={onSubmit}>
+                {subtitle !== "" && (
+                    <div className={styles.inputGroup}>
+            <input
+                type="text"
+                className={styles.input}
+                placeholder="Usuario"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+            />
+            <i className={`bi bi-person ${styles.icon}`}></i>
+        </div>
+                )}
                 <div className={styles.inputGroup}>
             <input
                 type="email"
@@ -66,7 +80,7 @@ const SigLogLayout = ({
                 value={repeatPassword}
                 onChange={(e) => setRepeat(e.target.value)}
             />
-            <i className={`bi bi-eye ${styles.icon}`}></i>
+            <i className={`bi bi-repeat ${styles.icon}`}></i>
         </div>
                 )}
                 {warningText !== '' ? <div className="alert alert-danger mb-0">{warningText}</div> : <></>}
