@@ -42,7 +42,6 @@ const FiltroComponente = ({id, changeTeacherId}) => {
         setFaculties(facultyData.filter(x => x.college_id === id))
         console.log(labels)
         
-
         //Asginar primer perfil de profesor
         changeTeacherId(teachers_ids[0].teacher_id)
     }, []);

@@ -1,57 +1,52 @@
 [
   {
-    "group_id": 1,
-    "name": "curso",
-    "text": "Elige tu curso"
-  },
-  {
     "group_id": 2,
-    "name": "claridad",
-    "text": "Claridad"
-  },
-  {
-    "group_id": 3,
-    "name": "ayuda",
-    "text": "Ayuda"
+    "name": "curso",
+    "text": "Elige el curso"
   },
   {
     "group_id": 4,
-    "name": "facilidad",
-    "text": "Facilidad"
+    "name": "Puntualidad",
+    "text": "¿El profesor llega y termina a tiempo sus clases?"
   },
   {
     "group_id": 5,
-    "name": "interes",
-    "text": "Tu interés en clase"
+    "name": "Uso de recursos",
+    "text": "¿Utiliza materiales o recursos que apoyan el aprendizaje?"
   },
   {
     "group_id": 6,
-    "name": "recomienda",
-    "text": "¿Lo recomiendas?"
+    "name": "Interacción con estudiantes",
+    "text": "¿Fomenta la participación y responde preguntas?"
   },
   {
     "group_id": 7,
-    "name": "asistencia",
-    "text": "Asistencia a clase"
+    "name": "Evaluación justa",
+    "text": "¿Las evaluaciones son coherentes con lo enseñado?"
   },
   {
     "group_id": 8,
-    "name": "calificacion",
-    "text": "¿Qué calificación le das al profesor?"
+    "name": "Retroalimentación",
+    "text": "¿Proporciona comentarios útiles para mejorar?"
   },
   {
     "group_id": 9,
-    "name": "caracteristicas",
-    "text": "¿Cuáles de estas frases describen mejor al profesor?"
+    "name": "Actitud profesional",
+    "text": "¿Mantiene una actitud respetuosa y profesional?"
   },
   {
     "group_id": 10,
-    "name": "comentario",
-    "text": "Añadir un comentario (opcional)"
+    "name": "Motivación",
+    "text": "¿Inspira o motiva a los estudiantes a aprender?"
   },
   {
-    "group_id": 11,
-    "name": "anonimo",
-    "text": "¿Quieres que tu calificación sea anónima?"
+    "group_id": 1,
+    "name": "claridad",
+    "text": "En general, ¿qué calificación le darías al profesor?"
+  },
+  {
+    "group_id": 3,
+    "name": "comentario",
+    "text": "Añade un comentario\n(opcional)"
   }
 ]

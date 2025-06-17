@@ -7,10 +7,10 @@ import Boton from '../../Componentes/Boton/Boton';
 import { ControladorPerfilProfesor } from './ControladorPerfilProfesor';
 const MAX_LENGTH = 150;
 
-const PerfilProfesor = ({idTeacher}) => {
+const PerfilProfesor = ({ idTeacher }) => {
     const navigate = useNavigate();
-    const { teacherProfile: teacher, loading } = ControladorPerfilProfesor(idTeacher);
-        const [showFullDescription, setShowFullDescription] = useState(false);
+    const { teacherProfile: teacher, loading, handleLike, handleDislike } = ControladorPerfilProfesor(idTeacher);
+    const [showFullDescription, setShowFullDescription] = useState(false);
 
     if (loading || !teacher) return <p className="text-center mt-5">Cargando...</p>;
 
@@ -102,6 +102,8 @@ const PerfilProfesor = ({idTeacher}) => {
                                 dislikes: r.review.dislikes
                             }}
                             showCourse={true}
+                            onLike={() => handleLike(r.review.review_id)}
+                            onDislike={() => handleDislike(r.review.review_id)}
                         />
                     ))}
                 </div>
