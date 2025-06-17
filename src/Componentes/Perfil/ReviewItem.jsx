@@ -1,7 +1,7 @@
 import './ReviewItem.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-const ReviewItem = ({ review, showCourse }) => {
+const ReviewItem = ({ review, showCourse, onLike, onDislike  }) => {
   return (
     <div className="review-item">
       <div className="left-section">
@@ -37,11 +37,11 @@ const ReviewItem = ({ review, showCourse }) => {
         <div className="emoji">{review.emoji || '😊'}</div>
         <div className="rating-label">{review.ratingLabel}</div>
         <div className="vote-icons">
-          <div className="vote-item">
+          <div className="vote-item" onClick={onLike}>
             <i className="bi bi-hand-thumbs-up"></i>
             <span className="vote-count">{review.likes ?? 0}</span>
           </div>
-          <div className="vote-item ms-3">
+          <div className="vote-item ms-3" onClick={onDislike}>
             <i className="bi bi-hand-thumbs-down"></i>
             <span className="vote-count">{review.dislikes ?? 0}</span>
           </div>
