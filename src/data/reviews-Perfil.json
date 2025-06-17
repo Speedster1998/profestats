@@ -1,0 +1,35 @@
+[
+  {
+    "nombreProfesor": "Hernan Nina Hanco",
+    "image-url": "https://cris.ulima.edu.pe/files-asset/24695965/Hernan1.jpg?w=320&f=webp",
+    "curso": "Program. Orientada a Objetos",
+    "nota": 9,
+    "comentario": "Es un profe que le apasiona el software.",
+    "dia": "21-06-2023",
+    "tags": ["Enseña bien", "Asistencia obligatoria", "Didáctico"],
+    "emoji": "😊",
+    "ratingLabel": "Bueno"
+  },
+  {
+    "nombreProfesor": "Hernan Nina Hanco",
+    "image-url": "https://cris.ulima.edu.pe/files-asset/24695965/Hernan1.jpg?w=320&f=webp",
+    "curso": "Program. Orientada a Objetos",
+    "nota": 9,
+    "comentario": "Siempre está dispuesto a apoyar a los alumnos.",
+    "dia": "21-06-2023",
+    "tags": ["Enseña bien", "Asistencia obligatoria", "Didáctico"],
+    "emoji": "💡",
+    "ratingLabel": "Excelente"
+  },
+  {
+    "nombreProfesor": "Franci Suni Lopez",
+    "image-url": "https://cris.ulima.edu.pe/files-asset/26099875/70616223Foto.jpg?w=320&f=webp",
+    "curso": "Lenguajes de Programación",
+    "nota": 8,
+    "comentario": "Excelente dominio del tema y muy claro.",
+    "dia": "01-07-2024",
+    "tags": ["Exigente", "Didáctico"],
+    "emoji": "💡",
+    "ratingLabel": "Excelente"
+  }
+]

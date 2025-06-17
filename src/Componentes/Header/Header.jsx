@@ -1,23 +1,22 @@
-import React from "react";
-import "./Header.css";
-import logo from "../../Images/logo.png"; // Cambia la ruta si usas otra ubicación
+import { useNavigate } from 'react-router-dom';
+import HeaderBase from './HeaderBase.jsx';
+import styles from "./Header.module.scss";
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const CerrarSesion = () => {
+    navigate('/')
+  }
+
   return (
-    <header className="header">
-      <div className="header-left">
-        <img src={logo} alt="ProfeStats logo" className="logo" />
-        <span className="brand-name">
-          <span className="brand-light">Profe</span>
-          <span className="brand-bold">Stats</span>
-        </span>
-      </div>
-      <nav className="nav">
+    <HeaderBase>
+      <nav className={styles.nav}>
         <a href="/filtrogeneral">BUSCAR</a>
         <a href="/perfil">PERFIL</a>
       </nav>
-      <button className="logout-btn">CERRAR SESIÓN</button>
-    </header>
+      <button className={styles.logoutBtn} onClick={CerrarSesion}>CERRAR SESIÓN</button>
+    </HeaderBase>
   );
 };
 

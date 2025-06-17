@@ -1,0 +1,123 @@
+[
+  {
+    "label_id": "curso",
+    "name": "curso",
+    "group_id": 1,
+    "opciones": [] 
+  },
+  {
+    "label_id": "claridad",
+    "name": "claridad",
+    "group_id": 2,
+    "opciones": [1, 2, 3, 4, 5],
+    "descriptores": [
+      "Muy confuso",
+      "Confuso",
+      "Algo claro",
+      "Bastante claro",
+      "Súper claro"
+    ]
+  },
+  {
+    "label_id": "ayuda",
+    "name": "ayuda",
+    "group_id": 3,
+    "opciones": [1, 2, 3, 4, 5],
+    "descriptores": [
+      "No ayuda nada",
+      "Le tienes que rogar por algo de ayuda",
+      "Si le pides ayuda, te la da",
+      "Lo más probable es que te ayude",
+      "Ayuda bastante"
+    ]
+  },
+  {
+    "label_id": "facilidad",
+    "name": "facilidad",
+    "group_id": 4,
+    "opciones": [1, 2, 3, 4, 5],
+    "descriptores": [
+      "Muy difícil",
+      "Difícil",
+      "Lo usual",
+      "Fácil",
+      "Súper fácil"
+    ]
+  },
+  {
+    "label_id": "interes",
+    "name": "interes",
+    "group_id": 5,
+    "opciones": [1, 2, 3, 4, 5],
+    "descriptores": [
+      "Casi nada",
+      "Poco interesado",
+      "Más o menos interesado",
+      "Interesado",
+      "Súper interesado"
+    ]
+  },
+  {
+    "label_id": "recomienda",
+    "name": "recomienda",
+    "group_id": 6,
+    "opciones": ["Sí", "No"]
+  },
+  {
+    "label_id": "asistencia",
+    "name": "asistencia",
+    "group_id": 7,
+    "opciones": ["Obligatoria", "No obligatoria"]
+  },
+  {
+    "label_id": "calificacion",
+    "name": "calificacion",
+    "group_id": 8,
+    "opciones": [
+      { "label": "Excelente", "emoji": "🤩" },
+      { "label": "Buena", "emoji": "🙂" },
+      { "label": "Regular", "emoji": "😐" },
+      { "label": "Mala", "emoji": "🙁" }
+    ]
+  },
+  {
+    "label_id": "caracteristicas",
+    "name": "caracteristicas",
+    "group_id": 9,
+    "opciones": [
+      "Tiene buena disposición",
+      "Responde dudas con claridad",
+      "Motiva a los estudiantes",
+      "Domina el curso",
+      "Es empático",
+      "Es puntual",
+      "Es organizado",
+      "Es accesible fuera de clase",
+      "Hace clases dinámicas",
+      "Explica con ejemplos claros",
+      "Transmite seguridad en lo que enseña",
+      "Hace seguimiento a los alumnos",
+      "Se preocupa por el aprendizaje",
+      "Fomenta la participación",
+      "Promueve el pensamiento crítico",
+      "Califica con justicia",
+      "Da buena retroalimentación",
+      "Las clases son excelentes",
+      "Tomaría su clase otra vez",
+      "Respetado por los estudiantes",
+      "Es muy cómico"
+    ]
+  },
+  {
+    "label_id": "comentario",
+    "name": "comentario",
+    "group_id": 10,
+    "opciones": []
+  },
+  {
+    "label_id": "anonimo",
+    "name": "anonimo",
+    "group_id": 11,
+    "opciones": ["Sí", "No"]
+  }
+]

@@ -9,7 +9,7 @@
   z-index: 10;
 }
 
-.header-left {
+.headerLeft {
   display: flex;
   align-items: center;
 }
@@ -20,16 +20,16 @@
   margin-right: 10px;
 }
 
-.brand-name {
+.brandName {
   font-size: 20px;
   font-weight: bold;
 }
 
-.brand-light {
+.brandLight {
   color: #b5ded4;
 }
 
-.brand-bold {
+.brandBold {
   color: #4df0b0;
 }
 
@@ -44,17 +44,32 @@
   color: white;
 }
 
-.logout-btn {
-  background-color: #91d6b2;
-  color: #1d3c2e;
-  border: none;
+.btn {
   padding: 10px 20px;
   border-radius: 30px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.2s ease;
 }
 
-.logout-btn:hover {
+.logoutBtn {
+  @extend .btn;
+  background-color: #91d6b2;
+  color: #1d3c2e;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+.logoutBtn:hover {
   background-color: #7dcaa2;
+}
+
+.registerBtn {
+  @extend .btn;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.registerBtn:hover {
+  background-color: white;
+  color: #1d3c2e;
 }
