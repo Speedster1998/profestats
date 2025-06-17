@@ -1,4 +1,4 @@
-import users from '../data/users.json';
+import users from '../data/Usuarios.json';
 
 export const UserService = {
   login: (email, password) => {
@@ -6,7 +6,7 @@ export const UserService = {
       user => user.email === email && user.password === password
     );
 
-    return matchingUser !== undefined;
+    return matchingUser;
   },
 
   loadUsersFromJson: () => {

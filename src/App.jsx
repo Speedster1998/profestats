@@ -10,14 +10,21 @@ import Perfil from "./Pages/Perfil/Perfil";
 import FiltroUniversidad from "./Pages/FiltroUniversidad/FiltroUniversidad";
 import FiltroGeneral from "./Pages/FiltroGeneral/FiltroGeneral";
 import PerfilProfesor from "./Pages/PerfilProfesor/PerfilProfesor";
-import LoginTest from "./Pages/Login2/LoginTest";
-
 function App() {
-    const [logged, setLogged] = useState(null)
+    const [logged, setLogged] = useState(false)
+    const [userId, setUserId] = useState(0);
 
     useEffect(() => {
-        setLogged(localStorage.getItem("logged") === "true")
+        if (localStorage.getItem("userid") !== null) {
+            setLogged(true)
+            setUserId(parseInt(localStorage.getItem("userid")))
+        }
     }, [])
+
+    const logIn = () => {
+        
+    }
+    
 
     const unloggedRoutes = [
         { path: "/", element: <Landing/> },

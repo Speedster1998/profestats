@@ -14,7 +14,8 @@ const SigLogLayout = ({
     passwordText,
     setPassword,
     repeatPassword,
-    setRepeat
+    setRepeat,
+    warningText = ''
 }) => {
     const InputGroup = ({ type, placeholder, icon, value, onChange }) => (
         <div className={styles.inputGroup}>
@@ -68,6 +69,7 @@ const SigLogLayout = ({
             <i className={`bi bi-eye ${styles.icon}`}></i>
         </div>
                 )}
+                {warningText !== '' ? <div className="alert alert-danger mb-0">{warningText}</div> : <></>}
                 <button type="submit" className={styles.button}>{buttonText}</button>
             </form>
 
