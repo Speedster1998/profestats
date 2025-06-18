@@ -1,30 +1,11 @@
-import reviewJson from '../data/Resena.json';
-import reviewLabelsJson from '../data/review_labels.json';
-import labelsJson from '../data/PreguntasContenido.json';
-import usersJson from '../data/Usuarios.json';
-import coursesJson from '../data/Cursos.json';
-import teachersJson from '../data/Profesores.json';
-
 class ReviewService {
-  constructor() {
-    const storedReviews = JSON.parse(localStorage.getItem('reviews'));
-    const storedReviewLabels = JSON.parse(localStorage.getItem('reviewLabels'));
-
-    this.reviews = storedReviews || [...reviewJson].map(r => ({
-      ...r,
-      likes: r.likes ?? 0,
-      dislikes: r.dislikes ?? 0,
-    }));
-
-    this.reviewLabels = storedReviewLabels || [...reviewLabelsJson];
-
-    this.labels = [...labelsJson];
-    const storedUsers = JSON.parse(localStorage.getItem('Usuarios'));
-    this.users = storedUsers || [...usersJson];
-
-    this.courses = [...coursesJson];
-    this.teachers = [...teachersJson];
-
+   constructor() {
+    this.reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+    this.reviewLabels = JSON.parse(localStorage.getItem('reviewLabels')) || [];
+    this.labels = JSON.parse(localStorage.getItem('labels')) || [];
+    this.users = JSON.parse(localStorage.getItem('Usuarios')) || [];
+    this.courses = JSON.parse(localStorage.getItem('Cursos')) || [];
+    this.teachers = JSON.parse(localStorage.getItem('Profesores')) || [];
     this.nextReviewId = this._getMaxId(this.reviews, 'review_id') + 1;
     this.nextReviewLabelId = this._getMaxId(this.reviewLabels, 'review_label_id') + 1;
   }
@@ -33,7 +14,6 @@ class ReviewService {
     localStorage.setItem('reviews', JSON.stringify(this.reviews));
     localStorage.setItem('reviewLabels', JSON.stringify(this.reviewLabels));
   }
-
   _getMaxId(array, key) {
     return array.length > 0 ? Math.max(...array.map(item => item[key])) : 0;
   }
