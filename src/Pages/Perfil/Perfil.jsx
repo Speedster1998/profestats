@@ -61,7 +61,8 @@ const Perfil = () => {
             <div className="review-wrapper" key={r.review.review_id}>
               <ReviewItem
                 review={{
-                  image: r.user.image_url || '/default-avatar.png',
+                  anonimo: r.review.anonimo,
+                  image: r.user.image_url || '/profileDefault.png',
                   username: r.user.username,
                   date: r.review.date,
                   course: r.courseName,

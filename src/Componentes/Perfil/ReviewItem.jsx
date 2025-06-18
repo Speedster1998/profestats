@@ -5,10 +5,10 @@ const ReviewItem = ({ review, showCourse, onLike, onDislike }) => {
   return (
     <div className="review-item">
       <div className="left-section">
-        <img className="profile-pic" src={review.image || '/default-avatar.png'} alt="profile" />
+        <img className="profile-pic" src={review.anonimo ? '/anonimo.png' : (review.image || '/profileDefault.png')} alt="profile" />
         <div className="student-info">
           <div className="name-time">
-            <span className="name">{review.username}</span>
+             <span className="name">{review.anonimo ? 'Anónimo' : review.username}</span>
             <span className="time">{review.date}</span>
           </div>
           <div className="course-grade">

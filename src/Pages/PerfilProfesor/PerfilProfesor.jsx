@@ -90,7 +90,8 @@ const PerfilProfesor = ({ idTeacher }) => {
                         <ReviewItem
                             key={i}
                             review={{
-                                image: r.user.image_url || '/default-avatar.png',
+                                anonimo: r.review.anonimo,
+                                image: r.user.image_url || '/profileDefault.png',
                                 username: r.user.username,
                                 date: r.review.date,
                                 course: r.courseName,
