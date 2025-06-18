@@ -8,11 +8,13 @@ class ReviewService {
     this.teachers = JSON.parse(localStorage.getItem('Profesores')) || [];
     this.nextReviewId = this._getMaxId(this.reviews, 'review_id') + 1;
     this.nextReviewLabelId = this._getMaxId(this.reviewLabels, 'review_label_id') + 1;
+    this.reviewVotes = JSON.parse(localStorage.getItem('reviewVotes')) || {};
   }
 
   _saveToLocalStorage() {
     localStorage.setItem('reviews', JSON.stringify(this.reviews));
     localStorage.setItem('reviewLabels', JSON.stringify(this.reviewLabels));
+    localStorage.setItem('reviewVotes', JSON.stringify(this.reviewVotes));
   }
   _getMaxId(array, key) {
     return array.length > 0 ? Math.max(...array.map(item => item[key])) : 0;
@@ -209,24 +211,42 @@ class ReviewService {
     }
   }
 
-  addLike(reviewId) {
+  toggleLike(reviewId, userId) {
     const review = this.reviews.find(r => r.review_id === reviewId);
-    if (review) {
-      review.likes += 1;
-      console.log(`Like añadido a review ${reviewId}. Total likes: ${review.likes}`);
+    if (!review) return;
+
+    const key = `${userId}-${reviewId}`;
+    const previousVote = this.reviewVotes[key];
+
+    if (previousVote === 'like') {
+      review.likes -= 1;
+      delete this.reviewVotes[key];
     } else {
-      console.warn(`No se encontró la review con ID ${reviewId}`);
+      if (previousVote === 'dislike') review.dislikes -= 1;
+      review.likes += 1;
+      this.reviewVotes[key] = 'like';
     }
+
+    this._saveToLocalStorage();
   }
 
-  addDislike(reviewId) {
+  toggleDislike(reviewId, userId) {
     const review = this.reviews.find(r => r.review_id === reviewId);
-    if (review) {
-      review.dislikes += 1;
-      console.log(`Dislike añadido a review ${reviewId}. Total dislikes: ${review.dislikes}`);
+    if (!review) return;
+
+    const key = `${userId}-${reviewId}`;
+    const previousVote = this.reviewVotes[key];
+
+    if (previousVote === 'dislike') {
+      review.dislikes -= 1;
+      delete this.reviewVotes[key];
     } else {
-      console.warn(`No se encontró la review con ID ${reviewId}`);
+      if (previousVote === 'like') review.likes -= 1;
+      review.dislikes += 1;
+      this.reviewVotes[key] = 'dislike';
     }
+
+    this._saveToLocalStorage();
   }
 
   getAllReviews() {

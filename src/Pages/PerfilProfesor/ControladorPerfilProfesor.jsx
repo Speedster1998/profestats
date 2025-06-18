@@ -16,7 +16,6 @@ export const useControladorPerfilProfesor = (teacherId) => {
       const courses = await CourseService.getCoursesByTeacherId(teacherId);
       const { reviews, promedios, usedLabelStats } = await ReviewService.getReviewsForTeacher(teacherId);
 
-
       const caracteristicasLabels = usedLabelStats.filter(label => {
         const fullLabel = ReviewService.labels.find(l => l.name === label.name);
         return fullLabel?.group_id === 21;
@@ -45,14 +44,20 @@ export const useControladorPerfilProfesor = (teacherId) => {
     loadProfile();
   }, [teacherId]);
 
+  const currentUser = JSON.parse(localStorage.getItem('usuario'));
+
   const handleLike = (reviewId) => {
-    ReviewService.addLike(reviewId);
-    loadProfile(); // Refresca los datos
+    const userId = currentUser?.user_id;
+    if (!userId) return;
+    ReviewService.toggleLike(reviewId, userId);
+    loadProfile();
   };
 
   const handleDislike = (reviewId) => {
-    ReviewService.addDislike(reviewId);
-    loadProfile(); // Refresca los datos
+    const userId = currentUser?.user_id;
+    if (!userId) return;
+    ReviewService.toggleDislike(reviewId, userId);
+    loadProfile();
   };
 
   return {

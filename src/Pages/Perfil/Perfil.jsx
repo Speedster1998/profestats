@@ -28,13 +28,17 @@ const Perfil = () => {
   };
 
   const handleLike = (reviewId) => {
-    ReviewService.addLike(reviewId);
-    loadProfile(userData.user_id);
+    const userId = userData?.user_id;
+    if (!userId) return;
+    ReviewService.toggleLike(reviewId, userId);
+    loadProfile(userId);
   };
 
   const handleDislike = (reviewId) => {
-    ReviewService.addDislike(reviewId);
-    loadProfile(userData.user_id);
+    const userId = userData?.user_id;
+    if (!userId) return;
+    ReviewService.toggleDislike(reviewId, userId);
+    loadProfile(userId);
   };
 
   const startEditing = (index) => {
