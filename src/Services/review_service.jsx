@@ -1,5 +1,5 @@
 class ReviewService {
-   constructor() {
+  constructor() {
     this.reviews = JSON.parse(localStorage.getItem('reviews')) || [];
     this.reviewLabels = JSON.parse(localStorage.getItem('reviewLabels')) || [];
     this.labels = JSON.parse(localStorage.getItem('labels')) || [];
@@ -51,9 +51,19 @@ class ReviewService {
   async getReviewsByUser(userId) {
     const data = this._loadAllData();
     const userReviews = data.reviews.filter(r => r.user_id === userId);
-    return userReviews.map(reviewJson =>
-      this._buildReviewDisplay(reviewJson, data, true)
-    );
+
+    const reviewList = [];
+    const labelNames = new Set();
+
+    for (const reviewJson of userReviews) {
+      const display = this._buildReviewDisplay(reviewJson, data, true, labelNames);
+      reviewList.push(display);
+    }
+
+    return {
+      reviews: reviewList,
+      usedLabelNames: Array.from(labelNames)
+    };
   }
 
   _getCalidadFacilidadPromedio(teacherId) {

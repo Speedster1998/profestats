@@ -1,38 +1,44 @@
+// Perfil.jsx
 import React, { useState, useEffect } from "react";
 import "./Perfil.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import ReviewService from '../../Services/review_service';
+import ReviewItem from '../../Componentes/Perfil/ReviewItem';
 
 const Perfil = () => {
   const [reviews, setReviews] = useState([]);
-  const [editIndex, setEditIndex] = useState(null);
-  const [editComentario, setEditComentario] = useState("");
-  const [editNota, setEditNota] = useState("");
-
   const [userData, setUserData] = useState({});
+  const [editIndex, setEditIndex] = useState(null);
 
   useEffect(() => {
     const usuario = JSON.parse(localStorage.getItem("usuario"));
-    setUserData(usuario)
-    fetch("./src/data/reviews-Perfil.json")
-      .then((res) => res.json())
-      .then((data) => setReviews(data))
-      .catch((err) => console.error("Error cargando datos:", err));
+    setUserData(usuario);
+
+    if (usuario?.user_id) {
+      loadProfile(usuario.user_id);
+    }
   }, []);
+
+  const loadProfile = (userId) => {
+    ReviewService.getReviewsByUser(userId)
+      .then(({ reviews }) => setReviews(reviews))
+      .catch(console.error);
+  };
+
+  const handleLike = (reviewId) => {
+    ReviewService.addLike(reviewId);
+    loadProfile(userData.user_id);
+  };
+
+  const handleDislike = (reviewId) => {
+    ReviewService.addDislike(reviewId);
+    loadProfile(userData.user_id);
+  };
 
   const startEditing = (index) => {
     setEditIndex(index);
-    setEditComentario(reviews[index].comentario);
-    setEditNota(reviews[index].nota);
-  };
 
-  const saveChanges = () => {
-    const updated = [...reviews];
-    updated[editIndex].comentario = editComentario;
-    updated[editIndex].nota = parseFloat(editNota);
-    setReviews(updated);
-    setEditIndex(null);
   };
-
-  const cancelEdit = () => setEditIndex(null);
 
   return (
     <div className="perfil-container">
@@ -40,66 +46,44 @@ const Perfil = () => {
         <img src='../../../src/images/profileDefault.png' alt="perfil" className="avatar" />
         <h2>{userData.username}</h2>
         <p className="perfil-datos">
-            {userData.email}<br></br>
-            Tu nombre anónimo: <strong>AMSN</strong><br></br>
-            Universidad de Lima
+          {userData.email}<br></br>
+          Tu nombre anónimo: <strong>AMSN</strong><br></br>
+          Universidad de Lima
         </p>
       </div>
 
       <div className="historial">
-        <div className="top-bar">
-          <h3>Historial de calificaciones</h3>
-        </div>
-
-        {reviews.map((rev, index) => (
-          <div className="review" key={index}>
-            <div className="review-info">
-              <img src={rev["image-url"]} alt="profe" className="mini-avatar" />
-              <div className="contenido">
-                <p className="perfil-nombreProfesor"><strong>{rev.nombreProfesor}</strong> · {rev.dia}</p>
-
-                {editIndex === index ? (
-                  <>
-                    <p>📘 <strong>Curso:</strong> {rev.curso} 🧾 <strong>Nueva nota:</strong> <input className="perfil-numberbox" type="number" value={editNota} onChange={(e) => setEditNota(e.target.value)} /></p>
-                    <p><strong>Comentario:</strong></p>
-                    <textarea
-                      className="perfil-textbox"
-                      rows={2}
-                      value={editComentario}
-                      onChange={(e) => setEditComentario(e.target.value)}
-                    />
-                    <div style={{ marginTop: "10px" }}>
-                      <button className="perfil-guardar" onClick={saveChanges}>Guardar</button>
-                      <button className="perfil-cancelar" onClick={cancelEdit} style={{ marginLeft: "10px" }}>Cancelar</button>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <p>📘 <strong>Curso:</strong> {rev.curso} 🧾 <strong>Nota recibida:</strong> {rev.nota}</p>
-                    <p className="comentario">{rev.comentario}</p>
-                  </>
-                )}
-
-                <div className="tags">
-                  {rev.tags.map((tag, i) => (
-                    <span key={i}>{tag}</span>
-                  ))}
-                </div>
-              </div>
-              <div className="perfil-contenido-right-section">
-                <div className="perfil-emoji">{rev.emoji}</div>
-                <div className="rating-label">{rev.ratingLabel}</div>
-                <div className="vote-icons">👍 🔁</div>
-              </div>
+        <h3>Historial de calificaciones</h3>
+        {reviews.length > 0 ? (
+          reviews.map((r, i) => (
+            <div className="review-wrapper" key={r.review.review_id}>
+              <ReviewItem
+                review={{
+                  image: r.user.image_url || '/default-avatar.png',
+                  username: r.user.username,
+                  date: r.review.date,
+                  course: r.courseName,
+                  nota: r.review.nota,
+                  comment: r.review.comment,
+                  labels: r.labels,
+                  emoji: r.review.emoji,
+                  ratingLabel: '',
+                  likes: r.review.likes,
+                  dislikes: r.review.dislikes
+                }}
+                showCourse={true}
+                onLike={() => handleLike(r.review.review_id)}
+                onDislike={() => handleDislike(r.review.review_id)}
+                showEditButton={true}
+                onEdit={() => startEditing(i)}
+              />
             </div>
+          ))
+        ) : (
+          <p>No has realizado ninguna review todavía.</p>
+        )}
 
-            {editIndex !== index && (
-              <button className="editar" onClick={() => startEditing(index)}>
-                <img src="./src/Images/pencil.png" alt="pencil" id="pencil"/> Editar
-              </button>
-            )}
-          </div>
-        ))}
+
       </div>
     </div>
   );
