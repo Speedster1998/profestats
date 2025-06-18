@@ -76,20 +76,26 @@ const Perfil = () => {
                 showCourse={true}
                 onLike={() => handleLike(r.review.review_id)}
                 onDislike={() => handleDislike(r.review.review_id)}
-                showEditButton={true}
-                onEdit={() =>
-                  navigate(`/evaluacion/${r.review.teacher_id}`, {
-                    state: {
-                      review: {
-                        ...r.review,
-                        labels: r.labels,
-                        course: r.courseName,
-                        emoji: r.review.emoji,
-                      }
-                    }
-                  })
-                }
               />
+              <div className="editar-boton-wrapper">
+                <button
+                  onClick={() =>
+                    navigate(`/evaluacion/${r.review.teacher_id}`, {
+                      state: {
+                        review: {
+                          ...r.review,
+                          labels: r.labels,
+                          course: r.courseName,
+                          emoji: r.review.emoji,
+                        },
+                      },
+                    })
+                  }
+                  className="editar"
+                >
+                  <i className="bi bi-pencil"></i> Editar
+                </button>
+              </div>
             </div>
           ))
         ) : (
