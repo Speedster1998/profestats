@@ -1,84 +1,78 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Header from "../../Componentes/Header/Header.jsx";
-import FondoDecorativo from "../../Componentes/Fondo/Fondo.jsx";
+import "./Evaluacion.css";
 import profesores from "../../data/Profesores.json";
 import cursosData from "../../data/Cursos.json";
 import relaciones from "../../data/Relacion_Profesor_Curso.json";
-import usuarios from "../../data/Usuarios.json";
 import preguntas from "../../data/Preguntas.json";
-import "./Evaluacion.css";
+import labels from "../../data/PreguntasContenido.json";
+import { loadQuestionsWithLabels } from "../../Services/rate_service.jsx";
+import ReviewService from "../../Services/review_service.jsx";
+import { useNavigate } from "react-router-dom";
 
 const Evaluacion = () => {
+    const navigate = useNavigate();
   const { teacherId } = useParams();
   const parsedProfesorId = parseInt(teacherId);
-
   const profesor = profesores.find((p) => p.teacher_id === parsedProfesorId);
   if (!profesor) return <div>Profesor no encontrado.</div>;
 
   const [curso, setCurso] = useState("");
-  const [claridad, setClaridad] = useState("");
-  const [ayuda, setAyuda] = useState("");
-  const [facilidad, setFacilidad] = useState("");
-  const [interes, setInteres] = useState("");
-  const [recomienda, setRecomienda] = useState(null);
+  const [facilidad, setFacilidad] = useState(null);
+  const [recomendado, setRecomendado] = useState(null);
   const [asistencia, setAsistencia] = useState(null);
-  const [calificacion, setCalificacion] = useState("");
+  const [emoji, setCalificacion] = useState("");
   const [comentario, setComentario] = useState("");
   const [anonimo, setAnonimo] = useState(null);
   const [caracteristicas, setCaracteristicas] = useState([]);
+  const [preguntasDinamicas, setPreguntasDinamicas] = useState([]);
+  const [respuestas, setRespuestas] = useState({});
+  const labelsEtiquetas = labels.filter(label => label.group_id === 21);
+  const [notaAlumno, setNotaAlumno] = useState(null);
+
+  useEffect(() => {
+    const cargarPreguntas = async () => {
+      const data = await loadQuestionsWithLabels();
+      console.log("Preguntas dinámicas cargadas:", data);
+      setPreguntasDinamicas(data);
+    };
+    cargarPreguntas();
+  }, []);
 
   const cursosDelProfesor = relaciones
     .filter((rel) => rel.teacher_id === parsedProfesorId)
     .map((rel) => cursosData.find((c) => c.course_id === rel.course_id))
     .filter(Boolean);
 
-  const opcionesCaracteristicas = [
-    "Tiene buena disposición",
-    "Responde dudas con claridad",
-    "Motiva a los estudiantes",
-    "Domina el curso",
-    "Es empático",
-    "Es puntual",
-    "Es organizado",
-    "Es accesible fuera de clase",
-    "Hace clases dinámicas",
-    "Explica con ejemplos claros",
-    "Transmite seguridad en lo que enseña",
-    "Hace seguimiento a los alumnos",
-    "Se preocupa por el aprendizaje",
-    "Fomenta la participación",
-    "Promueve el pensamiento crítico",
-    "Califica con justicia",
-    "Da buena retroalimentación",
-    "Las clases son excelentes",
-    "Tomaría su clase otra vez",
-    "Respetado por los estudiantes",
-    "Es muy cómico"
-  ];
+  const calcularPromedioDinamico = () => {
+    const valores = Object.entries(respuestas)
+      .map(([_, val]) => parseInt(val))
+      .filter((val) => !isNaN(val) && val >= 1 && val <= 5);
 
-  const descriptorClaridad = (v) =>
-    ["Muy confuso", "Confuso", "Algo claro", "Bastante claro", "Súper claro"][v - 1] || "";
-
-  const descriptorAyuda = (v) =>
-    [
-      "No ayuda nada",
-      "Le tienes que rogar por algo de ayuda",
-      "Si le pides ayuda, te la da",
-      "Lo más probable es que te ayude",
-      "Ayuda bastante"
-    ][v - 1] || "";
-
-  const descriptorFacilidad = (v) =>
-    ["Muy difícil", "Difícil", "Lo usual", "Fácil", "Súper fácil"][v - 1] || "";
-
-  const descriptorInteres = (v) =>
-    ["Casi nada", "Poco interesado", "Más o menos interesado", "Interesado", "Súper interesado"][v - 1] || "";
-
-  const calcularPromedio = (...valores) => {
-    const nums = valores.map(Number).filter((v) => !isNaN(v));
-    return nums.length ? (nums.reduce((a, b) => a + b, 0) / nums.length).toFixed(2) : null;
+    return valores.length
+      ? (valores.reduce((a, b) => a + b, 0) / valores.length).toFixed(2)
+      : null;
   };
+
+  // Extraer label_id de preguntas dinámicas
+  const labelIdsDinamicos = preguntasDinamicas
+    .map((preg) => {
+      const selected = respuestas[preg.group_id];
+      const label = labels.find(
+        (l) => l.group_id === preg.group_id && l.level === selected
+      );
+      return label?.label_id;
+    })
+    .filter(Boolean);
+
+  // Extraer label_id de características (group_id === 21)
+  const labelIdsCaracteristicas = labelsEtiquetas
+    .filter((l) => caracteristicas.includes(l.name))
+    .map((l) => l.label_id);
+
+  // Combinar todos los label_id
+  const allLabelIds = [...labelIdsCaracteristicas];
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -89,54 +83,47 @@ const Evaluacion = () => {
       return;
     }
 
-    const calificacionGeneral = calcularPromedio(claridad, ayuda, facilidad);
+    const promedioPreguntas = calcularPromedioDinamico();
 
     const usuario = anonimo
       ? {
-          user_id: 1,
-          username: "Alumno",
-          email: "alumno@aloe.ulima.edu.pe",
-          password: "123456",
-          college_id: 1,
-          image_url: require("../../Images/profileDefault.png")
-        }
+        user_id: 1,
+        username: "Alumno",
+        email: "alumno@aloe.ulima.edu.pe",
+        password: "123456",
+        college_id: 1,
+        image_url: require("../../Images/profileDefault.png")
+      }
       : {
-          user_id: "actual",
-          username: "Usuario Actual",
-          email: "usuario@ulima.edu.pe",
-          image_url: "https://cris.ulima.edu.pe/files-asset/40822754/EEscobedo.jpg?w=320&f=webp"
-        };
+        user_id: 1,
+        username: "Usuario Actual",
+        email: "usuario@ulima.edu.pe",
+        image_url: "https://cris.ulima.edu.pe/files-asset/40822754/EEscobedo.jpg?w=320&f=webp"
+      };
 
     const datos = {
-      profesorId: parsedProfesorId,
-      curso,
-      claridad,
-      ayuda,
-      facilidad,
-      calificacionGeneral,
-      interes,
-      recomienda,
-      asistencia,
-      calificacion,
-      comentario,
-      anonimo,
-      caracteristicas,
-      fecha: new Date().toISOString(),
-      usuario
+      user_id: usuario.user_id,
+      teacher_id: parsedProfesorId,
+      course_id: cursosDelProfesor.find((c) => c.name === curso)?.course_id || null,
+      comment: comentario,
+      date: new Date().toISOString().split("T")[0],
+      anonimo: anonimo,
+      calificacion_general: parseFloat(promedioPreguntas),
+      facilidad: parseInt(facilidad),
+      nota: parseInt(notaAlumno),
+      recomendado: recomendado,
+      asistencia: asistencia,
+      emoji
     };
 
-    const reseñasGuardadas = JSON.parse(localStorage.getItem("reseñas")) || [];
-    reseñasGuardadas.push(datos);
-    localStorage.setItem("reseñas", JSON.stringify(reseñasGuardadas));
-
+    ReviewService.addReview(datos, allLabelIds);
+     
     alert("¡Gracias por tu evaluación!");
+    navigate(-1);
 
     setCurso("");
-    setClaridad("");
-    setAyuda("");
     setFacilidad("");
-    setInteres("");
-    setRecomienda(null);
+    setRecomendado(null);
     setAsistencia(null);
     setCalificacion("");
     setComentario("");
@@ -146,8 +133,9 @@ const Evaluacion = () => {
 
   return (
     <div className="evaluacion-container">
+
       <h6>Evaluando a: {profesor.name}</h6>
-      <br/>
+      <br />
       <h1>Elige tu curso</h1>
       <select
         value={curso}
@@ -162,39 +150,40 @@ const Evaluacion = () => {
         ))}
       </select>
 
-      {/* Claridad */}
-      <div className="likert-row">
-        <div className="likert-label">Claridad</div>
-        <div className="likert-options">
-          {[1, 2, 3, 4, 5].map((n) => (
-            <button
-              key={n}
-              onClick={() => setClaridad(n)}
-              className={`btn ${claridad === n ? "selected" : ""}`}
-            >
-              {n}
-            </button>
-          ))}
-        </div>
-        <div className="likert-description">{descriptorClaridad(claridad)}</div>
-      </div>
 
-      {/* Ayuda */}
-      <div className="likert-row">
-        <div className="likert-label">Ayuda</div>
-        <div className="likert-options">
-          {[1, 2, 3, 4, 5].map((n) => (
-            <button
-              key={n}
-              onClick={() => setAyuda(n)}
-              className={`btn ${ayuda === n ? "selected" : ""}`}
-            >
-              {n}
-            </button>
-          ))}
-        </div>
-        <div className="likert-description">{descriptorAyuda(ayuda)}</div>
-      </div>
+      {preguntasDinamicas.map((pregunta) => {
+        const selectedValue = respuestas[pregunta.group_id];
+        const labelsDelGrupo = labels.filter((l) => l.group_id === pregunta.group_id);
+        const labelSeleccionado = labelsDelGrupo[selectedValue - 1];
+
+        return (
+          <div key={pregunta.group_id} className="likert-row">
+            <div className="likert-label">{pregunta.text}</div>
+            <div className="likert-options">
+              {[1, 2, 3, 4, 5].map((valor, i) => (
+                <button
+                  key={valor}
+                  onClick={() =>
+                    setRespuestas((prev) => ({
+                      ...prev,
+                      [pregunta.group_id]: valor,
+                    }))
+                  }
+                  className={`btn ${selectedValue === valor ? "selected" : ""}`}
+                >
+                  {valor}
+                </button>
+              ))}
+            </div>
+
+            {selectedValue && (
+              <div className="likert-description">
+                {labelSeleccionado?.name || ""}
+              </div>
+            )}
+          </div>
+        );
+      })}
 
       {/* Facilidad */}
       <div className="likert-row">
@@ -210,24 +199,7 @@ const Evaluacion = () => {
             </button>
           ))}
         </div>
-        <div className="likert-description">{descriptorFacilidad(facilidad)}</div>
-      </div>
 
-      {/* Interés */}
-      <div className="likert-row">
-        <div className="likert-label">Tu interés en clase</div>
-        <div className="likert-options">
-          {[1, 2, 3, 4, 5].map((n) => (
-            <button
-              key={n}
-              onClick={() => setInteres(n)}
-              className={`btn ${interes === n ? "selected" : ""}`}
-            >
-              {n}
-            </button>
-          ))}
-        </div>
-        <div className="likert-description">{descriptorInteres(interes)}</div>
       </div>
 
       {/* Recomienda */}
@@ -237,8 +209,8 @@ const Evaluacion = () => {
           {["Sí", "No"].map((op, i) => (
             <button
               key={i}
-              onClick={() => setRecomienda(op)}
-              className={`btn ${recomienda === op ? "selected" : ""}`}
+              onClick={() => setRecomendado(op)}
+              className={`btn ${recomendado === op ? "selected" : ""}`}
             >
               {op}
             </button>
@@ -261,6 +233,22 @@ const Evaluacion = () => {
           ))}
         </div>
       </div>
+      
+       {/* Nota */}
+      <div className="inline-row">
+        <div className="inline-label">¿Qué nota obtuviste en este curso?</div>
+        <div className="inline-options">
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((n) => (
+            <button
+              key={n}
+              onClick={() => setNotaAlumno(n)}
+              className={`btn ${notaAlumno === n ? "selected" : ""}`}
+            >
+              {n}
+            </button>
+          ))}
+        </div>
+      </div>
 
       {/* Emoji rating */}
       <h2>¿Qué calificación le das al profesor?</h2>
@@ -273,8 +261,8 @@ const Evaluacion = () => {
         ].map(({ label, emoji }, i) => (
           <button
             key={i}
-            onClick={() => setCalificacion(label)}
-            className={`emoji-btn ${calificacion === label ? "selected" : ""}`}
+            onClick={() => setCalificacion(emoji)}
+            className={`emoji-btn ${emoji === emoji ? "selected" : ""}`}
           >
             <span className="emoji">{emoji}</span>
             <span>{label}</span>
@@ -283,22 +271,29 @@ const Evaluacion = () => {
       </div>
 
       {/* Características */}
-      <h2>¿Cuáles de estas frases describen mejor al profesor?</h2>
+      <h2>¿Qué características destacarías del profesor?</h2>
       <div className="checkbox-group">
-        {opcionesCaracteristicas.map((carac, index) => {
-          const selected = caracteristicas.includes(carac);
+        {labelsEtiquetas.map((carac) => {
+          const selected = caracteristicas.includes(carac.name);
           return (
             <button
-              key={index}
+              key={carac.label_id}
               className={`btn ${selected ? "selected" : ""}`}
               onClick={() => {
                 setCaracteristicas((prev) =>
-                  selected ? prev.filter((c) => c !== carac) : [...prev, carac]
+                  selected
+                    ? prev.filter((c) => c !== carac.name)
+                    : [...prev, carac.name]
                 );
               }}
             >
-              <input type="checkbox" value={carac} checked={selected} readOnly />
-              {carac}
+              <input
+                type="checkbox"
+                value={carac.name}
+                checked={selected}
+                readOnly
+              />
+              {carac.name}
             </button>
           );
         })}

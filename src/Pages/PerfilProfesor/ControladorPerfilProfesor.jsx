@@ -4,7 +4,7 @@ import { CollegeService } from '../../Services/college_service';
 import ReviewService from '../../Services/review_service';
 import { CourseService } from '../../Services/course_service';
 
-export const ControladorPerfilProfesor = (teacherId) => {
+export const useControladorPerfilProfesor = (teacherId) => {
   const [teacherProfile, setTeacherProfile] = useState(null);
   const [loading, setLoading] = useState(true);
 

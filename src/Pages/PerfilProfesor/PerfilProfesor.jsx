@@ -4,12 +4,12 @@ import ReviewItem from '../../Componentes/Perfil/ReviewItem';
 import ProfileImage from '../../Componentes/Perfil/ProfileImage';
 import './PerfilProfesor.css';
 import Boton from '../../Componentes/Boton/Boton';
-import { ControladorPerfilProfesor } from './ControladorPerfilProfesor';
+import { useControladorPerfilProfesor } from './ControladorPerfilProfesor';
 const MAX_LENGTH = 150;
 
 const PerfilProfesor = ({ idTeacher }) => {
     const navigate = useNavigate();
-    const { teacherProfile: teacher, loading, handleLike, handleDislike } = ControladorPerfilProfesor(idTeacher);
+    const { teacherProfile: teacher, loading, handleLike, handleDislike } = useControladorPerfilProfesor(idTeacher);
     const [showFullDescription, setShowFullDescription] = useState(false);
 
     if (loading || !teacher) return <p className="text-center mt-5">Cargando...</p>;
@@ -96,7 +96,7 @@ const PerfilProfesor = ({ idTeacher }) => {
                                 nota: r.review.nota,
                                 comment: r.review.comment,
                                 labels: r.labels,
-                                emoji: r.emoji,
+                                emoji: r.review.emoji,
                                 ratingLabel: '',
                                 likes: r.review.likes,
                                 dislikes: r.review.dislikes

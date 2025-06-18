@@ -168,8 +168,21 @@ h2 {
 
 .likert-options {
   display: flex;
-  gap: 8px;
-  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.likert-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 60px;
+}
+
+.likert-description {
+  font-size: 0.8rem;
+  margin-top: 4px;
+  text-align: center;
 }
 
 .likert-options .btn {
@@ -268,3 +281,5 @@ button:active,
   font-weight: bold;
   border: 1px solid white;
 }
+
+

@@ -1,52 +1,42 @@
 [
   {
-    "group_id": 2,
-    "name": "curso",
-    "text": "Elige el curso"
+    "group_id": 4,
+    "name": "Claridad",
+    "text": "¿Explica claro?"
   },
   {
-    "group_id": 4,
+    "group_id": 5,
+    "name": "Ayuda",
+    "text": "¿Te ayuda en clase?"
+  },
+  {
+    "group_id": 6,
     "name": "Puntualidad",
     "text": "¿El profesor llega y termina a tiempo sus clases?"
   },
   {
-    "group_id": 5,
+    "group_id": 7,
     "name": "Uso de recursos",
     "text": "¿Utiliza materiales o recursos que apoyan el aprendizaje?"
   },
   {
-    "group_id": 6,
-    "name": "Interacción con estudiantes",
-    "text": "¿Fomenta la participación y responde preguntas?"
-  },
-  {
-    "group_id": 7,
+    "group_id": 8,
     "name": "Evaluación justa",
     "text": "¿Las evaluaciones son coherentes con lo enseñado?"
   },
   {
-    "group_id": 8,
+    "group_id": 9,
     "name": "Retroalimentación",
     "text": "¿Proporciona comentarios útiles para mejorar?"
   },
   {
-    "group_id": 9,
+    "group_id": 10,
     "name": "Actitud profesional",
     "text": "¿Mantiene una actitud respetuosa y profesional?"
   },
   {
-    "group_id": 10,
+    "group_id": 11,
     "name": "Motivación",
     "text": "¿Inspira o motiva a los estudiantes a aprender?"
-  },
-  {
-    "group_id": 1,
-    "name": "claridad",
-    "text": "En general, ¿qué calificación le darías al profesor?"
-  },
-  {
-    "group_id": 3,
-    "name": "comentario",
-    "text": "Añade un comentario\n(opcional)"
   }
 ]

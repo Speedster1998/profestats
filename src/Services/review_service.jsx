@@ -7,14 +7,17 @@ import teachersJson from '../data/Profesores.json';
 
 class ReviewService {
   constructor() {
+    const storedReviews = JSON.parse(localStorage.getItem('reviews'));
+    const storedReviewLabels = JSON.parse(localStorage.getItem('reviewLabels'));
 
-    this.reviews = [...reviewJson].map(r => ({
+    this.reviews = storedReviews || [...reviewJson].map(r => ({
       ...r,
       likes: r.likes ?? 0,
       dislikes: r.dislikes ?? 0,
     }));
 
-    this.reviewLabels = [...reviewLabelsJson];
+    this.reviewLabels = storedReviewLabels || [...reviewLabelsJson];
+
     this.labels = [...labelsJson];
     this.users = [...usersJson];
     this.courses = [...coursesJson];
@@ -22,6 +25,11 @@ class ReviewService {
 
     this.nextReviewId = this._getMaxId(this.reviews, 'review_id') + 1;
     this.nextReviewLabelId = this._getMaxId(this.reviewLabels, 'review_label_id') + 1;
+  }
+
+  _saveToLocalStorage() {
+    localStorage.setItem('reviews', JSON.stringify(this.reviews));
+    localStorage.setItem('reviewLabels', JSON.stringify(this.reviewLabels));
   }
 
   _getMaxId(array, key) {
@@ -68,7 +76,6 @@ class ReviewService {
 
   _getCalidadFacilidadPromedio(teacherId) {
     const teacherReviews = this.reviews.filter(r => r.teacher_id === teacherId);
-
     let sumaCalidad = 0;
     let sumaFacilidad = 0;
     let contador = 0;
@@ -100,10 +107,6 @@ class ReviewService {
       .map(rl => rl.label_id);
 
     const allLabels = labelIds.map(id => data.labelMap[id]);
-
-    const emojiLabel =
-      allLabels.find(l => l.group_id === 1) || { label_id: 0, name: '', image_url: '', group_id: 1 };
-
     const otherLabels = allLabels.filter(l => l.group_id !== 1);
 
     let user;
@@ -143,7 +146,6 @@ class ReviewService {
     return {
       review: reviewJson,
       user: user,
-      emoji: emojiLabel.name,
       labels: otherLabels,
       courseName: courseName,
     };
@@ -168,6 +170,7 @@ class ReviewService {
       this.reviewLabels.push(newReviewLabel);
     }
 
+    this._saveToLocalStorage();
     console.log('Review agregada:', newReview);
     console.log('Etiquetas asociadas:', labelIds);
   }
@@ -195,7 +198,7 @@ class ReviewService {
   getAllReviews() {
     return this.reviews;
   }
-  
+
   getAllReviewLabels() {
     return this.reviewLabels;
   }

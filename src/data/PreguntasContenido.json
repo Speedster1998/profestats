@@ -1,248 +1,70 @@
 [
-  {
-    "label_id": 1,
-    "name": "😄",
-    "image_url": "",
-    "group_id": 1
-  },
-  {
-    "label_id": 2,
-    "name": "🙂",
-    "image_url": "",
-    "group_id": 1
-  },
-  {
-    "label_id": 3,
-    "name": "😐",
-    "image_url": "",
-    "group_id": 1
-  },
-  {
-    "label_id": 4,
-    "name": "😞",
-    "image_url": "",
-    "group_id": 1
-  },
-  {
-    "label_id": 5,
-    "name": "Muy claro",
-    "image_url": "",
-    "group_id": 2
-  },
-  {
-    "label_id": 6,
-    "name": "Claro",
-    "image_url": "",
-    "group_id": 2
-  },
-  {
-    "label_id": 7,
-    "name": "Algo claro",
-    "image_url": "",
-    "group_id": 2
-  },
-  {
-    "label_id": 8,
-    "name": "Un poco claro",
-    "image_url": "",
-    "group_id": 2
-  },
-  {
-    "label_id": 9,
-    "name": "Entusiasta",
-    "image_url": "",
-    "group_id": 3
-  },
-  {
-    "label_id": 10,
-    "name": "Paciente",
-    "image_url": "",
-    "group_id": 3
-  },
-  {
-    "label_id": 11,
-    "name": "Motivador",
-    "image_url": "",
-    "group_id": 3
-  },
-  {
-    "label_id": 12,
-    "name": "Empático",
-    "image_url": "",
-    "group_id": 3
-  },
-    {
-    "label_id": 13,
-    "name": "Muy puntual",
-    "image_url": "",
-    "group_id": 4
-  },
-  {
-    "label_id": 14,
-    "name": "Puntual",
-    "image_url": "",
-    "group_id": 4
-  },
-  {
-    "label_id": 15,
-    "name": "Poco puntual",
-    "image_url": "",
-    "group_id": 4
-  },
-  {
-    "label_id": 16,
-    "name": "Impuntual",
-    "image_url": "",
-    "group_id": 4
-  },
+  { "label_id": 1, "name": "Muy claro", "image_url": "", "group_id": 4 },
+  { "label_id": 2, "name": "Claro", "image_url": "", "group_id": 4 },
+  { "label_id": 3, "name": "Algo claro", "image_url": "", "group_id":  4 },
+  { "label_id": 4, "name": "Un poco claro", "image_url": "", "group_id": 4 },
+  { "label_id": 5, "name": "Nada claro", "image_url": "", "group_id": 4 },
 
-  {
-    "label_id": 17,
-    "name": "Usa muchos recursos",
-    "image_url": "",
-    "group_id": 5
-  },
-  {
-    "label_id": 18,
-    "name": "Usa algunos recursos",
-    "image_url": "",
-    "group_id": 5
-  },
-  {
-    "label_id": 19,
-    "name": "Usa pocos recursos",
-    "image_url": "",
-    "group_id": 5
-  },
-  {
-    "label_id": 20,
-    "name": "No usa recursos",
-    "image_url": "",
-    "group_id": 5
-  },
+  { "label_id": 6, "name": "Siempre ayuda", "image_url": "", "group_id": 5 },
+  { "label_id": 7, "name": "Frecuentemente ayuda", "image_url": "", "group_id": 5 },
+  { "label_id": 8, "name": "Ayuda cuando se le pide", "image_url": "", "group_id": 5 },
+  { "label_id": 9, "name": "Casi no ayuda", "image_url": "", "group_id": 5 },
+  { "label_id": 10, "name": "No ayuda en clase", "image_url": "", "group_id": 5 },
 
-  {
-    "label_id": 21,
-    "name": "Muy participativo",
-    "image_url": "",
-    "group_id": 6
-  },
-  {
-    "label_id": 22,
-    "name": "Participativo",
-    "image_url": "",
-    "group_id": 6
-  },
-  {
-    "label_id": 23,
-    "name": "Poco participativo",
-    "image_url": "",
-    "group_id": 6
-  },
-  {
-    "label_id": 24,
-    "name": "Nada participativo",
-    "image_url": "",
-    "group_id": 6
-  },
+  { "label_id": 11, "name": "Muy puntual", "image_url": "", "group_id": 6 },
+  { "label_id": 12, "name": "Puntual", "image_url": "", "group_id": 6 },
+  { "label_id": 13, "name": "Poco puntual", "image_url": "", "group_id": 6 },
+  { "label_id": 14, "name": "Impuntual", "image_url": "", "group_id": 6 },
+  { "label_id": 15, "name": "Nada puntual", "image_url": "", "group_id": 6 },
 
-  {
-    "label_id": 25,
-    "name": "Muy justo",
-    "image_url": "",
-    "group_id": 7
-  },
-  {
-    "label_id": 26,
-    "name": "Justo",
-    "image_url": "",
-    "group_id": 7
-  },
-  {
-    "label_id": 27,
-    "name": "Poco justo",
-    "image_url": "",
-    "group_id": 7
-  },
-  {
-    "label_id": 28,
-    "name": "Injusto",
-    "image_url": "",
-    "group_id": 7
-  },
+  { "label_id": 16, "name": "Usa muchos recursos", "image_url": "", "group_id": 7 },
+  { "label_id": 17, "name": "Usa algunos recursos", "image_url": "", "group_id": 7 },
+  { "label_id": 18, "name": "Usa pocos recursos", "image_url": "", "group_id": 7 },
+  { "label_id": 19, "name": "No usa recursos", "image_url": "", "group_id": 7 },
 
-  {
-    "label_id": 29,
-    "name": "Retroalimenta muy bien",
-    "image_url": "",
-    "group_id": 8
-  },
-  {
-    "label_id": 30,
-    "name": "Retroalimenta bien",
-    "image_url": "",
-    "group_id": 8
-  },
-  {
-    "label_id": 31,
-    "name": "Retroalimenta poco",
-    "image_url": "",
-    "group_id": 8
-  },
-  {
-    "label_id": 32,
-    "name": "No retroalimenta",
-    "image_url": "",
-    "group_id": 8
-  },
+  { "label_id": 20, "name": "Muy justo", "image_url": "", "group_id": 8 },
+  { "label_id": 21, "name": "Justo", "image_url": "", "group_id": 8 },
+  { "label_id": 22, "name": "Algo justo", "image_url": "", "group_id": 8 },
+  { "label_id": 23, "name": "Poco justo", "image_url": "", "group_id": 8 },
+  { "label_id": 24, "name": "Injusto", "image_url": "", "group_id": 8 },
 
-  {
-    "label_id": 33,
-    "name": "Muy profesional",
-    "image_url": "",
-    "group_id": 9
-  },
-  {
-    "label_id": 34,
-    "name": "Profesional",
-    "image_url": "",
-    "group_id": 9
-  },
-  {
-    "label_id": 35,
-    "name": "Poco profesional",
-    "image_url": "",
-    "group_id": 9
-  },
-  {
-    "label_id": 36,
-    "name": "Nada profesional",
-    "image_url": "",
-    "group_id": 9
-  },
+  { "label_id": 25, "name": "Retroalimenta muy bien", "image_url": "", "group_id": 9 },
+  { "label_id": 26, "name": "Retroalimenta bien", "image_url": "", "group_id": 9 },
+  { "label_id": 27, "name": "Retroalimenta lo necesario", "image_url": "", "group_id": 9 },
+  { "label_id": 28, "name": "Retroalimenta poco", "image_url": "", "group_id": 9 },
+  { "label_id": 29, "name": "No retroalimenta", "image_url": "", "group_id": 9 },
 
-  {
-    "label_id": 37,
-    "name": "Muy motivador",
-    "image_url": "",
-    "group_id": 10
-  },
-  {
-    "label_id": 38,
-    "name": "Motivador",
-    "image_url": "",
-    "group_id": 10
-  },
-  {
-    "label_id": 39,
-    "name": "Poco motivador",
-    "image_url": "",
-    "group_id": 10
-  },
-  {
-    "label_id": 40,
-    "name": "Nada motivador",
-    "image_url": "",
-    "group_id": 10
-  }
+  { "label_id": 30, "name": "Muy profesional", "image_url": "", "group_id": 10 },
+  { "label_id": 31, "name": "Profesional", "image_url": "", "group_id": 10 },
+  { "label_id": 32, "name": "Algo profesional", "image_url": "", "group_id": 10 },
+  { "label_id": 33, "name": "Poco profesional", "image_url": "", "group_id": 10 },
+  { "label_id": 34, "name": "Nada profesional", "image_url": "", "group_id": 10 },
+
+  { "label_id": 35, "name": "Muy motivador", "image_url": "", "group_id": 11 },
+  { "label_id": 36, "name": "Motivador", "image_url": "", "group_id": 11 },
+  { "label_id": 37, "name": "Algo motivador", "image_url": "", "group_id": 11 },
+  { "label_id": 38, "name": "Poco motivador", "image_url": "", "group_id": 11 },
+  { "label_id": 39, "name": "Nada motivador", "image_url": "", "group_id": 11 },
+
+  { "label_id": 50, "name": "Tiene buena disposición", "image_url": "", "group_id": 21 },
+  { "label_id": 51, "name": "Responde dudas con claridad", "image_url": "", "group_id": 21 },
+  { "label_id": 52, "name": "Motiva a los estudiantes", "image_url": "", "group_id": 21 },
+  { "label_id": 53, "name": "Domina el curso", "image_url": "", "group_id": 21 },
+  { "label_id": 54, "name": "Es empático", "image_url": "", "group_id": 21 },
+  { "label_id": 55, "name": "Es puntual", "image_url": "", "group_id": 21 },
+  { "label_id": 56, "name": "Es organizado", "image_url": "", "group_id": 21 },
+  { "label_id": 57, "name": "Es accesible fuera de clase", "image_url": "", "group_id": 21 },
+  { "label_id": 58, "name": "Hace clases dinámicas", "image_url": "", "group_id": 21 },
+  { "label_id": 59, "name": "Explica con ejemplos claros", "image_url": "", "group_id": 21 },
+  { "label_id": 60, "name": "Transmite seguridad en lo que enseña", "image_url": "", "group_id": 21 },
+  { "label_id": 61, "name": "Hace seguimiento a los alumnos", "image_url": "", "group_id": 21 },
+  { "label_id": 62, "name": "Se preocupa por el aprendizaje", "image_url": "", "group_id": 21 },
+  { "label_id": 63, "name": "Fomenta la participación", "image_url": "", "group_id": 21 },
+  { "label_id": 64, "name": "Promueve el pensamiento crítico", "image_url": "", "group_id": 21 },
+  { "label_id": 65, "name": "Califica con justicia", "image_url": "", "group_id": 21 },
+  { "label_id": 66, "name": "Da buena retroalimentación", "image_url": "", "group_id": 21 },
+  { "label_id": 67, "name": "Las clases son excelentes", "image_url": "", "group_id": 21 },
+  { "label_id": 68, "name": "Tomaría su clase otra vez", "image_url": "", "group_id": 21 },
+  { "label_id": 69, "name": "Respetado por los estudiantes", "image_url": "", "group_id": 21 },
+  { "label_id": 70, "name": "Es muy cómico", "image_url": "", "group_id": 21 }
 ]

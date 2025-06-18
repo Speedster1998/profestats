@@ -6,12 +6,15 @@
     "course_id": 5,
     "comment": "Muy buen profesor, explica claramente.",
     "date": "2025-05-29",
-    "visible": true,
+    "anonimo": false,
     "calificacion_general": 3,
     "facilidad": 4,
+    "recomendado": false,
+    "asistencia": "No obligatoria",
     "nota": 7,
     "likes": 10,
-    "dislikes": 1
+    "dislikes": 1,
+    "emoji": "😐"
   },
   {
     "review_id": 2,
@@ -20,12 +23,15 @@
     "course_id": 3,
     "comment": "Le falta mejorar ejemplos prácticos.",
     "date": "2025-05-20",
-    "visible": true,
+    "anonimo": true,
     "calificacion_general": 2,
     "facilidad": 3,
+    "recomendado": true,
+    "asistencia": "Obligatoria",
     "nota": 8,
     "likes": 5,
-    "dislikes": 4
+    "dislikes": 4,
+    "emoji": "🙁"
   },
   {
     "review_id": 3,
@@ -34,12 +40,15 @@
     "course_id": 4,
     "comment": "Excelente dominio del tema y buena actitud.",
     "date": "2025-05-21",
-    "visible": true,
+    "anonimo": false,
     "calificacion_general": 3,
     "facilidad": 5,
+    "recomendado": false,
+    "asistencia": "No obligatoria",
     "nota": 8,
     "likes": 0,
-    "dislikes": 0
+    "dislikes": 0,
+    "emoji": "😐"
   },
   {
     "review_id": 4,
@@ -48,12 +57,15 @@
     "course_id": 2,
     "comment": "Muy paciente, resuelve todas las dudas.",
     "date": "2025-05-23",
-    "visible": true,
+    "anonimo": false,
     "calificacion_general": 5,
     "facilidad": 5,
+    "recomendado": false,
+    "asistencia": "No obligatoria",
     "nota": 10,
     "likes": 0,
-    "dislikes": 0
+    "dislikes": 0,
+    "emoji": "🤩"
   },
   {
     "review_id": 5,
@@ -62,12 +74,15 @@
     "course_id": 5,
     "comment": "Las clases son algo monótonas, pero efectivas.",
     "date": "2025-05-25",
-    "visible": true,
+    "anonimo": false,
     "calificacion_general": 2,
     "facilidad": 3,
+    "recomendado": false,
+    "asistencia": "No obligatoria",
     "nota": 6,
-    "likes": 0,
-    "dislikes": 0
+    "likes": 5,
+    "dislikes": 0,
+    "emoji": "🙁"
   },
   {
     "review_id": 6,
@@ -76,12 +91,15 @@
     "course_id": 1,
     "comment": "Inspira mucho con su pasión por enseñar.",
     "date": "2025-05-28",
-    "visible": true,
+    "anonimo": false,
     "calificacion_general": 2,
     "facilidad": 5,
+    "recomendado": false,
+    "asistencia": "No obligatoria",
     "nota": 7,
     "likes": 0,
-    "dislikes": 0
+    "dislikes": 0,
+    "emoji": "🙁"
   },
   {
     "review_id": 7,
@@ -90,12 +108,15 @@
     "course_id": 4,
     "comment": "Utiliza muchos recursos interactivos, muy útil.",
     "date": "2025-05-26",
-    "visible": true,
+    "anonimo": false,
     "calificacion_general": 3,
     "facilidad": 4,
+    "recomendado": false,
+    "asistencia": "No obligatoria",
     "nota": 7,
     "likes": 0,
-    "dislikes": 0
+    "dislikes": 0,
+    "emoji": "😐"
   },
   {
     "review_id": 8,
@@ -104,12 +125,15 @@
     "course_id": 2,
     "comment": "Explicaciones claras y material actualizado.",
     "date": "2025-05-22",
-    "visible": true,
+    "anonimo": false,
     "calificacion_general": 1,
     "facilidad": 5,
+    "recomendado": false,
+    "asistencia": "No obligatoria",
     "nota": 6,
     "likes": 0,
-    "dislikes": 0
+    "dislikes": 0,
+    "emoji": "🙁"
   },
   {
     "review_id": 9,
@@ -118,12 +142,15 @@
     "course_id": 3,
     "comment": "Muy estricto con los tiempos, pero justo.",
     "date": "2025-05-19",
-    "visible": true,
+    "anonimo": false,
     "calificacion_general": 4,
     "facilidad": 3,
+    "recomendado": false,
+    "asistencia": "No obligatoria",
     "nota": 7,
     "likes": 0,
-    "dislikes": 0
+    "dislikes": 0,
+    "emoji": "🙂"
   },
   {
     "review_id": 10,
@@ -132,12 +159,15 @@
     "course_id": 5,
     "comment": "Hace las clases dinámicas y divertidas.",
     "date": "2025-05-24",
-    "visible": true,
+    "anonimo": false,
     "calificacion_general": 4,
     "facilidad": 5,
+    "recomendado": false,
+    "asistencia": "No obligatoria",
     "nota": 9,
     "likes": 0,
-    "dislikes": 0
+    "dislikes": 0,
+    "emoji": "🙂"
   },
   {
     "review_id": 11,
@@ -146,12 +176,15 @@
     "course_id": 1,
     "comment": "Domina muy bien el contenido del curso.",
     "date": "2025-05-27",
-    "visible": true,
+    "anonimo": false,
     "calificacion_general": 5,
     "facilidad": 4,
+    "recomendado": false,
+    "asistencia": "No obligatoria",
     "nota": 9,
     "likes": 0,
-    "dislikes": 0
+    "dislikes": 0,
+    "emoji": "🤩"
   },
   {
     "review_id": 12,
@@ -160,12 +193,15 @@
     "course_id": 2,
     "comment": "Las explicaciones pueden ser más detalladas.",
     "date": "2025-05-30",
-    "visible": true,
+    "anonimo": false,
     "calificacion_general": 5,
     "facilidad": 3,
+    "recomendado": false,
+    "asistencia": "No obligatoria",
     "nota": 8,
     "likes": 0,
-    "dislikes": 0
+    "dislikes": 0,
+    "emoji": "🤩"
   },
   {
     "review_id": 13,
@@ -174,12 +210,15 @@
     "course_id": 4,
     "comment": "Muy buena disposición para ayudar.",
     "date": "2025-05-18",
-    "visible": true,
+    "anonimo": false,
     "calificacion_general": 3,
     "facilidad": 4,
+    "recomendado": false,
+    "asistencia": "No obligatoria",
     "nota": 7,
     "likes": 0,
-    "dislikes": 0
+    "dislikes": 0,
+    "emoji": "😐"
   },
   {
     "review_id": 14,
@@ -188,12 +227,15 @@
     "course_id": 3,
     "comment": "Debería usar más ejemplos en clase.",
     "date": "2025-05-31",
-    "visible": true,
+    "anonimo": false,
     "calificacion_general": 2,
     "facilidad": 3,
+    "recomendado": false,
+    "asistencia": "No obligatoria",
     "nota": 5,
     "likes": 0,
-    "dislikes": 0
+    "dislikes": 0,
+    "emoji": "🙁"
   },
   {
     "review_id": 15,
@@ -202,12 +244,15 @@
     "course_id": 1,
     "comment": "Muy profesional y empática.",
     "date": "2025-05-20",
-    "visible": true,
+    "anonimo": false,
     "calificacion_general": 5,
     "facilidad": 5,
+    "recomendado": false,
+    "asistencia": "No obligatoria",
     "nota": 10,
     "likes": 0,
-    "dislikes": 0
+    "dislikes": 0,
+    "emoji": "🤩"
   },
   {
     "review_id": 16,
@@ -216,12 +261,15 @@
     "course_id": 2,
     "comment": "Promueve la participación en clase.",
     "date": "2025-05-22",
-    "visible": true,
+    "anonimo": false,
     "calificacion_general": 4,
     "facilidad": 4,
+    "recomendado": false,
+    "asistencia": "No obligatoria",
     "nota": 8,
     "likes": 0,
-    "dislikes": 0
+    "dislikes": 0,
+    "emoji": "🙂"
   },
   {
     "review_id": 17,
@@ -230,12 +278,15 @@
     "course_id": 5,
     "comment": "Le falta un poco de energía al exponer.",
     "date": "2025-05-23",
-    "visible": true,
+    "anonimo": false,
     "calificacion_general": 5,
     "facilidad": 3,
+    "recomendado": false,
+    "asistencia": "No obligatoria",
     "nota": 8,
     "likes": 0,
-    "dislikes": 0
+    "dislikes": 0,
+    "emoji": "🤩"
   },
   {
     "review_id": 18,
@@ -244,12 +295,15 @@
     "course_id": 4,
     "comment": "Excelente trato con los estudiantes.",
     "date": "2025-05-21",
-    "visible": true,
+    "anonimo": false,
     "calificacion_general": 3,
     "facilidad": 5,
+    "recomendado": false,
+    "asistencia": "No obligatoria",
     "nota": 8,
     "likes": 0,
-    "dislikes": 0
+    "dislikes": 0,
+    "emoji": "😐"
   },
   {
     "review_id": 19,
@@ -258,12 +312,15 @@
     "course_id": 3,
     "comment": "Muy claro y organizado.",
     "date": "2025-05-25",
-    "visible": true,
+    "anonimo": false,
     "calificacion_general": 3,
     "facilidad": 5,
+    "recomendado": false,
+    "asistencia": "No obligatoria",
     "nota": 8,
     "likes": 0,
-    "dislikes": 0
+    "dislikes": 0,
+    "emoji": "😐"
   },
   {
     "review_id": 20,
@@ -272,12 +329,15 @@
     "course_id": 1,
     "comment": "Siempre dispuesto a resolver dudas.",
     "date": "2025-05-28",
-    "visible": true,
+    "anonimo": false,
     "calificacion_general": 5,
     "facilidad": 5,
+    "recomendado": false,
+    "asistencia": "No obligatoria",
     "nota": 10,
     "likes": 0,
-    "dislikes": 0
+    "dislikes": 0,
+    "emoji": "🤩"
   },
   {
     "review_id": 21,
@@ -286,12 +346,15 @@
     "course_id": 2,
     "comment": "Transmite bien los conocimientos.",
     "date": "2025-05-30",
-    "visible": true,
+    "anonimo": false,
     "calificacion_general": 2,
     "facilidad": 4,
+    "recomendado": false,
+    "asistencia": "No obligatoria",
     "nota": 6,
     "likes": 0,
-    "dislikes": 0
+    "dislikes": 0,
+    "emoji": "🙁"
   },
   {
     "review_id": 22,
@@ -300,12 +363,15 @@
     "course_id": 4,
     "comment": "Las evaluaciones son justas y claras.",
     "date": "2025-05-26",
-    "visible": true,
+    "anonimo": false,
     "calificacion_general": 5,
     "facilidad": 4,
+    "recomendado": false,
+    "asistencia": "No obligatoria",
     "nota": 9,
     "likes": 0,
-    "dislikes": 0
+    "dislikes": 0,
+    "emoji": "🤩"
   },
   {
     "review_id": 23,
@@ -314,11 +380,14 @@
     "course_id": 5,
     "comment": "Muy motivador y didáctico.",
     "date": "2025-05-29",
-    "visible": true,
+    "anonimo": false,
     "calificacion_general": 4,
     "facilidad": 5,
+    "recomendado": false,
+    "asistencia": "No obligatoria",
     "nota": 9,
     "likes": 0,
-    "dislikes": 0
+    "dislikes": 0,
+    "emoji": "🙂"
   }
 ]

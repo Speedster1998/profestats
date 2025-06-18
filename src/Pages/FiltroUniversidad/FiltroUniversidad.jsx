@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { ControladorPerfilProfesor } from "../PerfilProfesor/ControladorPerfilProfesor"
+import { useControladorPerfilProfesor } from "../PerfilProfesor/ControladorPerfilProfesor"
 import PerfilProfesor from "../PerfilProfesor/PerfilProfesor"
 import FiltroComponente from "./FiltroComponente"
 import { useState } from "react";
