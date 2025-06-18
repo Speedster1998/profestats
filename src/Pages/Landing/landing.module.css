@@ -24,7 +24,6 @@
 }
 
 .highlight {
-  font-size: 44px;
   font-weight: 700;
   background: linear-gradient(91.57deg, #86C0AE -1.02%, #4D9680 36.25%);
   -webkit-background-clip: text;
@@ -45,9 +44,23 @@
   cursor: pointer;
 }
 
+.logoutBtn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #91d6b2;
+  color: #1d3c2e;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+.logoutBtn:hover {
+  background-color: #7dcaa2;
+}
+
 .imageSection {
-  width: 490px;
-  height: 426px;
+  width: 570px;
+  height: 506px;
   background-color: #A3A3A3;
   border-radius: 100px 100px 100px 240px;
   box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
@@ -55,10 +68,10 @@
   position: relative;
 }
 .imageSection img {
-  width: 626px;
-  height: 500px;
+  width: 630px;
+  height: 540px;
   position: absolute;
-  top: -60px;
-  left: -70px;
+  top: 0;
+  left: -40px;
   object-fit: cover;
 }
