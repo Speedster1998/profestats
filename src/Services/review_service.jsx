@@ -34,16 +34,22 @@ class ReviewService {
     const teacherReviews = data.reviews.filter(r => r.teacher_id === teacherId);
 
     const reviewList = [];
-    const labelNames = new Set();
+    const labelCounts = new Map();
 
     for (const reviewJson of teacherReviews) {
-      const display = this._buildReviewDisplay(reviewJson, data, false, labelNames);
+      const display = this._buildReviewDisplay(reviewJson, data, false, labelCounts);
       reviewList.push(display);
     }
 
+    const usedLabelStats = Array.from(labelCounts.entries()).map(([name, count]) => ({
+      name,
+      count
+    }));
+
+
     return {
       reviews: reviewList,
-      usedLabelNames: Array.from(labelNames),
+      usedLabelStats,
       promedios: this._getCalidadFacilidadPromedio(teacherId)
     };
   }
@@ -90,17 +96,26 @@ class ReviewService {
     };
   }
 
-  _buildReviewDisplay(reviewJson, data, useTeacherAsUser = false, collectLabelNames = null) {
+_buildReviewDisplay(reviewJson, data, useTeacherAsUser = false, labelCounts = null) {
+
     const reviewId = reviewJson.review_id;
     const userId = reviewJson.user_id;
 
+    // Obtener todos los label_ids asociados a esta review
     const labelIds = data.reviewLabels
       .filter(rl => rl.review_id === reviewId)
       .map(rl => rl.label_id);
 
-    const allLabels = labelIds.map(id => data.labelMap[id]);
-    const caracteristicasLabels = allLabels.filter(l => l.group_id === 21);
-
+    // Mapear esos IDs a los objetos de etiqueta completos
+   
+    const allLabels = labelIds.map(id => data.labelMap[id]).filter(Boolean);
+    
+    if (labelCounts) {
+  allLabels.forEach(label => {
+    labelCounts.set(label.name, (labelCounts.get(label.name) || 0) + 1);
+  });
+}
+    // Obtener el usuario (o profesor si se usa esa opción)
     let user;
     if (useTeacherAsUser) {
       const teacher = data.teacherMap[reviewJson.teacher_id] || {
@@ -128,17 +143,14 @@ class ReviewService {
       };
     }
 
+    // Obtener nombre del curso
     const course = data.courseMap[reviewJson.course_id];
     const courseName = course ? course.name : '';
-
-    if (collectLabelNames) {
-      caracteristicasLabels.forEach(label => collectLabelNames.add(label.name));
-    }
 
     return {
       review: reviewJson,
       user: user,
-      labels: caracteristicasLabels,
+      labels: allLabels,
       courseName: courseName,
     };
   }
@@ -168,29 +180,29 @@ class ReviewService {
   }
 
   updateReview(reviewId, newReviewData, newLabelIds) {
-  const index = this.reviews.findIndex(r => r.review_id === reviewId);
-  if (index !== -1) {
-    this.reviews[index] = { ...this.reviews[index], ...newReviewData };
-    
-    // Eliminar etiquetas anteriores
-    this.reviewLabels = this.reviewLabels.filter(rl => rl.review_id !== reviewId);
+    const index = this.reviews.findIndex(r => r.review_id === reviewId);
+    if (index !== -1) {
+      this.reviews[index] = { ...this.reviews[index], ...newReviewData };
 
-    // Agregar nuevas etiquetas
-    for (const labelId of newLabelIds) {
-      const newReviewLabel = {
-        review_label_id: this.nextReviewLabelId++,
-        review_id: reviewId,
-        label_id: labelId
-      };
-      this.reviewLabels.push(newReviewLabel);
+      // Eliminar etiquetas anteriores
+      this.reviewLabels = this.reviewLabels.filter(rl => rl.review_id !== reviewId);
+
+      // Agregar nuevas etiquetas
+      for (const labelId of newLabelIds) {
+        const newReviewLabel = {
+          review_label_id: this.nextReviewLabelId++,
+          review_id: reviewId,
+          label_id: labelId
+        };
+        this.reviewLabels.push(newReviewLabel);
+      }
+
+      this._saveToLocalStorage();
+      console.log('Reseña actualizada:', this.reviews[index]);
+    } else {
+      console.warn(`No se encontró la reseña con ID ${reviewId}`);
     }
-
-    this._saveToLocalStorage();
-    console.log('Reseña actualizada:', this.reviews[index]);
-  } else {
-    console.warn(`No se encontró la reseña con ID ${reviewId}`);
   }
-}
 
   addLike(reviewId) {
     const review = this.reviews.find(r => r.review_id === reviewId);

@@ -67,7 +67,7 @@ const Perfil = () => {
                   course: r.courseName,
                   nota: r.review.nota,
                   comment: r.review.comment,
-                  labels: r.labels,
+                  labels: r.labels.filter(l => l.group_id === 21),
                   emoji: r.review.emoji,
                   ratingLabel: '',
                   likes: r.review.likes,

@@ -47,7 +47,7 @@ const Evaluacion = () => {
     const cargarPreguntas = async () => {
       const data = await loadQuestionsWithLabels();
 
-      // Preguntas Likert (grupos 4 al 11)
+      // Preguntas (grupos 4 al 11)
       const preguntasGenerales = data.filter(
         (p) => p.group_id >= 4 && p.group_id <= 11
       );
@@ -60,12 +60,14 @@ const Evaluacion = () => {
       // Todas las etiquetas disponibles
       const etiquetas = data.flatMap((p) => p.labels || []);
       setLabelsDinamicas(etiquetas);
+      console.log("Etiquetas dinámicas cargadas:", etiquetas);
     };
     cargarPreguntas();
   }, []);
 
   useEffect(() => {
     if (reviewToEdit && preguntasDinamicas.length > 0 && labelsDinamicas.length > 0) {
+
       setCurso(reviewToEdit.course);
       setFacilidad(reviewToEdit.facilidad);
       setRecomendado(reviewToEdit.recomendado);
@@ -81,28 +83,29 @@ const Evaluacion = () => {
       );
 
       const dinamicas = {};
-      preguntasDinamicas.forEach((p) => {
-        const labelFromReview = reviewToEdit.labels.find(
-          (l) => l.group_id === p.group_id
+      preguntasDinamicas.forEach((pregunta) => {
+        const labelSeleccionado = reviewToEdit.labels.find(
+          (l) => l.group_id === pregunta.group_id
         );
-        if (labelFromReview) {
+        if (labelSeleccionado) {
           const labelsDelGrupo = labelsDinamicas.filter(
-            (l) => l.group_id === p.group_id
+            (l) => l.group_id === pregunta.group_id
           );
 
-          const labelIndex = labelsDelGrupo.findIndex(
-            (l) => l.label_id === labelFromReview.label_id
+          const index = labelsDelGrupo.findIndex(
+            (l) => parseInt(l.label_id) === parseInt(labelSeleccionado.label_id)
           );
 
-          if (labelIndex !== -1) {
-            dinamicas[p.group_id] = labelIndex + 1;
+          if (index !== -1) {
+            dinamicas[pregunta.group_id] = index + 1;
           }
         }
       });
       setRespuestas(dinamicas);
-      console.log("📌 Preguntas dinámicas cargadas:", preguntasDinamicas);
-      console.log("📌 Etiquetas dinámicas cargadas:", labelsDinamicas);
-      console.log("📌 Review a editar:", reviewToEdit);
+
+      console.log("Preguntas dinámicas cargadas:", preguntasDinamicas);
+      console.log("Etiquetas dinámicas cargadas:", labelsDinamicas);
+      console.log("Review a editar:", reviewToEdit);
 
     }
   }, [reviewToEdit, preguntasDinamicas, labelsDinamicas]);

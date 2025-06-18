@@ -14,7 +14,13 @@ export const useControladorPerfilProfesor = (teacherId) => {
       const teacher = await TeacherService.getTeacherById(teacherId);
       const colleges = await CollegeService.getCollegesByTeacherId(teacherId);
       const courses = await CourseService.getCoursesByTeacherId(teacherId);
-      const { reviews, usedLabelNames, promedios } = await ReviewService.getReviewsForTeacher(teacherId);
+      const { reviews, promedios, usedLabelStats } = await ReviewService.getReviewsForTeacher(teacherId);
+
+
+      const caracteristicasLabels = usedLabelStats.filter(label => {
+        const fullLabel = ReviewService.labels.find(l => l.name === label.name);
+        return fullLabel?.group_id === 21;
+      });
 
       const profile = {
         name: teacher.name,
@@ -24,7 +30,7 @@ export const useControladorPerfilProfesor = (teacherId) => {
         description: teacher.description,
         colleges: colleges.map(c => ({ id: c.college_id, name: c.name })),
         courses: courses.map(c => c.name),
-        labels: usedLabelNames,
+        labels: caracteristicasLabels,
         reviews,
       };
 

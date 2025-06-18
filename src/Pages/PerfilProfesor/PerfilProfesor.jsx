@@ -72,8 +72,9 @@ const PerfilProfesor = ({ idTeacher }) => {
                     <h3 className="section-title fs-5">Etiquetas para profesor</h3>
                     <div className="chip-container">
                         {teacher.labels.map((label, i) => (
-                            <span key={i} className="chip-labels">{label}</span>
+                            <span key={i} className="chip-labels">{label.name} ({label.count})</span>
                         ))}
+
                     </div>
                 </div>
 
@@ -95,7 +96,7 @@ const PerfilProfesor = ({ idTeacher }) => {
                                 course: r.courseName,
                                 nota: r.review.nota,
                                 comment: r.review.comment,
-                                labels: r.labels,
+                                labels: r.labels.filter(l => l.group_id === 21),
                                 emoji: r.review.emoji,
                                 ratingLabel: '',
                                 likes: r.review.likes,
