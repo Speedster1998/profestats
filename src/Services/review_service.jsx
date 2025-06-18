@@ -99,7 +99,7 @@ class ReviewService {
       .map(rl => rl.label_id);
 
     const allLabels = labelIds.map(id => data.labelMap[id]);
-    const otherLabels = allLabels.filter(l => l.group_id !== 1);
+    const caracteristicasLabels = allLabels.filter(l => l.group_id === 21);
 
     let user;
     if (useTeacherAsUser) {
@@ -132,13 +132,13 @@ class ReviewService {
     const courseName = course ? course.name : '';
 
     if (collectLabelNames) {
-      otherLabels.forEach(label => collectLabelNames.add(label.name));
+      caracteristicasLabels.forEach(label => collectLabelNames.add(label.name));
     }
 
     return {
       review: reviewJson,
       user: user,
-      labels: otherLabels,
+      labels: caracteristicasLabels,
       courseName: courseName,
     };
   }
@@ -166,6 +166,31 @@ class ReviewService {
     console.log('Review agregada:', newReview);
     console.log('Etiquetas asociadas:', labelIds);
   }
+
+  updateReview(reviewId, newReviewData, newLabelIds) {
+  const index = this.reviews.findIndex(r => r.review_id === reviewId);
+  if (index !== -1) {
+    this.reviews[index] = { ...this.reviews[index], ...newReviewData };
+    
+    // Eliminar etiquetas anteriores
+    this.reviewLabels = this.reviewLabels.filter(rl => rl.review_id !== reviewId);
+
+    // Agregar nuevas etiquetas
+    for (const labelId of newLabelIds) {
+      const newReviewLabel = {
+        review_label_id: this.nextReviewLabelId++,
+        review_id: reviewId,
+        label_id: labelId
+      };
+      this.reviewLabels.push(newReviewLabel);
+    }
+
+    this._saveToLocalStorage();
+    console.log('Reseña actualizada:', this.reviews[index]);
+  } else {
+    console.warn(`No se encontró la reseña con ID ${reviewId}`);
+  }
+}
 
   addLike(reviewId) {
     const review = this.reviews.find(r => r.review_id === reviewId);

@@ -1,7 +1,7 @@
 [
-  { "review_label_id": 2, "review_id": 1, "label_id": 6 },
+  { "review_label_id": 2, "review_id": 1, "label_id": 28 },
   { "review_label_id": 3, "review_id": 1, "label_id": 13 },
-  { "review_label_id": 1, "review_id": 1, "label_id": 19 },
+  { "review_label_id": 1, "review_id": 1, "label_id": 21 },
 
   { "review_label_id": 4, "review_id": 2, "label_id": 2 },
   { "review_label_id": 5, "review_id": 2, "label_id": 7 },

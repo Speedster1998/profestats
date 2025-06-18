@@ -4,8 +4,10 @@ import "./Perfil.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import ReviewService from '../../Services/review_service';
 import ReviewItem from '../../Componentes/Perfil/ReviewItem';
+import { useNavigate } from 'react-router-dom';
 
 const Perfil = () => {
+  const navigate = useNavigate();
   const [reviews, setReviews] = useState([]);
   const [userData, setUserData] = useState({});
   const [editIndex, setEditIndex] = useState(null);
@@ -75,15 +77,24 @@ const Perfil = () => {
                 onLike={() => handleLike(r.review.review_id)}
                 onDislike={() => handleDislike(r.review.review_id)}
                 showEditButton={true}
-                onEdit={() => startEditing(i)}
+                onEdit={() =>
+                  navigate(`/evaluacion/${r.review.teacher_id}`, {
+                    state: {
+                      review: {
+                        ...r.review,
+                        labels: r.labels,
+                        course: r.courseName,
+                        emoji: r.review.emoji,
+                      }
+                    }
+                  })
+                }
               />
             </div>
           ))
         ) : (
           <p>No has realizado ninguna review todavía.</p>
         )}
-
-
       </div>
     </div>
   );

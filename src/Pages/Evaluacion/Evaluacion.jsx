@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import "./Evaluacion.css";
 import profesores from "../../data/Profesores.json";
 import cursosData from "../../data/Cursos.json";
@@ -12,6 +12,8 @@ import { useNavigate } from "react-router-dom";
 
 const Evaluacion = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const reviewToEdit = location.state?.review;
   const { teacherId } = useParams();
   const parsedProfesorId = parseInt(teacherId);
   const profesor = profesores.find((p) => p.teacher_id === parsedProfesorId);
@@ -30,8 +32,13 @@ const Evaluacion = () => {
   const [anonimo, setAnonimo] = useState(false);
   const [caracteristicas, setCaracteristicas] = useState([]);
   const [preguntasDinamicas, setPreguntasDinamicas] = useState([]);
+  const [labelsDinamicas, setLabelsDinamicas] = useState([]);
+
+  const [preguntasCaracteristicas, setPreguntaCaracteristicas] = useState([]);
+  const [labelsCaracteristicas, setLabelsCaracteristicas] = useState([]);
+
   const [respuestas, setRespuestas] = useState({});
-  const labelsEtiquetas = labels.filter(label => label.group_id === 21);
+
   const [notaAlumno, setNotaAlumno] = useState(null);
   const [enviando, setEnviando] = useState(false);
   const [errorMensaje, setErrorMensaje] = useState("");
@@ -39,10 +46,67 @@ const Evaluacion = () => {
   useEffect(() => {
     const cargarPreguntas = async () => {
       const data = await loadQuestionsWithLabels();
-      setPreguntasDinamicas(data);
+
+      // Preguntas Likert (grupos 4 al 11)
+      const preguntasGenerales = data.filter(
+        (p) => p.group_id >= 4 && p.group_id <= 11
+      );
+      setPreguntasDinamicas(preguntasGenerales);
+
+      // Características (grupo 21)
+      const preguntaCaracteristicas = data.find((p) => p.group_id === 21);
+      setPreguntaCaracteristicas(preguntaCaracteristicas);
+
+      // Todas las etiquetas disponibles
+      const etiquetas = data.flatMap((p) => p.labels || []);
+      setLabelsDinamicas(etiquetas);
     };
     cargarPreguntas();
   }, []);
+
+  useEffect(() => {
+    if (reviewToEdit && preguntasDinamicas.length > 0 && labelsDinamicas.length > 0) {
+      setCurso(reviewToEdit.course);
+      setFacilidad(reviewToEdit.facilidad);
+      setRecomendado(reviewToEdit.recomendado);
+      setAsistencia(reviewToEdit.asistencia);
+      setCalificacion(reviewToEdit.emoji);
+      setComentario(reviewToEdit.comment);
+      setAnonimo(reviewToEdit.anonimo);
+      setNotaAlumno(reviewToEdit.nota);
+      setCaracteristicas(
+        reviewToEdit.labels
+          .filter((l) => l.group_id === 21)
+          .map((l) => l.name)
+      );
+
+      const dinamicas = {};
+      preguntasDinamicas.forEach((p) => {
+        const labelFromReview = reviewToEdit.labels.find(
+          (l) => l.group_id === p.group_id
+        );
+        if (labelFromReview) {
+          const labelsDelGrupo = labelsDinamicas.filter(
+            (l) => l.group_id === p.group_id
+          );
+
+          const labelIndex = labelsDelGrupo.findIndex(
+            (l) => l.label_id === labelFromReview.label_id
+          );
+
+          if (labelIndex !== -1) {
+            dinamicas[p.group_id] = labelIndex + 1;
+          }
+        }
+      });
+      setRespuestas(dinamicas);
+      console.log("📌 Preguntas dinámicas cargadas:", preguntasDinamicas);
+      console.log("📌 Etiquetas dinámicas cargadas:", labelsDinamicas);
+      console.log("📌 Review a editar:", reviewToEdit);
+
+    }
+  }, [reviewToEdit, preguntasDinamicas, labelsDinamicas]);
+
 
   if (!profesor) return <div>Profesor no encontrado.</div>;
 
@@ -61,24 +125,6 @@ const Evaluacion = () => {
       : null;
   };
 
-  // Extraer label_id de preguntas dinámicas
-  const labelIdsDinamicos = preguntasDinamicas
-    .map((preg) => {
-      const selected = respuestas[preg.group_id];
-      const label = labels.find(
-        (l) => l.group_id === preg.group_id && l.level === selected
-      );
-      return label?.label_id;
-    })
-    .filter(Boolean);
-
-  // Extraer label_id de características (group_id === 21)
-  const labelIdsCaracteristicas = labelsEtiquetas
-    .filter((l) => caracteristicas.includes(l.name))
-    .map((l) => l.label_id);
-
-  // Combinar todos los label_id
-  const allLabelIds = [...labelIdsCaracteristicas];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -97,9 +143,27 @@ const Evaluacion = () => {
     if (!cursosDelProfesor.some((c) => c.name === curso)) {
       return setErrorMensaje("El curso seleccionado no pertenece al profesor.");
     }
+
+    // Labels de las respuestas de preguntas generales (Likert)
+    const dinamicasLabels = Object.entries(respuestas).map(([group_id, index]) => {
+      const labelsDelGrupo = labelsDinamicas.filter(
+        (l) => l.group_id === parseInt(group_id)
+      );
+      return labelsDelGrupo[index - 1]?.label_id;
+    }).filter(Boolean);
+
+    // Labels de características seleccionadas (checkboxes)
+    const caracteristicasLabels = labels
+      .filter((l) => l.group_id === 21 && caracteristicas.includes(l.name))
+      .map((l) => l.label_id);
+
+    console.log("Respuestas:", respuestas);
+    console.log("Labels dinámicas disponibles:", labelsDinamicas);
+    console.log("Label IDs seleccionadas:", dinamicasLabels);
+
     const promedioPreguntas = calcularPromedioDinamico();
 
-    const datos = {
+    const reviewData = {
       user_id: user_id,
       teacher_id: parsedProfesorId,
       course_id: cursosDelProfesor.find((c) => c.name === curso)?.course_id || null,
@@ -114,8 +178,15 @@ const Evaluacion = () => {
       emoji
     };
 
+    const labelIds = [...dinamicasLabels, ...caracteristicasLabels];
+
     setEnviando(true);
-    await ReviewService.addReview(datos, allLabelIds);
+    if (reviewToEdit) {
+      await ReviewService.updateReview(reviewToEdit.review_id, reviewData, labelIds);
+
+    } else {
+      await ReviewService.addReview(reviewData, labelIds);
+    }
     setEnviando(false);
     console.log("¡Gracias por tu evaluación!");
     navigate(-1);
@@ -129,9 +200,7 @@ const Evaluacion = () => {
     setAnonimo(null);
     setCaracteristicas([]);
     setErrorMensaje("");
-
   };
-
 
   return (
     <div className="evaluacion-container">
@@ -261,25 +330,29 @@ const Evaluacion = () => {
         ))}
       </div>
 
-      <h2>¿Qué características destacarías del profesor?</h2>
+      <h2>{preguntasCaracteristicas?.text}</h2>
       <div className="checkbox-group">
-        {labelsEtiquetas.map((carac) => {
-          const selected = caracteristicas.includes(carac.name);
-          return (
-            <button
-              key={carac.label_id}
-              className={`btn ${selected ? "selected" : ""}`}
-              onClick={() => {
-                setCaracteristicas((prev) =>
-                  selected ? prev.filter((c) => c !== carac.name) : [...prev, carac.name]
-                );
-              }}
-            >
-              <input type="checkbox" checked={selected} readOnly />
-              {carac.name}
-            </button>
-          );
-        })}
+        {labels
+          .filter((l) => l.group_id === 21)
+          .map((carac) => {
+            const selected = caracteristicas.includes(carac.name);
+            return (
+              <button
+                key={carac.label_id}
+                className={`btn ${selected ? "selected" : ""}`}
+                onClick={() => {
+                  setCaracteristicas((prev) =>
+                    selected
+                      ? prev.filter((c) => c !== carac.name)
+                      : [...prev, carac.name]
+                  );
+                }}
+              >
+                <input type="checkbox" checked={selected} readOnly />
+                {carac.name}
+              </button>
+            );
+          })}
       </div>
 
       <h2>Añadir un comentario (opcional)</h2>
@@ -311,7 +384,7 @@ const Evaluacion = () => {
       )}
 
       <button className="submit-btn" onClick={handleSubmit} disabled={enviando}>
-        {enviando ? "Enviando..." : "Enviar evaluación"}
+        {reviewToEdit ? 'Actualizar Reseña' : 'Enviar Reseña'}
       </button>
     </div>
   );

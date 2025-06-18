@@ -38,5 +38,10 @@
     "group_id": 11,
     "name": "Motivación",
     "text": "¿Inspira o motiva a los estudiantes a aprender?"
+  },
+  {
+    "group_id": 21,
+    "name": "Caracteristicas",
+    "text": "Qué características destacarías del profesor?"
   }
 ]
