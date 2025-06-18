@@ -2,11 +2,13 @@ import { useNavigate } from 'react-router-dom';
 import HeaderBase from './HeaderBase.jsx';
 import styles from "./Header.module.scss";
 
-const Header = () => {
+const Header = ({logOut}) => {
   const navigate = useNavigate();
 
   const CerrarSesion = () => {
+    localStorage.setItem("logged", "false");
     navigate('/')
+    
   }
 
   return (
@@ -15,7 +17,7 @@ const Header = () => {
         <a href="/filtrogeneral">BUSCAR</a>
         <a href="/perfil">PERFIL</a>
       </nav>
-      <button className={styles.logoutBtn} onClick={CerrarSesion}>CERRAR SESIÓN</button>
+      <button className={styles.logoutBtn} onClick={logOut}>CERRAR SESIÓN</button>
     </HeaderBase>
   );
 };

@@ -10,17 +10,39 @@ import Perfil from "./Pages/Perfil/Perfil";
 import FiltroUniversidad from "./Pages/FiltroUniversidad/FiltroUniversidad";
 import FiltroGeneral from "./Pages/FiltroGeneral/FiltroGeneral";
 import PerfilProfesor from "./Pages/PerfilProfesor/PerfilProfesor";
-
 function App() {
-    const [logged, setLogged] = useState(true)
+    const [logged, setLogged] = useState(null)
 
-    /*useEffect(() => {
-        setLogged(localStorage.getItem("logged") === "true")
-    }, [])*/
+    useEffect(() => {
+        const usuario = localStorage.getItem("usuario");
+        const estaLogeado = localStorage.getItem("logged") === "true";
+
+        setLogged(usuario !== null && estaLogeado);
+    }, [])
+    
+    const logUser = () => {
+        localStorage.setItem("logged", "true");
+        const usuario = localStorage.getItem("usuario");
+        const estaLogeado = localStorage.getItem("logged") === "true";
+
+        setLogged(usuario !== null && estaLogeado);
+
+        navigate("/perfil");
+    }
+
+    const logOut = () => {
+        localStorage.setItem("logged", "false");
+        const usuario = localStorage.getItem("usuario");
+        const estaLogeado = localStorage.getItem("logged") === "true";
+
+        setLogged(usuario !== null && estaLogeado);
+
+        navigate("/login");
+    }
 
     const unloggedRoutes = [
         { path: "/", element: <Landing/> },
-        { path: "/login", element: <Login/> },
+        { path: "/login", element: <Login logFunc={logUser}/> },
         { path: "/signin", element: <Signin/> }
     ];
 
@@ -37,8 +59,8 @@ function App() {
     };
 
     return <FondoDecorativo>
-        {logged && <Header/>}
-        {logged !== undefined &&
+        {logged && <Header logOut={logOut}/>}
+        {logged !== null &&
         <Routes>
             {unloggedRoutes.map(({ path, element }, index) => (
                 <Route key={index} path={path} element={<CheckRoute loggedIn={false} elseRoute="/perfil">{element}</CheckRoute>} />

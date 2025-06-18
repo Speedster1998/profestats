@@ -56,7 +56,7 @@ const FiltroGeneral = () => {
         <i className="bi bi-search text-white ms-3" style={{ fontSize: '1.2rem', cursor: 'pointer' }}></i>
       </div>
 
-      <div className="overflow-auto" style={{ maxHeight: '70vh' }}>
+      <div className="" style={{ maxHeight: '70vh' }}>
         {filteredUniversities.map((u) => (
           <button key={u.college_id} className="card mb-2 bg-transparent text-white border-success text-start w-100" style={{ border: '1px solid #198754' }} onClick={() => navigate(`/filtrouniversidad/${u.college_id}`)}>
             <div className="card-body d-flex align-items-center">

@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import profeLanding from "@/Images/profeLanding.png";
-import "./landing.css";
+import styles from "./landing.module.css";
 import HeaderLanding from "@/Componentes/Header/HeaderLanding.jsx"
 
 const Landing = () => {
@@ -13,24 +13,24 @@ const Landing = () => {
     return (
     <>
     <HeaderLanding onRegisterClick={Registarse}/>
-    <section>
-        <div className="text-section">
+    <section className={styles.section}>
+        <div className={styles.textSection}>
             <h1>
-                <span className="highlight">CALIFICA</span> A TUS PROFESORES<br/>
-                TU <span className="highlight">OPINIÓN</span> CUENTA
+                <span className={styles.highlight}>CALIFICA</span> A TUS PROFESORES<br/>
+                TU <span className={styles.highlight}>OPINIÓN</span> CUENTA
             </h1>
             <p>
                 ¡Tu opinión cuenta y puede marcar la diferencia!<br/>
                 ¿Tuviste un profesor increíble que hizo más fácil aprender? ¿O uno que podría mejorar su forma de enseñar?<br/>
                 Calificar y comentar sobre tus profesores no solo te permite expresar tu experiencia, sino que también ayuda a cientos de estudiantes como tú a tomar mejores decisiones académicas.
             </p>
-            <button className="register-button" onClick={Registarse}>REGISTRARSE<span className="arrow">→</span></button>
+            <button className={styles.registerButton} onClick={Registarse}>REGISTRARSE<span className={styles.arrow}>→</span></button>
         </div>
-        <div className="image-section">
+        <div className={styles.imageSection}>
             <img src={profeLanding} alt="Profesor" />
         </div>
-        <div className="help-icon">
-            <button className="help-button">?</button>
+        <div className={styles.helpIcon}>
+            <button className={styles.helpButton}>?</button>
         </div>
     </section>
     </>

@@ -7,7 +7,11 @@ const Perfil = () => {
   const [editComentario, setEditComentario] = useState("");
   const [editNota, setEditNota] = useState("");
 
+  const [userData, setUserData] = useState({});
+
   useEffect(() => {
+    const usuario = JSON.parse(localStorage.getItem("usuario"));
+    setUserData(usuario)
     fetch("./src/data/reviews-Perfil.json")
       .then((res) => res.json())
       .then((data) => setReviews(data))
@@ -33,10 +37,10 @@ const Perfil = () => {
   return (
     <div className="perfil-container">
       <div className="perfil">
-        <img src="https://i.pravatar.cc/150?img=12" alt="perfil" className="avatar" />
-        <h2>Alex Hernandez</h2>
+        <img src='../../../src/images/profileDefault.png' alt="perfil" className="avatar" />
+        <h2>{userData.username}</h2>
         <p className="perfil-datos">
-            Alex@ulima.com<br></br>
+            {userData.email}<br></br>
             Tu nombre anónimo: <strong>AMSN</strong><br></br>
             Universidad de Lima
         </p>
