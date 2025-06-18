@@ -1,14 +1,11 @@
 import { useState } from "react";
 import styles from "./login.module.css";
 import SigLogLayout from "./SigLogLayout.jsx"
-import { UserService } from "../../Services/user_services.jsx";
-import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Login = ({logFunc}) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [warning, setWarning] = useState("");
-    const navigate = useNavigate()
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -23,8 +20,9 @@ const Login = () => {
             usuarioGuardado.password === password
         ) {
             console.log("Inicio de sesión exitoso");
-            localStorage.setItem("logged", "true");
-            navigate("/perfil");
+            /*localStorage.setItem("logged", "true");
+            navigate("/perfil");*/
+            logFunc()
         } else {
             console.log("Credenciales incorrectas");
             setWarning("Correo o contraseña incorrectos");

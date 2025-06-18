@@ -20,10 +20,29 @@ function App() {
         setLogged(usuario !== null && estaLogeado);
     }, [])
     
+    const logUser = () => {
+        localStorage.setItem("logged", "true");
+        const usuario = localStorage.getItem("usuario");
+        const estaLogeado = localStorage.getItem("logged") === "true";
+
+        setLogged(usuario !== null && estaLogeado);
+
+        navigate("/perfil");
+    }
+
+    const logOut = () => {
+        localStorage.setItem("logged", "false");
+        const usuario = localStorage.getItem("usuario");
+        const estaLogeado = localStorage.getItem("logged") === "true";
+
+        setLogged(usuario !== null && estaLogeado);
+
+        navigate("/login");
+    }
 
     const unloggedRoutes = [
         { path: "/", element: <Landing/> },
-        { path: "/login", element: <Login/> },
+        { path: "/login", element: <Login logFunc={logUser}/> },
         { path: "/signin", element: <Signin/> }
     ];
 
@@ -40,7 +59,7 @@ function App() {
     };
 
     return <FondoDecorativo>
-        {logged && <Header/>}
+        {logged && <Header logOut={logOut}/>}
         {logged !== null &&
         <Routes>
             {unloggedRoutes.map(({ path, element }, index) => (
