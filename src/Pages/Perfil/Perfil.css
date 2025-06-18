@@ -163,6 +163,12 @@ body {
   margin-bottom: -7px;
 }
 
+.editar-boton-wrapper {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
 .editar {
   position: absolute;
   top: 10px;
@@ -234,4 +240,10 @@ body {
   vertical-align: sub;
   margin-right: 1px;
   width: 16px;
+}
+
+.review-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
