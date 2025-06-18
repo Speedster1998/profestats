@@ -19,7 +19,9 @@ class ReviewService {
     this.reviewLabels = storedReviewLabels || [...reviewLabelsJson];
 
     this.labels = [...labelsJson];
-    this.users = [...usersJson];
+    const storedUsers = JSON.parse(localStorage.getItem('Usuarios'));
+    this.users = storedUsers || [...usersJson];
+
     this.courses = [...coursesJson];
     this.teachers = [...teachersJson];
 

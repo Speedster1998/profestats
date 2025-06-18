@@ -10,7 +10,17 @@ import Perfil from "./Pages/Perfil/Perfil";
 import FiltroUniversidad from "./Pages/FiltroUniversidad/FiltroUniversidad";
 import FiltroGeneral from "./Pages/FiltroGeneral/FiltroGeneral";
 import PerfilProfesor from "./Pages/PerfilProfesor/PerfilProfesor";
+import usuariosJSON from './data/Usuarios.json';
+
 function App() {
+     useEffect(() => {
+    const usuariosGuardados = JSON.parse(localStorage.getItem("Usuarios"));
+
+    if (!usuariosGuardados || usuariosGuardados.length === 0) {
+      // Guardar los usuarios del archivo JSON por primera vez
+      localStorage.setItem("Usuarios", JSON.stringify(usuariosJSON));
+    }
+  }, []);
     const [logged, setLogged] = useState(null)
 
     useEffect(() => {

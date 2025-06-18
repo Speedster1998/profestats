@@ -282,4 +282,12 @@ button:active,
   border: 1px solid white;
 }
 
-
+.error-message {
+  color: #e74c3c;
+  background-color: #fdecea;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+}

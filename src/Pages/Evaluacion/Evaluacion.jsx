@@ -11,11 +11,15 @@ import ReviewService from "../../Services/review_service.jsx";
 import { useNavigate } from "react-router-dom";
 
 const Evaluacion = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const { teacherId } = useParams();
   const parsedProfesorId = parseInt(teacherId);
   const profesor = profesores.find((p) => p.teacher_id === parsedProfesorId);
   if (!profesor) return <div>Profesor no encontrado.</div>;
+  console.log("Usuario actual:", localStorage.getItem("usuario"));
+
+  const userFromStorage = JSON.parse(localStorage.getItem("usuario"));
+  const user_id = userFromStorage?.user_id || 1;
 
   const [curso, setCurso] = useState("");
   const [facilidad, setFacilidad] = useState(null);
@@ -23,21 +27,24 @@ const Evaluacion = () => {
   const [asistencia, setAsistencia] = useState(null);
   const [emoji, setCalificacion] = useState("");
   const [comentario, setComentario] = useState("");
-  const [anonimo, setAnonimo] = useState(null);
+  const [anonimo, setAnonimo] = useState(false);
   const [caracteristicas, setCaracteristicas] = useState([]);
   const [preguntasDinamicas, setPreguntasDinamicas] = useState([]);
   const [respuestas, setRespuestas] = useState({});
   const labelsEtiquetas = labels.filter(label => label.group_id === 21);
   const [notaAlumno, setNotaAlumno] = useState(null);
+  const [enviando, setEnviando] = useState(false);
+  const [errorMensaje, setErrorMensaje] = useState("");
 
   useEffect(() => {
     const cargarPreguntas = async () => {
       const data = await loadQuestionsWithLabels();
-      console.log("Preguntas dinámicas cargadas:", data);
       setPreguntasDinamicas(data);
     };
     cargarPreguntas();
   }, []);
+
+  if (!profesor) return <div>Profesor no encontrado.</div>;
 
   const cursosDelProfesor = relaciones
     .filter((rel) => rel.teacher_id === parsedProfesorId)
@@ -73,36 +80,27 @@ const Evaluacion = () => {
   // Combinar todos los label_id
   const allLabelIds = [...labelIdsCaracteristicas];
 
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const cursoValido = cursosDelProfesor.some((c) => c.name === curso);
-    if (!cursoValido) {
-      alert("El curso seleccionado no pertenece al profesor.");
-      return;
+    if (enviando) return;
+    if (!curso) return setErrorMensaje("Debes seleccionar un curso.");
+    if (!facilidad) return setErrorMensaje("Indica la facilidad.");
+    if (!recomendado) return setErrorMensaje("Indica si recomiendas al profesor.");
+    if (!asistencia) return setErrorMensaje("Selecciona la asistencia.");
+    if (!notaAlumno) return setErrorMensaje("Debes indicar qué nota obtuviste.");
+    if (!emoji) return setErrorMensaje("Selecciona una calificación en emojis.");
+    if (preguntasDinamicas.some((p) => !respuestas[p.group_id])) {
+      return setErrorMensaje("Responde todas las preguntas antes de enviar.");
     }
 
+    if (!cursosDelProfesor.some((c) => c.name === curso)) {
+      return setErrorMensaje("El curso seleccionado no pertenece al profesor.");
+    }
     const promedioPreguntas = calcularPromedioDinamico();
 
-    const usuario = anonimo
-      ? {
-        user_id: 1,
-        username: "Alumno",
-        email: "alumno@aloe.ulima.edu.pe",
-        password: "123456",
-        college_id: 1,
-        image_url: require("../../Images/profileDefault.png")
-      }
-      : {
-        user_id: 1,
-        username: "Usuario Actual",
-        email: "usuario@ulima.edu.pe",
-        image_url: "https://cris.ulima.edu.pe/files-asset/40822754/EEscobedo.jpg?w=320&f=webp"
-      };
-
     const datos = {
-      user_id: usuario.user_id,
+      user_id: user_id,
       teacher_id: parsedProfesorId,
       course_id: cursosDelProfesor.find((c) => c.name === curso)?.course_id || null,
       comment: comentario,
@@ -116,8 +114,9 @@ const Evaluacion = () => {
       emoji
     };
 
-    ReviewService.addReview(datos, allLabelIds);
-     
+    setEnviando(true);
+    await ReviewService.addReview(datos, allLabelIds);
+    setEnviando(false);
     console.log("¡Gracias por tu evaluación!");
     navigate(-1);
 
@@ -129,18 +128,21 @@ const Evaluacion = () => {
     setComentario("");
     setAnonimo(null);
     setCaracteristicas([]);
+    setErrorMensaje("");
+
   };
+
 
   return (
     <div className="evaluacion-container">
-
       <h6>Evaluando a: {profesor.name}</h6>
-      <br />
+
       <h1>Elige tu curso</h1>
       <select
         value={curso}
         onChange={(e) => setCurso(e.target.value)}
         className="select"
+        disabled={cursosDelProfesor.length === 0}
       >
         <option value="">Selecciona un curso</option>
         {cursosDelProfesor.map((c) => (
@@ -149,7 +151,6 @@ const Evaluacion = () => {
           </option>
         ))}
       </select>
-
 
       {preguntasDinamicas.map((pregunta) => {
         const selectedValue = respuestas[pregunta.group_id];
@@ -160,14 +161,11 @@ const Evaluacion = () => {
           <div key={pregunta.group_id} className="likert-row">
             <div className="likert-label">{pregunta.text}</div>
             <div className="likert-options">
-              {[1, 2, 3, 4, 5].map((valor, i) => (
+              {[1, 2, 3, 4, 5].map((valor) => (
                 <button
                   key={valor}
                   onClick={() =>
-                    setRespuestas((prev) => ({
-                      ...prev,
-                      [pregunta.group_id]: valor,
-                    }))
+                    setRespuestas((prev) => ({ ...prev, [pregunta.group_id]: valor }))
                   }
                   className={`btn ${selectedValue === valor ? "selected" : ""}`}
                 >
@@ -175,7 +173,6 @@ const Evaluacion = () => {
                 </button>
               ))}
             </div>
-
             {selectedValue && (
               <div className="likert-description">
                 {labelSeleccionado?.name || ""}
@@ -185,7 +182,6 @@ const Evaluacion = () => {
         );
       })}
 
-      {/* Facilidad */}
       <div className="likert-row">
         <div className="likert-label">Facilidad</div>
         <div className="likert-options">
@@ -199,16 +195,14 @@ const Evaluacion = () => {
             </button>
           ))}
         </div>
-
       </div>
 
-      {/* Recomienda */}
       <div className="inline-row">
         <div className="inline-label">¿Lo recomiendas?</div>
         <div className="inline-options">
-          {["Sí", "No"].map((op, i) => (
+          {["Sí", "No"].map((op) => (
             <button
-              key={i}
+              key={op}
               onClick={() => setRecomendado(op)}
               className={`btn ${recomendado === op ? "selected" : ""}`}
             >
@@ -218,13 +212,12 @@ const Evaluacion = () => {
         </div>
       </div>
 
-      {/* Asistencia */}
       <div className="inline-row">
         <div className="inline-label">Asistencia a clase</div>
         <div className="inline-options">
-          {["Obligatoria", "No obligatoria"].map((op, i) => (
+          {["Obligatoria", "No obligatoria"].map((op) => (
             <button
-              key={i}
+              key={op}
               onClick={() => setAsistencia(op)}
               className={`btn ${asistencia === op ? "selected" : ""}`}
             >
@@ -233,24 +226,22 @@ const Evaluacion = () => {
           ))}
         </div>
       </div>
-      
-       {/* Nota */}
+
       <div className="inline-row">
         <div className="inline-label">¿Qué nota obtuviste en este curso?</div>
         <div className="inline-options">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((n) => (
+          {[...Array(10)].map((_, i) => (
             <button
-              key={n}
-              onClick={() => setNotaAlumno(n)}
-              className={`btn ${notaAlumno === n ? "selected" : ""}`}
+              key={i + 1}
+              onClick={() => setNotaAlumno(i + 1)}
+              className={`btn ${notaAlumno === i + 1 ? "selected" : ""}`}
             >
-              {n}
+              {i + 1}
             </button>
           ))}
         </div>
       </div>
 
-      {/* Emoji rating */}
       <h2>¿Qué calificación le das al profesor?</h2>
       <div className="emoji-group">
         {[
@@ -258,9 +249,9 @@ const Evaluacion = () => {
           { label: "Buena", emoji: "🙂" },
           { label: "Regular", emoji: "😐" },
           { label: "Mala", emoji: "🙁" },
-        ].map(({ label, emoji }, i) => (
+        ].map(({ label, emoji }) => (
           <button
-            key={i}
+            key={emoji}
             onClick={() => setCalificacion(emoji)}
             className={`emoji-btn ${emoji === emoji ? "selected" : ""}`}
           >
@@ -270,7 +261,6 @@ const Evaluacion = () => {
         ))}
       </div>
 
-      {/* Características */}
       <h2>¿Qué características destacarías del profesor?</h2>
       <div className="checkbox-group">
         {labelsEtiquetas.map((carac) => {
@@ -281,25 +271,17 @@ const Evaluacion = () => {
               className={`btn ${selected ? "selected" : ""}`}
               onClick={() => {
                 setCaracteristicas((prev) =>
-                  selected
-                    ? prev.filter((c) => c !== carac.name)
-                    : [...prev, carac.name]
+                  selected ? prev.filter((c) => c !== carac.name) : [...prev, carac.name]
                 );
               }}
             >
-              <input
-                type="checkbox"
-                value={carac.name}
-                checked={selected}
-                readOnly
-              />
+              <input type="checkbox" checked={selected} readOnly />
               {carac.name}
             </button>
           );
         })}
       </div>
 
-      {/* Comentario */}
       <h2>Añadir un comentario (opcional)</h2>
       <textarea
         className="textarea"
@@ -308,13 +290,13 @@ const Evaluacion = () => {
         onChange={(e) => setComentario(e.target.value)}
         maxLength={300}
       />
+      <p>{300 - comentario.length} caracteres restantes</p>
 
-      {/* Anonimato */}
       <h2>¿Quieres que tu calificación sea anónima?</h2>
       <div className="button-group">
-        {["Sí", "No"].map((op, i) => (
+        {["Sí", "No"].map((op) => (
           <button
-            key={i}
+            key={op}
             onClick={() => setAnonimo(op === "Sí")}
             className={`btn ${anonimo === (op === "Sí") ? "selected" : ""}`}
           >
@@ -322,12 +304,18 @@ const Evaluacion = () => {
           </button>
         ))}
       </div>
+      {errorMensaje && (
+        <div className="error-message">
+          {errorMensaje}
+        </div>
+      )}
 
-      <button className="submit-btn" onClick={handleSubmit}>
-        Enviar evaluación
+      <button className="submit-btn" onClick={handleSubmit} disabled={enviando}>
+        {enviando ? "Enviando..." : "Enviar evaluación"}
       </button>
     </div>
   );
 };
+
 
 export default Evaluacion;
