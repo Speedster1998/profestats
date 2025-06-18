@@ -118,7 +118,7 @@ const Evaluacion = () => {
 
     ReviewService.addReview(datos, allLabelIds);
      
-    alert("¡Gracias por tu evaluación!");
+    console.log("¡Gracias por tu evaluación!");
     navigate(-1);
 
     setCurso("");
