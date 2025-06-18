@@ -96,7 +96,7 @@ class ReviewService {
     };
   }
 
-_buildReviewDisplay(reviewJson, data, useTeacherAsUser = false, labelCounts = null) {
+  _buildReviewDisplay(reviewJson, data, useTeacherAsUser = false, labelCounts = null) {
 
     const reviewId = reviewJson.review_id;
     const userId = reviewJson.user_id;
@@ -107,14 +107,19 @@ _buildReviewDisplay(reviewJson, data, useTeacherAsUser = false, labelCounts = nu
       .map(rl => rl.label_id);
 
     // Mapear esos IDs a los objetos de etiqueta completos
-   
+
     const allLabels = labelIds.map(id => data.labelMap[id]).filter(Boolean);
-    
+
     if (labelCounts) {
-  allLabels.forEach(label => {
-    labelCounts.set(label.name, (labelCounts.get(label.name) || 0) + 1);
-  });
-}
+      allLabels.forEach(label => {
+        if (labelCounts instanceof Map) {
+          labelCounts.set(label.name, (labelCounts.get(label.name) || 0) + 1);   // Conteo ( perfil profesor)
+        } else if (labelCounts instanceof Set) {
+          labelCounts.add(label.name);  // Solo registrar (perfil usuario)
+        }
+      });
+    }
+
     // Obtener el usuario (o profesor si se usa esa opción)
     let user;
     if (useTeacherAsUser) {
