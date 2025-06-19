@@ -256,6 +256,51 @@ class ReviewService {
   getAllReviewLabels() {
     return this.reviewLabels;
   }
+
+getGroupAveragesForTeacher(teacherId) {
+  const data = this._loadAllData();
+  const teacherReviews = this.reviews.filter(r => r.teacher_id === teacherId);
+
+  const groupScores = {};
+  const groupCounts = {};
+
+  for (const review of teacherReviews) {
+    const labelIds = this.reviewLabels
+      .filter(rl => rl.review_id === review.review_id)
+      .map(rl => rl.label_id);
+
+    for (const labelId of labelIds) {
+      const label = data.labelMap[labelId];
+      console.log("Etiqueta cargada:", label);
+      if (!label || label.nivel == null) continue;
+
+      const groupId = label.group_id;
+
+      if (!groupScores[groupId]) {
+        groupScores[groupId] = 0;
+        groupCounts[groupId] = 0;
+      }
+
+      groupScores[groupId] += label.nivel;
+      groupCounts[groupId] += 1;
+    }
+  }
+
+  const result = [];
+
+  for (const groupId in groupScores) {
+    const groupLabel = this.labels.find(l => l.group_id == groupId && l.text); 
+    result.push({
+      group_id: Number(groupId),
+      name: groupLabel?.text || `Pregunta ${groupId}`,
+      promedio: parseFloat((groupScores[groupId] / groupCounts[groupId]).toFixed(2))
+    });
+  }
+
+  return result;
+}
+
+
 }
 
 export default new ReviewService();
