@@ -49,8 +49,6 @@
   { "label_id": 36, "name": "Motivador", "group_id": 11, "nivel": 4 },
   { "label_id": 35, "name": "Muy motivador", "group_id": 11, "nivel": 5 },
 
-
-
   { "label_id": 50, "name": "Tiene buena disposición", "group_id": 21 },
   { "label_id": 53, "name": "Domina el curso", "group_id": 21 },
   { "label_id": 54, "name": "Es empático", "group_id": 21 },
