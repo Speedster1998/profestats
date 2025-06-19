@@ -52,5 +52,13 @@
   { "teacher_course_id": 51, "teacher_id": 20, "course_id": 30 },
   { "teacher_course_id": 52, "teacher_id": 28, "course_id": 8 },
   { "teacher_course_id": 52, "teacher_id": 28, "course_id": 34 },
-  { "teacher_course_id": 52, "teacher_id": 28, "course_id": 29 }
+  { "teacher_course_id": 52, "teacher_id": 28, "course_id": 29 },
+  { "teacher_course_id": 52, "teacher_id": 29, "course_id": 39 },
+  { "teacher_course_id": 52, "teacher_id": 29, "course_id": 45 },
+  { "teacher_course_id": 52, "teacher_id": 29, "course_id": 26 },
+  { "teacher_course_id": 52, "teacher_id": 30, "course_id": 26 },
+  { "teacher_course_id": 52, "teacher_id": 30, "course_id": 39 },
+  { "teacher_course_id": 52, "teacher_id": 30, "course_id": 32 },
+  { "teacher_course_id": 52, "teacher_id": 31, "course_id": 42 },
+  { "teacher_course_id": 52, "teacher_id": 31, "course_id": 45 }
 ]
