@@ -49,5 +49,8 @@
   { "teacher_course_id": 48, "teacher_id": 17, "course_id": 27 },
   { "teacher_course_id": 49, "teacher_id": 18, "course_id": 28 },
   { "teacher_course_id": 50, "teacher_id": 19, "course_id": 29 },
-  { "teacher_course_id": 51, "teacher_id": 20, "course_id": 30 }
+  { "teacher_course_id": 51, "teacher_id": 20, "course_id": 30 },
+  { "teacher_course_id": 52, "teacher_id": 28, "course_id": 8 },
+  { "teacher_course_id": 52, "teacher_id": 28, "course_id": 34 },
+  { "teacher_course_id": 52, "teacher_id": 28, "course_id": 29 }
 ]
