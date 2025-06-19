@@ -1,5 +1,11 @@
 [
   {
+    "faculty_id": 21,
+    "name": "Facultad de Generales",
+    "college_id": 1,
+    "teachers_amount": 8
+  },
+  {
     "faculty_id": 1,
     "name": "Facultad de Ingeniería",
     "college_id": 1,
@@ -119,4 +125,5 @@
     "college_id": 10,
     "teachers_amount": 8
   }
+  
 ]

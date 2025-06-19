@@ -2,13 +2,13 @@
   {
     "course_id": 1,
     "name": "Matemática Básica",
-    "faculty_id": 1,
+    "faculty_id": 21,
     "ciclo": 1
   },
   {
     "course_id": 2,
     "name": "Taller de Comunicación",
-    "faculty_id": 1,
+    "faculty_id": 21,
     "ciclo": 1
   },
   {
@@ -20,7 +20,7 @@
   {
     "course_id": 4,
     "name": "Química",
-    "faculty_id": 1,
+    "faculty_id": 21,
     "ciclo": 1
   },
   {
@@ -32,13 +32,13 @@
   {
     "course_id": 6,
     "name": "Cálculo I",
-    "faculty_id": 1,
+    "faculty_id": 21,
     "ciclo": 2
   },
   {
     "course_id": 7,
     "name": "Física I",
-    "faculty_id": 1,
+    "faculty_id": 21,
     "ciclo": 2
   },
   {
@@ -49,8 +49,8 @@
   },
   {
     "course_id": 9,
-    "name": "Lengua",
-    "faculty_id": 1,
+    "name": "Lenguaje",
+    "faculty_id": 21,
     "ciclo": 2
   },
   {
@@ -62,13 +62,13 @@
   {
     "course_id": 11,
     "name": "Cálculo II",
-    "faculty_id": 1,
+    "faculty_id": 21,
     "ciclo": 3
   },
   {
     "course_id": 12,
     "name": "Física II",
-    "faculty_id": 1,
+    "faculty_id": 21,
     "ciclo": 3
   },
   {
@@ -92,7 +92,7 @@
   {
     "course_id": 16,
     "name": "Matemática Discreta",
-    "faculty_id": 1,
+    "faculty_id": 21,
     "ciclo": 4
   },
   {
@@ -146,12 +146,12 @@
   {
     "course_id": 25,
     "name": "Economía",
-    "faculty_id": 1,
+    "faculty_id": 21,
     "ciclo": 5
   },
   {
     "course_id": 26,
-    "name": "Redes y Comunicaciones",
+    "name": "Redes de Computadoras",
     "faculty_id": 1,
     "ciclo": 6
   },
@@ -266,6 +266,12 @@
   {
     "course_id": 45,
     "name": "Desarrollo de Startups Tecnológicas",
+    "faculty_id": 1,
+    "ciclo": 10
+  },
+  {
+    "course_id": 46,
+    "name": "Desarrollo de Competencias gerenciales",
     "faculty_id": 1,
     "ciclo": 10
   }
