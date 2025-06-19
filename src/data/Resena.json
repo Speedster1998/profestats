@@ -474,5 +474,39 @@
     "recomendado": "No",
     "asistencia": "Obligatoria",
     "emoji": "🤩"
+  },
+  {
+    "review_id": 30,
+    "likes": 0,
+    "dislikes": 0,
+    "user_id": 6,
+    "teacher_id": 32,
+    "course_id": 47,
+    "comment": "El profesor explica los temas de forma clara y estructurada, utilizando ejemplos prácticos que facilitan la comprensión. Además, responde con paciencia a las dudas y adapta su ritmo según el grupo, lo que demuestra un buen dominio de la enseñanza.",
+    "date": "2025-06-19",
+    "anonimo": false,
+    "calificacion_general": 4.5,
+    "facilidad": 5,
+    "nota": 7,
+    "recomendado": "Sí",
+    "asistencia": "Obligatoria",
+    "emoji": "🙂"
+  },
+  {
+    "review_id": 31,
+    "likes": 0,
+    "dislikes": 0,
+    "user_id": 14,
+    "teacher_id": 33,
+    "course_id": 47,
+    "comment": "Fomenta la interacción en clase y utiliza diferentes recursos didácticos para mantener el interés del alumnado. Sin embargo, en ocasiones podría organizar mejor el tiempo para cubrir todos los temas con más profundidad.",
+    "date": "2025-06-19",
+    "anonimo": false,
+    "calificacion_general": 4.5,
+    "facilidad": 5,
+    "nota": 8,
+    "recomendado": "Sí",
+    "asistencia": "No obligatoria",
+    "emoji": "🙂"
   }
 ]

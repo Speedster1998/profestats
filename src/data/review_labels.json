@@ -307,5 +307,27 @@
   { "review_label_id": 5249, "review_id": 29, "label_id": 26 },
   { "review_label_id": 5250, "review_id": 29, "label_id": 30 },
   { "review_label_id": 5251, "review_id": 29, "label_id": 37 },
-  { "review_label_id": 5252, "review_id": 29, "label_id": 61 }
+  { "review_label_id": 5252, "review_id": 29, "label_id": 61 },
+
+  { "review_label_id": 5253, "review_id": 30, "label_id": 2 },
+  { "review_label_id": 5254, "review_id": 30, "label_id": 6 },
+  { "review_label_id": 5255, "review_id": 30, "label_id": 12 },
+  { "review_label_id": 5256, "review_id": 30, "label_id": 40 },
+  { "review_label_id": 5257, "review_id": 30, "label_id": 20 },
+  { "review_label_id": 5258, "review_id": 30, "label_id": 26 },
+  { "review_label_id": 5259, "review_id": 30, "label_id": 30 },
+  { "review_label_id": 5260, "review_id": 30, "label_id": 36 },
+  { "review_label_id": 5261, "review_id": 30, "label_id": 56 },
+  { "review_label_id": 5262, "review_id": 30, "label_id": 64 },
+  
+  { "review_label_id": 5263, "review_id": 31, "label_id": 2 },
+  { "review_label_id": 5264, "review_id": 31, "label_id": 7 },
+  { "review_label_id": 5265, "review_id": 31, "label_id": 12 },
+  { "review_label_id": 5266, "review_id": 31, "label_id": 16 },
+  { "review_label_id": 5267, "review_id": 31, "label_id": 20 },
+  { "review_label_id": 5268, "review_id": 31, "label_id": 25 },
+  { "review_label_id": 5269, "review_id": 31, "label_id": 30 },
+  { "review_label_id": 5270, "review_id": 31, "label_id": 35 },
+  { "review_label_id": 5271, "review_id": 31, "label_id": 50 },
+  { "review_label_id": 5272, "review_id": 31, "label_id": 63 }
 ]
