@@ -57,7 +57,7 @@
   },
   {
     "teacher_id": 9,
-    "name": "Rosario Marybel Guzman Jimenez",
+    "name": "Rosario Marybel Guzman Diosenez",
     "image_url": "https://cris.ulima.edu.pe/files-asset/18592982/19229.jpg?w=320&f=webp",
     "college_id": 1,
     "description": "Especialista en sistemas empresariales y procesos digitales. Ha capacitado a profesionales en transformación digital."
@@ -187,5 +187,33 @@
     "image_url": "https://cris.ulima.edu.pe/files-asset/26035388/Olga_Zumar_n.png?w=320&f=webp",
     "college_id": 1,
     "description": "Profesora con experiencia en innovación educativa y TIC. Desarrolla contenido para ambientes virtuales de aprendizaje."
+  },
+  {
+    "teacher_id": 28,
+    "name": "Jose Jesus Valdivia Caballero",
+    "image_url": "https://sistemas.unmsm.edu.pe/posgrado/wp-content/uploads/2023/05/VALDIVIA-CABALLERO.png",
+    "college_id": 1,
+    "description": "Me considero una persona emprendedora, proactiva y responsable, que ha aprendido a no temerle a los nuevos retos que se presentan y enfrentarlos con la seriedad y serenidad que ameritan."
+  },
+  {
+    "teacher_id": 29,
+    "name": "Jim Bryan Dios Luna",
+    "image_url": "https://www.ulima.edu.pe/sites/default/files/styles/webp/public/career/person/Jim%20Dios%20Luna%20Ingenieri%CC%81a.jpg.webp?itok=lU-1ULW4",
+    "college_id": 1,
+    "description": "Máster en Ingeniería Informática por la Universidad Autónoma de Madrid y profesional en Ingeniería de Sistemas y Computación, con amplia experiencia participando y gestionando proyectos de multidisciplinarios a corto y mediano plazo."
+  },
+  {
+    "teacher_id": 30,
+    "name": "Javier More Sanchez",
+    "image_url": "https://www.lacnic.net/innovaportal/file/4573/1/javier-more.png",
+    "college_id": 1,
+    "description": "Ing. Electrónico, Dr.(c) en Ing. de Sistemas e informática, Mag. en Ing. de Telecomunicaciones, Mag. en Regulación y Gestión de Servicios Públicos, Ms. en Gestión de Infraestructuras."
+  },
+  {
+    "teacher_id": 31,
+    "name": "Andrea Matuk Chijner",
+    "image_url": "https://cdn.theorg.com/454a5b7f-ed8a-4be9-b279-a6f527b01c0d_thumb.jpg",
+    "college_id": 1,
+    "description": "Ingeniera de Sistemas y actualmente directora de la carrera de Ingeniería de Sistemas. Experiencia laboral en banca y en docencia. Enfocada en la innovación educativa y la tecnología para impulsar el aprendizaje."
   }
 ]
