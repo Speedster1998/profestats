@@ -192,6 +192,7 @@ const FiltroComponente = ({id, changeTeacherId}) => {
         </select>
       </div>
 
+      <div className="overflow-auto" style={{ maxHeight: '50vh' }}>
       {filteredTeachers.map((profesor, index) => (
         <button
           key={index}
@@ -213,7 +214,7 @@ const FiltroComponente = ({id, changeTeacherId}) => {
             <div className="text-light">{profesor.calificaciones} calificaciones</div>
           </div>
         </button>
-      ))}
+      ))}</div>
     </div>
 }
 
