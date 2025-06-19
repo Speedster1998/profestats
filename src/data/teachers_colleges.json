@@ -35,5 +35,7 @@
   { "teacher_college_id": 29, "college_id": 1, "teacher_id": 28},
   { "teacher_college_id": 29, "college_id": 1, "teacher_id": 29},
   { "teacher_college_id": 29, "college_id": 1, "teacher_id": 30},
-  { "teacher_college_id": 29, "college_id": 1, "teacher_id": 31}
+  { "teacher_college_id": 29, "college_id": 1, "teacher_id": 31},
+  { "teacher_college_id": 29, "college_id": 1, "teacher_id": 32},
+  { "teacher_college_id": 29, "college_id": 1, "teacher_id": 33}
 ]

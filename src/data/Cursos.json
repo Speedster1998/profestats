@@ -274,5 +274,11 @@
     "name": "Desarrollo de Competencias gerenciales",
     "faculty_id": 1,
     "ciclo": 10
+  },
+  {
+    "course_id": 47,
+    "name": "Derecho Civil I",
+    "faculty_id": 11,
+    "ciclo": 10
   }
 ]

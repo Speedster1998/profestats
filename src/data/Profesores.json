@@ -215,5 +215,19 @@
     "image_url": "https://cdn.theorg.com/454a5b7f-ed8a-4be9-b279-a6f527b01c0d_thumb.jpg",
     "college_id": 1,
     "description": "Ingeniera de Sistemas y actualmente directora de la carrera de Ingeniería de Sistemas. Experiencia laboral en banca y en docencia. Enfocada en la innovación educativa y la tecnología para impulsar el aprendizaje."
+  },
+  {
+    "teacher_id": 32,
+    "name": "Enrique Varsi Rospigliosi",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/32446655/Foto_EVR.jpg/",
+    "college_id": 1,
+    "description": "Miembro del Grupo de Trabajo encargado de revisar y proponer mejoras al Código Civil (2016). Miembro de la Comisión encargada de elaborar el anteproyecto de reforma del Código Civil (2002."
+  },
+  {
+    "teacher_id": 33,
+    "name": "Liz Paola Atoche Fernández",
+    "image_url": "https://cris.ulima.edu.pe/files-asset/31904822/atoche.jpg?w=160&f=webp",
+    "college_id": 1,
+    "description": "Miembra del Grupo de Trabajo encargado de revisar y proponer mejoras al Código Civil (2016). Miembra de la Comisión encargada de elaborar el anteproyecto de reforma del Código Civil (2002."
   }
 ]
