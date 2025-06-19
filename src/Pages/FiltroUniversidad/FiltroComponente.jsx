@@ -15,6 +15,7 @@ const FiltroComponente = ({id, changeTeacherId}) => {
     const [teachers, setTeachers] = useState([]);
     const [filteredTeachers, setFilteredTeachers] = useState([]);
     const [courses, setCourses] = useState([]);
+    const [filteredCourses, setFilteredCourses] = useState([]);
     const [faculties, setFaculties] = useState([]);
     const [labels, setLabels] = useState([]);
     const [searchText, setSearchText] = useState('');
@@ -39,6 +40,7 @@ const FiltroComponente = ({id, changeTeacherId}) => {
         setFilteredTeachers(teachers_ids)
         setLabels(labelData.filter(x => x.label_id>4))
         setCourses(coursesData)
+        setFilteredCourses(coursesData)
         setFaculties(facultyData.filter(x => x.college_id === id))
         console.log(labels)
         
@@ -70,6 +72,7 @@ const FiltroComponente = ({id, changeTeacherId}) => {
 
     const filterTeachers = () => {
       let filtered = [...teachers];
+      setFilteredCourses(coursesData)
 
       // Filtro por texto (nombre del profesor)
       if (searchText.trim() !== '') {
@@ -80,6 +83,10 @@ const FiltroComponente = ({id, changeTeacherId}) => {
 
       // Filtro por facultad
       if (selectedFaculty) {
+        const my_faculty_id = faculties.filter(f => f.name === selectedFaculty)[0].faculty_id;
+        console.log(my_faculty_id)
+        setFilteredCourses(coursesData.filter(x => x.faculty_id === my_faculty_id))
+
         const facultyIds = facultyData
           .filter(f => f.name === selectedFaculty && f.college_id === id)
           .map(f => f.faculty_id);
@@ -186,7 +193,7 @@ const FiltroComponente = ({id, changeTeacherId}) => {
         </select>
         <select className="form-select bg-dark text-white" style={{ width: '48%' }} value={selectedCourse} onChange={updateCourse}>
           <option value={''}>Cursos</option>
-          {courses.map((course,index) => (
+          {filteredCourses.map((course,index) => (
             <option key={index} value={course.name}>{course.name}</option>
           ))}
         </select>
