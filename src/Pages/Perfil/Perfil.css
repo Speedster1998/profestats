@@ -100,6 +100,12 @@ body {
   margin-bottom: 0px;
 }
 
+.review-wrapper {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
 @media (min-width: 600px) {
   .review-info {
     flex-direction: row;
@@ -170,7 +176,7 @@ body {
 }
 
 .editar {
-  position: absolute;
+  width: 150px;
   top: 10px;
   right: 12px;
   font-size: 14px;
@@ -233,17 +239,4 @@ body {
 .perfil-cancelar:hover {
   background-color: rgb(195, 0, 0);
   color: white;
-}
-
-#pencil{
-  display: inline-block;
-  vertical-align: sub;
-  margin-right: 1px;
-  width: 16px;
-}
-
-.review-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
