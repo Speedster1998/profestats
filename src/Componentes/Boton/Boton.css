@@ -1,12 +1,11 @@
 .btn-primary {
   display: flex;
-  width: 472px;
   justify-content: center;
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
   border-radius: 30px;
-  background: #43BF98;
+  background-color: #43BF98;
   color: white;
   font-size: 18px;
   font-weight: 600;
@@ -16,6 +15,9 @@
     0px 4px 8px 3px rgba(0, 0, 0, 0.15),
     0px 1px 3px 0px rgba(0, 0, 0, 0.30);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 16px 24px;
+  box-sizing: border-box;
+  max-width: 472px;
 }
 
 .btn-primary:hover {
@@ -23,4 +25,19 @@
   box-shadow:
     0px 6px 10px 4px rgba(0, 0, 0, 0.15),
     0px 2px 4px 1px rgba(0, 0, 0, 0.30);
+}
+
+@media (max-width: 768px) {
+  .btn-primary {
+    font-size: 16px;
+    padding: 14px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-primary {
+    font-size: 14px;
+    padding: 12px 16px;
+    max-width: 100%;
+  }
 }

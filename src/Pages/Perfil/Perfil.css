@@ -272,6 +272,7 @@ body {
   font-size: 13px;
   font-weight: 500;
   border: none;
+   height: 40px;  
   cursor: pointer;
   padding: 4px 10px;
   box-shadow:
@@ -293,6 +294,7 @@ body {
   .btn-primary {
     font-size: 12px;
     padding: 5px 10px;
+    height: 42px;
   }
 }
 
@@ -310,8 +312,8 @@ body {
 }
 
 .btn-editar-perfil {
-  width: 100%;
-  max-width: 170px;
+  width: auto;           
+  max-width: 140px;      
   font-size: 13px;
   padding: 6px 12px;
 }
