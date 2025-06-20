@@ -31,7 +31,7 @@ const Signin = () => {
 
             const usuariosGuardados = JSON.parse(localStorage.getItem("Usuarios")) || [];
             const user_id = Math.floor(Math.random() * 1000) + 31;
-            const college_id = Math.floor(Math.random() * 6) + 1;
+            const college_id = null;
             const image_url = "https://cdn-icons-png.flaticon.com/512/3237/3237472.png";
 
             const nuevoUsuario = {

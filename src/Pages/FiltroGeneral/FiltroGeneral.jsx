@@ -48,7 +48,7 @@ const FiltroGeneral = () => {
         <input
           type="text"
           className="form-control border-0 bg-transparent text-white"
-          placeholder="Busca a tu profesor"
+          placeholder="Busca tu universidad"
           style={{ boxShadow: 'none' }}
           value={searchText}
           onChange={updateSearchText}
