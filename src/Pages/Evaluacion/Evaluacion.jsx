@@ -402,25 +402,24 @@ const Evaluacion = () => {
 
         <div className="emoji-group">
           {[
-            { label: "Excelente", emoji: "🤩" },
-            { label: "Buena", emoji: "🙂" },
-            { label: "Regular", emoji: "😐" },
             { label: "Mala", emoji: "🙁" },
-          ].map(({ label, emoji }) => (
+            { label: "Regular", emoji: "😐" },
+            { label: "Buena", emoji: "😃" },
+            { label: "Excelente", emoji: "🤩" },
+          ].map(({ label, emoji: emojiOption }) => (
             <button
-              key={emoji}
+              key={emojiOption}
               onClick={() => {
-                setCalificacion((prev) => (prev === emoji ? "" : emoji));
+                setCalificacion((prev) => (prev === emojiOption ? "" : emojiOption));
                 setErroresCampos((prev) => {
                   const nuevos = { ...prev };
                   delete nuevos.emoji;
                   return nuevos;
                 });
               }}
-
-              className={`emoji-btn ${emoji === emoji ? "selected" : ""}`}
+              className={`emoji-btn ${emoji === emojiOption ? "selected" : ""}`}
             >
-              <span className="emoji">{emoji}</span>
+              <span className="emoji">{emojiOption}</span>
               <span>{label}</span>
             </button>
           ))}
