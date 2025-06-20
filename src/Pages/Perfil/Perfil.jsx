@@ -4,6 +4,8 @@ import "./Perfil.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import ReviewService from '../../Services/review_service';
 import ReviewItem from '../../Componentes/Perfil/ReviewItem';
+import ConfirmModal from '../../Componentes/Perfil/ConfirmModal';
+
 import { useNavigate } from 'react-router-dom';
 
 const Perfil = () => {
@@ -41,13 +43,25 @@ const Perfil = () => {
     loadProfile(userId);
   };
 
-  const handleDelete = (reviewId) => {
-    const confirmacion = window.confirm("¿Estás seguro de que deseas eliminar esta reseña?");
-    if (!confirmacion) return;
+ const [modalVisible, setModalVisible] = useState(false);
+const [reviewIdToDelete, setReviewIdToDelete] = useState(null);
 
-    ReviewService.deleteReview(reviewId);
-    loadProfile(userData.user_id);
-  };
+const openDeleteModal = (reviewId) => {
+  setReviewIdToDelete(reviewId);
+  setModalVisible(true);
+};
+
+const handleConfirmDelete = () => {
+  ReviewService.deleteReview(reviewIdToDelete);
+  setModalVisible(false);
+  loadProfile(userData.user_id);
+};
+
+const handleCancelDelete = () => {
+  setModalVisible(false);
+  setReviewIdToDelete(null);
+};
+
 
 
   const startEditing = (index) => {
@@ -109,12 +123,13 @@ const Perfil = () => {
                 >
                   <i className="bi bi-pencil"></i> Editar
                 </button>
-                <button
-                  onClick={() => handleDelete(r.review.review_id)}
-                  className="editar"
-                >
-                  <i className="bi bi-trash"></i> Eliminar
-                </button>
+              <button
+  onClick={() => openDeleteModal(r.review.review_id)}
+  className="editar"
+>
+  <i className="bi bi-trash"></i> Eliminar
+</button>
+
               </div>
             </div>
           ))
@@ -122,7 +137,15 @@ const Perfil = () => {
           <p>No has realizado ninguna review todavía.</p>
         )}
       </div>
+      <ConfirmModal
+  show={modalVisible}
+  onConfirm={handleConfirmDelete}
+  onCancel={handleCancelDelete}
+  message="¿Estás seguro de que deseas eliminar esta reseña?"
+/>
+
     </div>
+    
   );
 };
 
