@@ -488,9 +488,13 @@ const Evaluacion = () => {
         </div>
       )}
 
-      <button className="submit-btn" onClick={handleSubmit} disabled={enviando}>
-        {reviewToEdit ? 'Actualizar Reseña' : 'Enviar Reseña'}
-      </button>
+      <div className="d-flex justify-content-center">
+
+        <button className="btn-primary" style={{ height: '65px' }} onClick={handleSubmit} disabled={enviando}>
+          {reviewToEdit ? 'Actualizar Reseña' : 'Enviar Reseña'}
+        </button>
+      </div>
+
     </div>
   );
 };

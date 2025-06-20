@@ -240,8 +240,7 @@ button,
 .checkbox-group .btn,
 .inline-options .btn,
 .likert-options .btn,
-.emoji-btn
-.button-group {
+.emoji-btn .button-group {
   padding: 10px 20px;
   border: 1px solid white;
   background-color: transparent;
@@ -268,8 +267,8 @@ button:active,
 .checkbox-group .btn:active,
 .inline-options .btn:active,
 .likert-options .btn:active,
-.emoji-btn:active, 
-.button-group:active{
+.emoji-btn:active,
+.button-group:active {
   transform: scale(0.96);
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -290,4 +289,33 @@ button:active,
   margin-top: 10px;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  display: flex;
+  width: 100%;
+  max-width: 472px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  background: #43BF98;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow:
+    0px 4px 8px 3px rgba(0, 0, 0, 0.15),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.30);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0px 6px 10px 4px rgba(0, 0, 0, 0.15),
+    0px 2px 4px 1px rgba(0, 0, 0, 0.30);
 }

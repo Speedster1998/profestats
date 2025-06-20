@@ -109,129 +109,156 @@ const Perfil = () => {
   };
 
   return (
-    <div className="perfil-container">
-      <div className="perfil">
-        <img
-          src={userData.image_url || "../../../src/images/profileDefault.png"}
-          alt="perfil"
-          className="avatar"
-          style={{ objectFit: "cover" }}
-        />
+    <div className="container py-4">
+      <div className="row gy-4">
+        <div className="col-12 col-md-4">
+          <div className="perfil p-3 text-center rounded-9 d-flex flex-column h-100">
 
-        {isEditingProfile && (
-          <div className="d-flex flex-column align-items-center my-2">
-            <input
-              type="file"
-              accept="image/*"
-              className="form-control form-control-sm w-75"
-              style={{ backgroundColor: 'transparent', border: '1px solid white', color: 'white' }}
-              onChange={handleImageChange}
-            />
-            <small className="text-white-50 mt-1">Cambiar imagen de perfil</small>
+            <div className="perfil-content flex-grow-1">
+
+              <img
+                src={userData.image_url || "../../../src/images/profileDefault.png"}
+                alt="perfil"
+                className="avatar"
+                style={{ objectFit: "cover" }}
+              />
+
+              {isEditingProfile && (
+                <div className="d-flex flex-column align-items-center my-2">
+                  <input
+                    type="file"
+                    accept="image/*"
+                    className="form-control form-control-sm mx-auto text-center bg-transparent text-white border-white"
+                    onChange={handleImageChange}
+                  />
+                  <small className="text-white-50 mt-1">Cambiar imagen de perfil</small>
+                </div>
+              )}
+
+<div className="perfil-datos text-center">
+  {isEditingProfile ? (
+    <>
+      <p className="text-white-50 mb-1">Edita tu nombre</p>
+      <input
+        className="form-control form-control-sm mx-auto text-center bg-transparent text-white border-white"
+        value={newUsername}
+        onChange={(e) => setNewUsername(e.target.value)}
+        placeholder="Nuevo nombre de usuario"
+      />
+
+      <p className="text-white-50 mt-3 mb-1">Elige tu universidad</p>
+      <select
+        value={collegeId ?? ""}
+        onChange={handleUniversityChange}
+        className="form-control form-control-sm mx-auto text-center bg-transparent text-white border-white"
+      >
+        {colleges.map((c) => (
+          <option key={c.college_id} value={c.college_id}>{c.name}</option>
+        ))}
+      </select>
+    </>
+  ) : (
+    <>
+      <h2 className="text-center">{userData.username}</h2>
+      <div className="d-flex justify-content-center mt-3">{userData.email}</div>
+      <div className="d-flex justify-content-center mt-3">
+        <span className="text-light">{collegeName}</span>
+      </div>
+    </>
+  )}
+</div>
+
+            </div>
+
+            {/* BOTÓN EDITAR PEGADO ABAJO */}
+            <div className="editar-perfil-boton-wrapper d-flex justify-content-center mt-4">
+              {isEditingProfile ? (
+                <div className="d-flex flex-column flex-md-row flex-wrap justify-content-center gap-2">
+                  <button className="btn-primary btn-pequeno" onClick={handleSaveProfile}>
+                    Guardar
+                  </button>
+                  <button className="btn-primary btn-pequeno" onClick={() => setIsEditingProfile(false)}>
+                    Cancelar
+                  </button>
+                </div>
+              ) : (
+                <button
+                  className="btn-primary btn-editar-perfil"
+
+                  onClick={() => setIsEditingProfile(true)}
+                >
+                  <i className="bi bi-pencil"></i> Editar perfil
+                </button>
+              )}
+            </div>
+
           </div>
-        )}
 
-        <div className="perfil-datos text-center">
-          {isEditingProfile ? (
-            <input
-              className="form-control form-control-sm w-75 mx-auto text-center"
-              style={{ backgroundColor: 'transparent', border: '1px solid white', color: 'white' }}
-              value={newUsername}
-              onChange={(e) => setNewUsername(e.target.value)}
-              placeholder="Nuevo nombre de usuario"
-            />
-          ) : (
-            <h2 className="text-center">{userData.username}</h2>
-          )}
+        </div>
 
-          <div className="d-flex justify-content-center mt-3">{userData.email}</div>
+        <div className="col-12 col-md-8">
+          <div className="historial">
+            <h3>Historial de calificaciones</h3>
+            {reviews.length > 0 ? (
+              reviews.map((r) => (
+                <div className="review-wrapper d-flex flex-column flex-md-row align-items-md-center gap-3 mb-4" key={r.review.review_id}>
+                  <div className="flex-grow-1">
+                    <ReviewItem
+                      review={{
+                        anonimo: r.review.anonimo,
+                        image: r.user.image_url || '/profileDefault.png',
+                        username: r.user.username,
+                        date: r.review.date,
+                        course: r.courseName,
+                        nota: r.review.nota,
+                        comment: r.review.comment,
+                        labels: r.labels.filter(l => l.group_id === 21),
+                        emoji: r.review.emoji,
+                        ratingLabel: '',
+                        likes: r.review.likes,
+                        dislikes: r.review.dislikes
+                      }}
+                      showCourse={true}
+                      onLike={() => handleLike(r.review.review_id)}
+                      onDislike={() => handleDislike(r.review.review_id)}
+                    />
+                  </div>
+                  <div className="editar-boton-wrapper d-flex flex-column justify-content-center align-items-center gap-2">
+                    <button
+                      onClick={() =>
+                        navigate(`/evaluacion/${r.review.teacher_id}`, {
+                          state: {
+                            review: {
+                              ...r.review,
+                              labels: r.labels,
+                              course: r.courseName,
+                              emoji: r.review.emoji,
+                            },
+                          },
+                        })
+                      }
+                      className="btn-primary btn-pequeno"
+                    >
+                      <i className="bi bi-pencil"></i> Editar
+                    </button>
 
-          <div className="d-flex justify-content-center mt-3">
-            {isEditingProfile ? (
-              <select
-                value={collegeId ?? ""}
-                onChange={handleUniversityChange}
-                className="form-control form-control-sm w-75 mx-auto text-center"
-                style={{ backgroundColor: 'transparent', border: '1px solid white', color: 'white' }}
-              >
-                {colleges.map((c) => (
-                  <option key={c.college_id} value={c.college_id}>{c.name}</option>
-                ))}
-              </select>
+                    <button
+                      onClick={() => openDeleteModal(r.review.review_id)}
+                      className="btn-primary btn-pequeno"
+                    >
+                      <i className="bi bi-trash"></i> Eliminar
+                    </button>
+                  </div>
+
+                </div>
+
+              ))
             ) : (
-              <span className="text-light">{collegeName}</span>
+              <p>No has realizado ninguna review todavía.</p>
             )}
           </div>
         </div>
-
-        <div className="d-flex justify-content-end mt-4">
-          {isEditingProfile ? (
-            <div className="d-flex gap-2">
-              <button className="btn btn-sm btn-success" onClick={handleSaveProfile}>Guardar</button>
-              <button className="btn btn-sm btn-secondary" onClick={() => setIsEditingProfile(false)}>Cancelar</button>
-            </div>
-          ) : (
-            <div className="mt-auto d-flex justify-content-center">
-              <button
-                className="btn btn-outline-light btn-sm mt-9"
-                onClick={() => setIsEditingProfile(true)}
-              >
-                <i className="bi bi-pencil"></i> Editar perfil
-              </button>
-            </div>
-          )}
-        </div>
       </div>
-
-      <div className="historial">
-        <h3>Historial de calificaciones</h3>
-        {reviews.length > 0 ? (
-          reviews.map((r) => (
-            <div className="review-wrapper" key={r.review.review_id}>
-              <ReviewItem
-                review={{
-                  anonimo: r.review.anonimo,
-                  image: r.user.image_url || '/profileDefault.png',
-                  username: r.user.username,
-                  date: r.review.date,
-                  course: r.courseName,
-                  nota: r.review.nota,
-                  comment: r.review.comment,
-                  labels: r.labels.filter(l => l.group_id === 21),
-                  emoji: r.review.emoji,
-                  ratingLabel: '',
-                  likes: r.review.likes,
-                  dislikes: r.review.dislikes
-                }}
-                showCourse={true}
-                onLike={() => handleLike(r.review.review_id)}
-                onDislike={() => handleDislike(r.review.review_id)}
-              />
-              <div className="editar-boton-wrapper">
-                <button
-                  onClick={() =>
-                    navigate(`/evaluacion/${r.review.teacher_id}`, {
-                      state: { review: { ...r.review, labels: r.labels, course: r.courseName, emoji: r.review.emoji } }
-                    })
-                  }
-                  className="editar"
-                >
-                  <i className="bi bi-pencil"></i> Editar
-                </button>
-                <button
-                  onClick={() => openDeleteModal(r.review.review_id)}
-                  className="editar"
-                >
-                  <i className="bi bi-trash"></i> Eliminar
-                </button>
-              </div>
-            </div>
-          ))
-        ) : (
-          <p>No has realizado ninguna review todavía.</p>
-        )}
-      </div>
-
       <ConfirmModal
         show={modalVisible}
         onConfirm={handleConfirmDelete}
