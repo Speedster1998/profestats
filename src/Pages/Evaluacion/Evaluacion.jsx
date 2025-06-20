@@ -202,7 +202,12 @@ const Evaluacion = () => {
     }
     setEnviando(false);
     console.log("¡Gracias por tu evaluación!");
-
+    if (reviewToEdit) {
+      if (location.state?.fromPerfil) {
+        navigate(-1);
+        return;
+      }
+    }
     const collegeId = location.state?.collegeId;
 
     if (!collegeId) {

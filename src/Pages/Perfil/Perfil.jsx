@@ -228,6 +228,7 @@ const Perfil = () => {
                       onClick={() =>
                         navigate(`/evaluacion/${r.review.teacher_id}`, {
                           state: {
+                            fromPerfil: true,
                             review: {
                               ...r.review,
                               labels: r.labels,
