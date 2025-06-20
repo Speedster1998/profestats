@@ -324,8 +324,6 @@ class ReviewService {
 
     return result;
   }
-
-
 }
 
 export default new ReviewService();

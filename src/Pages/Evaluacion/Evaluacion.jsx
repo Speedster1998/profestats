@@ -40,8 +40,6 @@ const Evaluacion = () => {
   const [faltantes, setFaltantes] = useState([]);
   const [erroresCampos, setErroresCampos] = useState({});
 
-
-
   useEffect(() => {
     const cargarPreguntas = async () => {
       const data = await loadQuestionsWithLabels();
@@ -204,7 +202,15 @@ const Evaluacion = () => {
     }
     setEnviando(false);
     console.log("¡Gracias por tu evaluación!");
-    navigate(-1);
+
+    const usuarios = JSON.parse(localStorage.getItem("Usuarios")) || [];
+    const usuarioActualizado = usuarios.find(u => u.user_id === userFromStorage.user_id);
+    const collegeId = usuarioActualizado?.college_id ?? userFromStorage.college_id;
+
+    console.log("¡Gracias por tu evaluación!");
+    navigate(`/filtrouniversidad/${collegeId}`, {
+      state: { teacher_id: parsedProfesorId }
+    });
 
     setCurso("");
     setFacilidad("");

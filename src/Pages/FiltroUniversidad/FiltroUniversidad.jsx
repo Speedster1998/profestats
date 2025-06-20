@@ -1,25 +1,41 @@
-import { useParams } from "react-router-dom";
-import { useControladorPerfilProfesor } from "../PerfilProfesor/ControladorPerfilProfesor"
-import PerfilProfesor from "../PerfilProfesor/PerfilProfesor"
-import FiltroComponente from "./FiltroComponente"
-import { useState } from "react";
+import { useParams, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import FiltroComponente from "./FiltroComponente";
+import PerfilProfesor from "../PerfilProfesor/PerfilProfesor";
 
 const FiltroUniversidad = () => {
     const { collegeId } = useParams();
-    const collegeIdNum = parseInt(collegeId, 10);
-    const [teacher_id, setTeacherId] = useState(1)
-    return <div className="container">
-        <div className="row">
-            <div className="col-md-3">
-                <FiltroComponente id={collegeIdNum} changeTeacherId={setTeacherId}/>
-            </div>
-            <div className="col-md">
-                <div className="overflow-auto">
-                <PerfilProfesor idTeacher={teacher_id}/>
+    const location = useLocation();
+
+    const [teacherId, setTeacherId] = useState(() => {
+        const savedId = location.state?.teacher_id;
+        return savedId ? savedId : 1;
+    });
+
+    useEffect(() => {
+        if (location.state?.teacher_id) {
+            setTeacherId(location.state.teacher_id);
+        }
+    }, [location.state?.teacher_id]);
+
+    useEffect(() => {
+        localStorage.setItem("collegeIdActual", collegeId);
+    }, [collegeId]);
+
+    return (
+        <div className="container">
+            <div className="row">
+                <div className="col-md-3">
+                    <FiltroComponente id={parseInt(collegeId)} changeTeacherId={setTeacherId} />
+                </div>
+                <div className="col-md">
+                    <div className="overflow-auto">
+                        <PerfilProfesor key={teacherId} idTeacher={teacherId} />
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-}
+    );
+};
 
-export default FiltroUniversidad
+export default FiltroUniversidad;

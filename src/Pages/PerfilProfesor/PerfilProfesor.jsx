@@ -112,9 +112,15 @@ const PerfilProfesor = ({ idTeacher }) => {
                     </div>
                 </div>
 
-                <div className="d-flex justify-content-center my-4">
-                    <Boton texto="Calificar profesor" onClick={() => navigate(`/evaluacion/${idTeacher}`)} />
-                </div>
+               <Boton
+  texto="Calificar profesor"
+  onClick={() =>
+    navigate(`/evaluacion/${idTeacher}`, {
+      state: { collegeId: teacher.colleges[0]?.id } // Usa el primer college asociado
+    })
+  }
+/>
+
 
                 <hr className="dashed" />
 
