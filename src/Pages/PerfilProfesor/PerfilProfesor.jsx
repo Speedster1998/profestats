@@ -86,7 +86,7 @@ const PerfilProfesor = ({ idTeacher }) => {
                         ))}
                     </div>
                 </div>
-                
+
                 {teacher.groupAverages && teacher.groupAverages.length > 0 && (
                     <div className="section">
                         <h3 className="section-title fs-5">Estadisticas</h3>

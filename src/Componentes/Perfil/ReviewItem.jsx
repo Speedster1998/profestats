@@ -8,7 +8,7 @@ const ReviewItem = ({ review, showCourse, onLike, onDislike }) => {
         <img className="profile-pic" src={review.anonimo ? '/anonimo.png' : (review.image || '/profileDefault.png')} alt="profile" />
         <div className="student-info">
           <div className="name-time">
-             <span className="name">{review.anonimo ? 'Anónimo' : review.username}</span>
+            <span className="name">{review.anonimo ? 'Anónimo' : review.username}</span>
             <span className="time">{review.date}</span>
           </div>
           <div className="course-grade">
@@ -22,13 +22,17 @@ const ReviewItem = ({ review, showCourse, onLike, onDislike }) => {
                 <strong>📝 Nota recibida:</strong> {review.nota}
               </span>
             )}
+
           </div>
-          <div className="comment-bubble">{review.comment}</div>
+
+          {review.comment && (
+            <div className="comment-bubble">{review.comment}</div>
+          )}
+
           <div className="labels">
             {review.labels.map((label, index) => (
               <span key={index} className="chip-label">{label.name}</span>
             ))}
-
           </div>
         </div>
       </div>
