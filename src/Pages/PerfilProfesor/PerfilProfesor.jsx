@@ -121,7 +121,6 @@ const PerfilProfesor = ({ idTeacher }) => {
                             })
                         }
                     />
-
                 </div>
 
                 <hr className="dashed" />

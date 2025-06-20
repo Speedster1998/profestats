@@ -203,14 +203,18 @@ const Evaluacion = () => {
     setEnviando(false);
     console.log("¡Gracias por tu evaluación!");
 
-    const usuarios = JSON.parse(localStorage.getItem("Usuarios")) || [];
-    const usuarioActualizado = usuarios.find(u => u.user_id === userFromStorage.user_id);
-    const collegeId = usuarioActualizado?.college_id ?? userFromStorage.college_id;
+    const collegeId = location.state?.collegeId;
 
-    console.log("¡Gracias por tu evaluación!");
+    if (!collegeId) {
+      console.error("No se pudo obtener el collegeId desde location.state");
+      return;
+    }
+
+
     navigate(`/filtrouniversidad/${collegeId}`, {
       state: { teacher_id: parsedProfesorId }
     });
+
 
     setCurso("");
     setFacilidad("");

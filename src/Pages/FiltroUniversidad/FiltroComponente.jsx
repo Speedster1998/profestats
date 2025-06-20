@@ -26,6 +26,21 @@ const FiltroComponente = ({ id, changeTeacherId }) => {
   const [selectedLabel, setSelectedLabel] = useState('');
   const [selectedCourse, setSelectedCourse] = useState('');
 
+  const [mostrarFiltro, setMostrarFiltro] = useState(true);
+
+  useEffect(() => {
+    const manejarResize = () => {
+      const esMovil = window.innerWidth < 768;
+      if (!esMovil) setMostrarFiltro(true);
+    };
+
+    manejarResize(); 
+    window.addEventListener("resize", manejarResize);
+
+    return () => window.removeEventListener("resize", manejarResize);
+  }, []);
+
+
   useEffect(() => {
     filterTeachers();
   }, [searchText, selectedFaculty, selectedCycle, selectedLabel, selectedCourse]);
@@ -161,9 +176,21 @@ const FiltroComponente = ({ id, changeTeacherId }) => {
   };
 
   return <div className="container py-4 text-white">
+    {!mostrarFiltro && (
+      <div className="mb-3">
+        <button
+          className="btn btn-outline-light w-100"
+          onClick={() => setMostrarFiltro(true)}
+        >
+          <i className="bi bi-arrow-left me-2"></i> Seguir buscando
+        </button>
+      </div>
+    )}
+  {mostrarFiltro && (
+ <>
     <div className="mb-4">
       <h3 className="text-white">
-        <BackButton/>
+        <BackButton />
         <img src={uniersity.image_url} alt="Logo" height="30" className="me-2" />
         {uniersity.name}
       </h3>
@@ -212,7 +239,10 @@ const FiltroComponente = ({ id, changeTeacherId }) => {
       {filteredTeachers.map((profesor, index) => (
         <button
           key={index}
-          onClick={() => changeTeacherId(profesor.teacher_id)}
+          onClick={() => {
+            changeTeacherId(profesor.teacher_id);
+            if (window.innerWidth < 768) setMostrarFiltro(false);
+          }}
           className="d-flex align-items-center border rounded mb-2 p-2 w-100 text-start"
           style={{ borderColor: '#28a745', background: 'transparent', borderWidth: '1px', cursor: 'pointer' }}
         >
@@ -231,6 +261,8 @@ const FiltroComponente = ({ id, changeTeacherId }) => {
           </div>
         </button>
       ))}</div>
+  </>
+  )}
   </div>
 }
 
