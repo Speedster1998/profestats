@@ -238,10 +238,12 @@ class ReviewService {
     const previousVote = this.reviewVotes[key];
 
     if (previousVote === 'like') {
-      review.likes -= 1;
+      review.likes = Math.max(0, review.likes - 1);
       delete this.reviewVotes[key];
     } else {
-      if (previousVote === 'dislike') review.dislikes -= 1;
+      if (previousVote === 'dislike') {
+        review.dislikes = Math.max(0, review.dislikes - 1);
+      }
       review.likes += 1;
       this.reviewVotes[key] = 'like';
     }
@@ -257,16 +259,20 @@ class ReviewService {
     const previousVote = this.reviewVotes[key];
 
     if (previousVote === 'dislike') {
-      review.dislikes -= 1;
+      review.dislikes = Math.max(0, review.dislikes - 1);
       delete this.reviewVotes[key];
     } else {
-      if (previousVote === 'like') review.likes -= 1;
+      if (previousVote === 'like') {
+        review.likes = Math.max(0, review.likes - 1);
+      }
       review.dislikes += 1;
       this.reviewVotes[key] = 'dislike';
     }
 
     this._saveToLocalStorage();
   }
+
+
 
   getAllReviews() {
     return this.reviews;
