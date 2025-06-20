@@ -41,6 +41,15 @@ const Perfil = () => {
     loadProfile(userId);
   };
 
+  const handleDelete = (reviewId) => {
+    const confirmacion = window.confirm("¿Estás seguro de que deseas eliminar esta reseña?");
+    if (!confirmacion) return;
+
+    ReviewService.deleteReview(reviewId);
+    loadProfile(userData.user_id);
+  };
+
+
   const startEditing = (index) => {
     setEditIndex(index);
 
@@ -99,6 +108,12 @@ const Perfil = () => {
                   className="editar"
                 >
                   <i className="bi bi-pencil"></i> Editar
+                </button>
+                <button
+                  onClick={() => handleDelete(r.review.review_id)}
+                  className="editar"
+                >
+                  <i className="bi bi-trash"></i> Eliminar
                 </button>
               </div>
             </div>

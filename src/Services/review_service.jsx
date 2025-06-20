@@ -211,6 +211,25 @@ class ReviewService {
     }
   }
 
+  deleteReview(reviewId) {
+    // Eliminar la review
+    this.reviews = this.reviews.filter(r => r.review_id !== reviewId);
+
+    // Eliminar etiquetas asociadas
+    this.reviewLabels = this.reviewLabels.filter(rl => rl.review_id !== reviewId);
+
+    // Eliminar votos asociados a esta review
+    for (const key in this.reviewVotes) {
+      if (key.endsWith(`-${reviewId}`)) {
+        delete this.reviewVotes[key];
+      }
+    }
+
+    this._saveToLocalStorage();
+    console.log(`Reseña ${reviewId} eliminada correctamente.`);
+  }
+
+
   toggleLike(reviewId, userId) {
     const review = this.reviews.find(r => r.review_id === reviewId);
     if (!review) return;
@@ -257,48 +276,48 @@ class ReviewService {
     return this.reviewLabels;
   }
 
-getGroupAveragesForTeacher(teacherId) {
-  const data = this._loadAllData();
-  const teacherReviews = this.reviews.filter(r => r.teacher_id === teacherId);
+  getGroupAveragesForTeacher(teacherId) {
+    const data = this._loadAllData();
+    const teacherReviews = this.reviews.filter(r => r.teacher_id === teacherId);
 
-  const groupScores = {};
-  const groupCounts = {};
+    const groupScores = {};
+    const groupCounts = {};
 
-  for (const review of teacherReviews) {
-    const labelIds = this.reviewLabels
-      .filter(rl => rl.review_id === review.review_id)
-      .map(rl => rl.label_id);
+    for (const review of teacherReviews) {
+      const labelIds = this.reviewLabels
+        .filter(rl => rl.review_id === review.review_id)
+        .map(rl => rl.label_id);
 
-    for (const labelId of labelIds) {
-      const label = data.labelMap[labelId];
-      console.log("Etiqueta cargada:", label);
-      if (!label || label.nivel == null) continue;
+      for (const labelId of labelIds) {
+        const label = data.labelMap[labelId];
+        console.log("Etiqueta cargada:", label);
+        if (!label || label.nivel == null) continue;
 
-      const groupId = label.group_id;
+        const groupId = label.group_id;
 
-      if (!groupScores[groupId]) {
-        groupScores[groupId] = 0;
-        groupCounts[groupId] = 0;
+        if (!groupScores[groupId]) {
+          groupScores[groupId] = 0;
+          groupCounts[groupId] = 0;
+        }
+
+        groupScores[groupId] += label.nivel;
+        groupCounts[groupId] += 1;
       }
-
-      groupScores[groupId] += label.nivel;
-      groupCounts[groupId] += 1;
     }
+
+    const result = [];
+
+    for (const groupId in groupScores) {
+      const groupLabel = this.labels.find(l => l.group_id == groupId && l.text);
+      result.push({
+        group_id: Number(groupId),
+        name: groupLabel?.text || `Pregunta ${groupId}`,
+        promedio: parseFloat((groupScores[groupId] / groupCounts[groupId]).toFixed(2))
+      });
+    }
+
+    return result;
   }
-
-  const result = [];
-
-  for (const groupId in groupScores) {
-    const groupLabel = this.labels.find(l => l.group_id == groupId && l.text); 
-    result.push({
-      group_id: Number(groupId),
-      name: groupLabel?.text || `Pregunta ${groupId}`,
-      promedio: parseFloat((groupScores[groupId] / groupCounts[groupId]).toFixed(2))
-    });
-  }
-
-  return result;
-}
 
 
 }
