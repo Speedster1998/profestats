@@ -233,7 +233,30 @@ const Evaluacion = () => {
   };
 
   return (
+
     <div className="evaluacion-container">
+      <button
+        className="btn p-0 m-0 border-0 bg-transparent text-white"
+        onClick={() => {
+          const fromPerfil = location.state?.fromPerfil;
+          const collegeId = location.state?.collegeId;
+
+          if (fromPerfil) {
+            navigate(-1);
+          } else if (collegeId) {
+            navigate(`/filtrouniversidad/${collegeId}`, {
+              state: { teacher_id: parsedProfesorId },
+            });
+          } else {
+            console.warn("No se encontró collegeId ni fromPerfil, navegación cancelada.");
+          }
+        }}
+      >
+        <i className="bi bi-chevron-left fs-1"></i>
+      </button>
+
+
+
       <h6>Evaluando a: {profesor.name}</h6>
 
       <h2>Elige tu curso</h2>
