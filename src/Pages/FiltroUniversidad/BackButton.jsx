@@ -8,7 +8,7 @@ const BackButton = () => {
       className="btn p-0 m-0 border-0 bg-transparent text-white"
       onClick={() => navigate(-1)}
     >
-      <i className="bi bi-caret-left-fill fs-1"></i>
+      <i className="bi bi-chevron-left fs-1"></i>
     </button>
   );
 };
