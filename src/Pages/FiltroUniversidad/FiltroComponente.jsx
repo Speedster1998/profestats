@@ -8,6 +8,7 @@ import facultyData from '../../data/Facultad.json'
 import labelData from '../../data/PreguntasContenido.json'
 import reviews from '../../data/Resena.json';
 import review_labels from '../../data/review_labels.json';
+import BackButton from "./BackButton";
 
 const FiltroComponente = ({ id, changeTeacherId }) => {
 
@@ -162,6 +163,7 @@ const FiltroComponente = ({ id, changeTeacherId }) => {
   return <div className="container py-4 text-white">
     <div className="mb-4">
       <h3 className="text-white">
+        <BackButton/>
         <img src={uniersity.image_url} alt="Logo" height="30" className="me-2" />
         {uniersity.name}
       </h3>

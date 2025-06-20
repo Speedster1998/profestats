@@ -16,7 +16,7 @@ const Landing = () => {
 
         <div className='container'>
             <div className='row align-items-center min-vh-100'>
-                <div className='col-6 text-light'>
+                <div className='col-md-6 text-light'>
                     <h1 style={{fontSize:45}}>
                         <span className={styles.highlight}>CALIFICA</span> A TUS PROFESORES<br/>
                         TU <span className={styles.highlight}>OPINIÓN</span> CUENTA
@@ -28,8 +28,8 @@ const Landing = () => {
                     </p>
                     <button className={styles.logoutBtn} onClick={Registarse}>REGISTRARSE<span className={styles.arrow}>→</span></button>
                 </div>
-                <div className='col-1'></div>
-                <div className='col-4'>
+                <div className='col-md-1'></div>
+                <div className='col-md-4'>
                 <div className={styles.imageSection}>
                     <img src={profeLanding} alt="Profesor"/>
                 </div>
