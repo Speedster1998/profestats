@@ -3,10 +3,94 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 40px 20px; /* más espacio arriba */
+  padding: 30px 40px 20px;
   color: white;
   position: relative;
   z-index: 10;
+}
+
+.center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-weight: bold;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.center a {
+  text-decoration: none;
+  color: white;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logoutBtn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #91d6b2;
+  color: #1d3c2e;
+  border: none;
+  transition: background-color 0.2s ease;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.logoutBtn:hover {
+  background-color: #7dcaa2;
+}
+
+.hamburguesa {
+  display: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.menuMobile {
+  display: none;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #07060D;
+    padding: 20px;
+    border-radius: 12px;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    gap: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+
+  button {
+    display: block;
+  }
+}
+
+.menuVisible {
+  display: flex !important;
 }
 
 .headerLeft {
@@ -33,42 +117,17 @@
   color: #4df0b0;
 }
 
-.nav {
-  display: flex;
-  gap: 30px;
-  font-weight: bold;
-}
-
-.nav a {
-  text-decoration: none;
-  color: white;
-}
-
-.btn {
+.registerBtn {
   padding: 10px 20px;
   border-radius: 30px;
   font-weight: bold;
   cursor: pointer;
-}
-
-.logoutBtn {
-  @extend .btn;
-  background-color: #91d6b2;
-  color: #1d3c2e;
-  border: none;
-  transition: background-color 0.2s ease;
-}
-.logoutBtn:hover {
-  background-color: #7dcaa2;
-}
-
-.registerBtn {
-  @extend .btn;
   background-color: transparent;
   color: white;
   border: 2px solid white;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
+
 .registerBtn:hover {
   background-color: white;
   color: #1d3c2e;
