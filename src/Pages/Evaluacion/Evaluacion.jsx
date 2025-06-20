@@ -19,10 +19,8 @@ const Evaluacion = () => {
   const profesor = profesores.find((p) => p.teacher_id === parsedProfesorId);
   if (!profesor) return <div>Profesor no encontrado.</div>;
   console.log("Usuario actual:", localStorage.getItem("usuario"));
-
   const userFromStorage = JSON.parse(localStorage.getItem("usuario"));
   const user_id = userFromStorage?.user_id || 1;
-
   const [curso, setCurso] = useState("");
   const [facilidad, setFacilidad] = useState(null);
   const [recomendado, setRecomendado] = useState(null);
@@ -33,15 +31,16 @@ const Evaluacion = () => {
   const [caracteristicas, setCaracteristicas] = useState([]);
   const [preguntasDinamicas, setPreguntasDinamicas] = useState([]);
   const [labelsDinamicas, setLabelsDinamicas] = useState([]);
-
   const [preguntasCaracteristicas, setPreguntaCaracteristicas] = useState([]);
   const [labelsCaracteristicas, setLabelsCaracteristicas] = useState([]);
-
   const [respuestas, setRespuestas] = useState({});
-
   const [notaAlumno, setNotaAlumno] = useState(null);
   const [enviando, setEnviando] = useState(false);
   const [errorMensaje, setErrorMensaje] = useState("");
+  const [faltantes, setFaltantes] = useState([]);
+  const [erroresCampos, setErroresCampos] = useState({});
+
+
 
   useEffect(() => {
     const cargarPreguntas = async () => {
@@ -132,16 +131,29 @@ const Evaluacion = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (enviando) return;
-    if (!curso) return setErrorMensaje("Debes seleccionar un curso.");
-    if (!facilidad) return setErrorMensaje("Indica la facilidad.");
-    if (!recomendado) return setErrorMensaje("Indica si recomiendas al profesor.");
-    if (!asistencia) return setErrorMensaje("Selecciona la asistencia.");
-    if (!notaAlumno) return setErrorMensaje("Debes indicar qué nota obtuviste.");
-    if (!emoji) return setErrorMensaje("Selecciona una calificación en emojis.");
-    if (preguntasDinamicas.some((p) => !respuestas[p.group_id])) {
-      return setErrorMensaje("Responde todas las preguntas antes de enviar.");
+    const nuevosErrores = {};
+
+    preguntasDinamicas.forEach((p) => {
+      if (!respuestas[p.group_id]) {
+        nuevosErrores[`pregunta_${p.group_id}`] = true;
+      }
+    });
+
+    if (!curso) nuevosErrores.curso = true;
+    if (!facilidad) nuevosErrores.facilidad = true;
+    if (!recomendado) nuevosErrores.recomendado = true;
+    if (!asistencia) nuevosErrores.asistencia = true;
+    if (!notaAlumno) nuevosErrores.notaAlumno = true;
+    if (!emoji) nuevosErrores.emoji = true;
+
+    if (Object.keys(nuevosErrores).length > 0) {
+      setErroresCampos(nuevosErrores);
+      return setErrorMensaje("Por favor, completa todos los campos obligatorios.");
     }
+
+    setErroresCampos({});
+    setFaltantes([]);
+
 
     if (!cursosDelProfesor.some((c) => c.name === curso)) {
       return setErrorMensaje("El curso seleccionado no pertenece al profesor.");
@@ -209,11 +221,18 @@ const Evaluacion = () => {
     <div className="evaluacion-container">
       <h6>Evaluando a: {profesor.name}</h6>
 
-      <h1>Elige tu curso</h1>
+      <h2>Elige tu curso</h2>
       <select
         value={curso}
-        onChange={(e) => setCurso(e.target.value)}
-        className="select"
+        onChange={(e) => {
+          setCurso(e.target.value);
+          setErroresCampos((prev) => {
+            const nuevos = { ...prev };
+            delete nuevos.curso;
+            return nuevos;
+          });
+        }}
+        className={`select mb-2 ${erroresCampos.curso ? 'border border-danger' : ''}`}
         disabled={cursosDelProfesor.length === 0}
       >
         <option value="">Selecciona un curso</option>
@@ -223,22 +242,37 @@ const Evaluacion = () => {
           </option>
         ))}
       </select>
+      {erroresCampos.curso && <div className="invalid-feedback">Selecciona un curso.</div>}
 
+
+      <h2>Contesta las siguientes preguntas</h2>
       {preguntasDinamicas.map((pregunta) => {
         const selectedValue = respuestas[pregunta.group_id];
         const labelsDelGrupo = labels.filter((l) => l.group_id === pregunta.group_id);
         const labelSeleccionado = labelsDelGrupo[selectedValue - 1];
+        const errorClave = `pregunta_${pregunta.group_id}`;
+
+        const hayError = erroresCampos[errorClave];
 
         return (
-          <div key={pregunta.group_id} className="likert-row">
+          <div
+            key={pregunta.group_id}
+            className={`likert-row rounded p-3 mb-3 ${hayError ? "border border-danger" : ""}`}
+          >
             <div className="likert-label">{pregunta.text}</div>
             <div className="likert-options">
               {[1, 2, 3, 4, 5].map((valor) => (
                 <button
                   key={valor}
-                  onClick={() =>
-                    setRespuestas((prev) => ({ ...prev, [pregunta.group_id]: valor }))
-                  }
+                  onClick={() => {
+                    setRespuestas((prev) => ({ ...prev, [pregunta.group_id]: valor }));
+                    setErroresCampos((prev) => {
+                      const nuevos = { ...prev };
+                      delete nuevos[`pregunta_${pregunta.group_id}`];
+                      return nuevos;
+                    });
+                  }}
+
                   className={`btn ${selectedValue === valor ? "selected" : ""}`}
                 >
                   {valor}
@@ -250,87 +284,150 @@ const Evaluacion = () => {
                 {labelSeleccionado?.name || ""}
               </div>
             )}
+            {hayError && (
+              <div className="text-danger mt-2">Por favor, responde esta pregunta.</div>
+            )}
           </div>
         );
       })}
 
-      <div className="likert-row">
-        <div className="likert-label">Facilidad</div>
+      <div className={`likert-row rounded p-3 mb-3 ${erroresCampos.facilidad ? "border border-danger" : ""}`}>
+        <div className="likert-label">¿Qué tan fácil fue el curso?</div>
         <div className="likert-options">
           {[1, 2, 3, 4, 5].map((n) => (
             <button
               key={n}
-              onClick={() => setFacilidad(n)}
+              onClick={() => {
+                setFacilidad((prev) => (prev === n ? null : n));
+                setErroresCampos((prev) => {
+                  const nuevos = { ...prev };
+                  delete nuevos.facilidad;
+                  return nuevos;
+                });
+              }}
+
               className={`btn ${facilidad === n ? "selected" : ""}`}
             >
               {n}
             </button>
           ))}
         </div>
+        {erroresCampos.facilidad && (
+          <div className="text-danger mt-2">Selecciona una opción de facilidad.</div>
+        )}
       </div>
 
-      <div className="inline-row">
-        <div className="inline-label">¿Lo recomiendas?</div>
-        <div className="inline-options">
-          {["Sí", "No"].map((op) => (
-            <button
-              key={op}
-              onClick={() => setRecomendado(op)}
-              className={`btn ${recomendado === op ? "selected" : ""}`}
-            >
-              {op}
-            </button>
-          ))}
-        </div>
-      </div>
 
-      <div className="inline-row">
-        <div className="inline-label">Asistencia a clase</div>
+      <div className={`inline-row rounded p-3 mb-3 ${erroresCampos.asistencia ? "border border-danger" : ""}`}>
+        <div className="inline-label">¿La asistencia fue obligatoria?</div>
         <div className="inline-options">
           {["Obligatoria", "No obligatoria"].map((op) => (
             <button
               key={op}
-              onClick={() => setAsistencia(op)}
+              onClick={() => {
+                setAsistencia((prev) => (prev === op ? null : op));
+                setErroresCampos((prev) => {
+                  const nuevos = { ...prev };
+                  delete nuevos.asistencia;
+                  return nuevos;
+                });
+              }}
+
               className={`btn ${asistencia === op ? "selected" : ""}`}
             >
               {op}
             </button>
           ))}
         </div>
+        {erroresCampos.asistencia && (
+          <div className="text-danger mt-2">Selecciona si la asistencia fue obligatoria.</div>
+        )}
       </div>
 
-      <div className="inline-row">
+      <div className={`inline-row rounded p-3 mb-3 ${erroresCampos.recomendado ? "border border-danger" : ""}`}>
+        <div className="inline-label">¿Recomiendas al profesor?</div>
+        <div className="inline-options">
+          {["Sí", "No"].map((op) => (
+            <button
+              key={op}
+              onClick={() => {
+                setRecomendado((prev) => (prev === op ? null : op));
+                setErroresCampos((prev) => {
+                  const nuevos = { ...prev };
+                  delete nuevos.recomendado;
+                  return nuevos;
+                });
+              }}
+
+              className={`btn ${recomendado === op ? "selected" : ""}`}
+            >
+              {op}
+            </button>
+          ))}
+        </div>
+        {erroresCampos.recomendado && (
+          <div className="text-danger mt-2">Indica si recomiendas al profesor.</div>
+        )}
+      </div>
+
+
+      <div className={`inline-row rounded p-3 mb-3 ${erroresCampos.notaAlumno ? "border border-danger" : ""}`}>
         <div className="inline-label">¿Qué nota obtuviste en este curso?</div>
         <div className="inline-options">
           {[...Array(10)].map((_, i) => (
             <button
               key={i + 1}
-              onClick={() => setNotaAlumno(i + 1)}
+              onClick={() => {
+                setNotaAlumno((prev) => (prev === i + 1 ? null : i + 1));
+                setErroresCampos((prev) => {
+                  const nuevos = { ...prev };
+                  delete nuevos.notaAlumno;
+                  return nuevos;
+                });
+              }}
+
               className={`btn ${notaAlumno === i + 1 ? "selected" : ""}`}
             >
               {i + 1}
             </button>
           ))}
         </div>
+        {erroresCampos.notaAlumno && (
+          <div className="text-danger mt-2">Selecciona la nota que obtuviste.</div>
+        )}
       </div>
 
       <h2>¿Qué calificación le das al profesor?</h2>
-      <div className="emoji-group">
-        {[
-          { label: "Excelente", emoji: "🤩" },
-          { label: "Buena", emoji: "🙂" },
-          { label: "Regular", emoji: "😐" },
-          { label: "Mala", emoji: "🙁" },
-        ].map(({ label, emoji }) => (
-          <button
-            key={emoji}
-            onClick={() => setCalificacion(emoji)}
-            className={`emoji-btn ${emoji === emoji ? "selected" : ""}`}
-          >
-            <span className="emoji">{emoji}</span>
-            <span>{label}</span>
-          </button>
-        ))}
+      <div className={`emoji-group rounded p-3 mb-3 ${erroresCampos.emoji ? "border border-danger" : ""}`}>
+
+        <div className="emoji-group">
+          {[
+            { label: "Excelente", emoji: "🤩" },
+            { label: "Buena", emoji: "🙂" },
+            { label: "Regular", emoji: "😐" },
+            { label: "Mala", emoji: "🙁" },
+          ].map(({ label, emoji }) => (
+            <button
+              key={emoji}
+              onClick={() => {
+                setCalificacion((prev) => (prev === emoji ? "" : emoji));
+                setErroresCampos((prev) => {
+                  const nuevos = { ...prev };
+                  delete nuevos.emoji;
+                  return nuevos;
+                });
+              }}
+
+              className={`emoji-btn ${emoji === emoji ? "selected" : ""}`}
+            >
+              <span className="emoji">{emoji}</span>
+              <span>{label}</span>
+            </button>
+          ))}
+        </div>
+        {erroresCampos.emoji && (
+          <div className="text-danger mt-2">Selecciona la calificación.</div>
+        )}
       </div>
 
       <h2>{preguntasCaracteristicas?.text}</h2>
@@ -358,7 +455,7 @@ const Evaluacion = () => {
           })}
       </div>
 
-      <h2>Añadir un comentario (opcional)</h2>
+      <h2>Añade un comentario (opcional)</h2>
       <textarea
         className="textarea"
         placeholder="Escribe un comentario..."
@@ -392,6 +489,5 @@ const Evaluacion = () => {
     </div>
   );
 };
-
 
 export default Evaluacion;
