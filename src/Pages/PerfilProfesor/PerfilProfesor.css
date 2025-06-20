@@ -118,3 +118,42 @@ hr.dashed {
   font-size: 13px;
   color: #555;
 }
+
+@media (max-width: 768px) {
+  .profile-card {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .left-column, .right-column {
+    padding: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .right-column {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.1rem;
+  }
+
+  .chip, .chip-labels {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  .circulo-nombre {
+    font-size: 13px;
+  }
+
+  .circulo-valor {
+    font-size: 12px;
+  }
+}
+
+

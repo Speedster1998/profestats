@@ -44,12 +44,12 @@ const PerfilProfesor = ({ idTeacher }) => {
             <div className="profile-card my-4 mx-auto">
                 <div className="left-column">
                     <ProfileImage src={teacher.image} size={140} />
-                    <h2 className="text-white fs-5 fw-bold mt-4">{teacher.name}</h2>
+                    <h2 className="text-white fw-bold mt-4 fs-5 fs-md-4 fs-lg-3">{teacher.name}</h2>
+
                 </div>
                 <div className="right-column">
-                    <h3 className="section-title fs-3">Dificultad: {teacher.facilidad}</h3>
-                    <h3 className="section-title fs-3">Calidad: {teacher.calidad}</h3>
-
+                    <h3 className="section-title fs-4 fs-md-5 fs-lg-4">Dificultad: {teacher.facilidad}</h3>
+                    <h3 className="section-title fs-4 fs-md-5 fs-lg-4">Calidad: {teacher.calidad}</h3>
                     <p>{getDescriptionText()}</p>
                     {teacher.description.length > MAX_LENGTH && (
                         <div className="d-flex justify-content-center mt-3">

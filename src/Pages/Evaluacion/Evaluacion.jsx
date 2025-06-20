@@ -522,7 +522,7 @@ const Evaluacion = () => {
 
       <div className="d-flex justify-content-center">
 
-        <button className="btn-primary" style={{ height: '65px' }} onClick={handleSubmit} disabled={enviando}>
+        <button className="btn-primary" style={{ height: '55px' }} onClick={handleSubmit} disabled={enviando}>
           {reviewToEdit ? 'Actualizar Reseña' : 'Enviar Reseña'}
         </button>
       </div>
