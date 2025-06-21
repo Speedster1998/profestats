@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Header from "./Componentes/Header/Header";
 import Landing from "./Pages/Landing/Landing";
 import FondoDecorativo from "./Componentes/Fondo/Fondo";
@@ -18,6 +19,8 @@ import labelsJSON from './data/PreguntasContenido.json';
 import reviewLabelsJSON from './data/review_labels.json';
 
 function App() {
+    const navigate = useNavigate();
+    
     useEffect(() => {
         const usuariosGuardados = JSON.parse(localStorage.getItem("Usuarios"));
 
