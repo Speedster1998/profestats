@@ -1,5 +1,4 @@
 import { useState } from "react";
-import styles from "./login.module.css";
 import SigLogLayout from "./SigLogLayout.jsx"
 
 const Login = ({logFunc}) => {
