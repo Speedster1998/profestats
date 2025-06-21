@@ -190,7 +190,7 @@ const FiltroComponente = ({ id, changeTeacherId }) => {
  <>
     <div className="mb-4">
       <h3 className="text-white">
-        <BackButton />
+        <BackButton to={'/filtrogeneral'}/>
         <img src={uniersity.image_url} alt="Logo" height="30" className="me-2" />
         {uniersity.name}
       </h3>

@@ -223,7 +223,7 @@ const Perfil = () => {
                       onDislike={() => handleDislike(r.review.review_id)}
                     />
                   </div>
-                  <div className="editar-boton-wrapper d-flex flex-column justify-content-center align-items-center gap-2">
+                  <div className="editar-boton-wrapper d-flex flex-column justify-content-center align-items-center gap-2 row">
                     <button
                       onClick={() =>
                         navigate(`/evaluacion/${r.review.teacher_id}`, {
