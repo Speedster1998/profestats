@@ -151,6 +151,7 @@ const Perfil = () => {
         value={collegeId ?? ""}
         onChange={handleUniversityChange}
         className="form-control form-control-sm mx-auto text-center bg-transparent text-white border-white"
+        style={{ color: "white" }}
       >
         {colleges.map((c) => (
           <option key={c.college_id} value={c.college_id}>{c.name}</option>
