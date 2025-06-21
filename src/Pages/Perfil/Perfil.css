@@ -317,3 +317,11 @@ body {
   font-size: 13px;
   padding: 6px 12px;
 }
+
+select {
+  color: white;
+}
+
+select option {
+  color: black;
+}
