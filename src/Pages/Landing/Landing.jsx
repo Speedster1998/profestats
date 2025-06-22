@@ -1,13 +1,13 @@
 import { useNavigate } from 'react-router-dom';
 import profeLanding from "@/Images/profeLanding.png";
 import styles from "./landing.module.css";
-import HeaderLanding from "@/Componentes/Header/HeaderLanding.jsx"
+import HeaderLanding from "@/Componentes/Header/HeaderLanding.jsx";
 
 const Landing = () => {
     const navigate = useNavigate();
 
     const Registarse = () => {
-        navigate('/signin')
+        navigate('/signin');
     };
 
     return (
