@@ -303,7 +303,7 @@
     "nota": 8,
     "likes": 0,
     "dislikes": 0,
-    "emoji": "😐"
+    "emoji": "🤩"
   },
   {
     "review_id": 19,
@@ -500,6 +500,23 @@
     "teacher_id": 33,
     "course_id": 47,
     "comment": "Fomenta la interacción en clase y utiliza diferentes recursos didácticos para mantener el interés del alumnado. Sin embargo, en ocasiones podría organizar mejor el tiempo para cubrir todos los temas con más profundidad.",
+    "date": "2025-06-19",
+    "anonimo": false,
+    "calificacion_general": 4.5,
+    "facilidad": 5,
+    "nota": 8,
+    "recomendado": "Sí",
+    "asistencia": "No obligatoria",
+    "emoji": "🙂"
+  },
+  {
+    "review_id": 32,
+    "likes": 0,
+    "dislikes": 0,
+    "user_id": 3,
+    "teacher_id": 15,
+    "course_id": 76,
+    "comment": "Kingtana 👑",
     "date": "2025-06-19",
     "anonimo": false,
     "calificacion_general": 4.5,

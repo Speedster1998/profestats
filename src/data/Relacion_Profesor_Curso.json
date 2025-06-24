@@ -51,17 +51,987 @@
   { "teacher_course_id": 50, "teacher_id": 19, "course_id": 29 },
   { "teacher_course_id": 51, "teacher_id": 20, "course_id": 30 },
   { "teacher_course_id": 52, "teacher_id": 28, "course_id": 8 },
-  { "teacher_course_id": 52, "teacher_id": 28, "course_id": 34 },
-  { "teacher_course_id": 52, "teacher_id": 28, "course_id": 29 },
-  { "teacher_course_id": 52, "teacher_id": 29, "course_id": 39 },
-  { "teacher_course_id": 52, "teacher_id": 29, "course_id": 45 },
-  { "teacher_course_id": 52, "teacher_id": 29, "course_id": 26 },
-  { "teacher_course_id": 52, "teacher_id": 30, "course_id": 26 },
-  { "teacher_course_id": 52, "teacher_id": 30, "course_id": 39 },
-  { "teacher_course_id": 52, "teacher_id": 30, "course_id": 32 },
-  { "teacher_course_id": 52, "teacher_id": 31, "course_id": 42 },
-  { "teacher_course_id": 52, "teacher_id": 31, "course_id": 46 },
-  { "teacher_course_id": 52, "teacher_id": 32, "course_id": 47 },
-  { "teacher_course_id": 52, "teacher_id": 32, "course_id": 9 },
-  { "teacher_course_id": 52, "teacher_id": 33, "course_id": 47 }
+  { "teacher_course_id": 53, "teacher_id": 28, "course_id": 34 },
+  { "teacher_course_id": 54, "teacher_id": 28, "course_id": 29 },
+  { "teacher_course_id": 55, "teacher_id": 29, "course_id": 39 },
+  { "teacher_course_id": 56, "teacher_id": 29, "course_id": 45 },
+  { "teacher_course_id": 57, "teacher_id": 29, "course_id": 26 },
+  { "teacher_course_id": 58, "teacher_id": 30, "course_id": 26 },
+  { "teacher_course_id": 59, "teacher_id": 30, "course_id": 39 },
+  { "teacher_course_id": 60, "teacher_id": 30, "course_id": 32 },
+  { "teacher_course_id": 61, "teacher_id": 31, "course_id": 42 },
+  { "teacher_course_id": 62, "teacher_id": 31, "course_id": 46 },
+  { "teacher_course_id": 63, "teacher_id": 32, "course_id": 47 },
+  { "teacher_course_id": 64, "teacher_id": 32, "course_id": 9 },
+  { "teacher_course_id": 65, "teacher_id": 33, "course_id": 47 },
+  {
+    "teacher_course_id": 66,
+    "teacher_id": 34,
+    "course_id": 64
+  },
+  {
+    "teacher_course_id": 67,
+    "teacher_id": 34,
+    "course_id": 49
+  },
+  {
+    "teacher_course_id": 68,
+    "teacher_id": 35,
+    "course_id": 62
+  },
+  {
+    "teacher_course_id": 69,
+    "teacher_id": 36,
+    "course_id": 59
+  },
+  {
+    "teacher_course_id": 70,
+    "teacher_id": 37,
+    "course_id": 95
+  },
+  {
+    "teacher_course_id": 71,
+    "teacher_id": 31,
+    "course_id": 62
+  },
+  {
+    "teacher_course_id": 72,
+    "teacher_id": 38,
+    "course_id": 50
+  },
+  {
+    "teacher_course_id": 73,
+    "teacher_id": 38,
+    "course_id": 91
+  },
+  {
+    "teacher_course_id": 74,
+    "teacher_id": 38,
+    "course_id": 75
+  },
+  {
+    "teacher_course_id": 75,
+    "teacher_id": 39,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 76,
+    "teacher_id": 40,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 77,
+    "teacher_id": 41,
+    "course_id": 95
+  },
+  {
+    "teacher_course_id": 78,
+    "teacher_id": 41,
+    "course_id": 68
+  },
+  {
+    "teacher_course_id": 79,
+    "teacher_id": 42,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 80,
+    "teacher_id": 43,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 81,
+    "teacher_id": 44,
+    "course_id": 59
+  },
+  {
+    "teacher_course_id": 82,
+    "teacher_id": 44,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 83,
+    "teacher_id": 26,
+    "course_id": 67
+  },
+  {
+    "teacher_course_id": 84,
+    "teacher_id": 26,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 85,
+    "teacher_id": 45,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 86,
+    "teacher_id": 46,
+    "course_id": 62
+  },
+  {
+    "teacher_course_id": 87,
+    "teacher_id": 47,
+    "course_id": 80
+  },
+  {
+    "teacher_course_id": 88,
+    "teacher_id": 48,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 89,
+    "teacher_id": 49,
+    "course_id": 70
+  },
+  {
+    "teacher_course_id": 90,
+    "teacher_id": 50,
+    "course_id": 95
+  },
+  {
+    "teacher_course_id": 91,
+    "teacher_id": 51,
+    "course_id": 93
+  },
+  {
+    "teacher_course_id": 92,
+    "teacher_id": 51,
+    "course_id": 62
+  },
+  {
+    "teacher_course_id": 93,
+    "teacher_id": 52,
+    "course_id": 51
+  },
+  {
+    "teacher_course_id": 94,
+    "teacher_id": 52,
+    "course_id": 77
+  },
+  {
+    "teacher_course_id": 95,
+    "teacher_id": 52,
+    "course_id": 75
+  },
+  {
+    "teacher_course_id": 96,
+    "teacher_id": 53,
+    "course_id": 68
+  },
+  {
+    "teacher_course_id": 97,
+    "teacher_id": 54,
+    "course_id": 78
+  },
+  {
+    "teacher_course_id": 98,
+    "teacher_id": 55,
+    "course_id": 66
+  },
+  {
+    "teacher_course_id": 99,
+    "teacher_id": 55,
+    "course_id": 61
+  },
+  {
+    "teacher_course_id": 100,
+    "teacher_id": 55,
+    "course_id": 77
+  },
+  {
+    "teacher_course_id": 101,
+    "teacher_id": 55,
+    "course_id": 91
+  },
+  {
+    "teacher_course_id": 102,
+    "teacher_id": 56,
+    "course_id": 75
+  },
+  {
+    "teacher_course_id": 103,
+    "teacher_id": 57,
+    "course_id": 60
+  },
+  {
+    "teacher_course_id": 104,
+    "teacher_id": 57,
+    "course_id": 59
+  },
+  {
+    "teacher_course_id": 105,
+    "teacher_id": 58,
+    "course_id": 78
+  },
+  {
+    "teacher_course_id": 106,
+    "teacher_id": 59,
+    "course_id": 69
+  },
+  {
+    "teacher_course_id": 107,
+    "teacher_id": 59,
+    "course_id": 74
+  },
+  {
+    "teacher_course_id": 108,
+    "teacher_id": 60,
+    "course_id": 95
+  },
+  {
+    "teacher_course_id": 109,
+    "teacher_id": 60,
+    "course_id": 48
+  },
+  {
+    "teacher_course_id": 110,
+    "teacher_id": 61,
+    "course_id": 95
+  },
+  {
+    "teacher_course_id": 111,
+    "teacher_id": 62,
+    "course_id": 78
+  },
+  {
+    "teacher_course_id": 112,
+    "teacher_id": 63,
+    "course_id": 75
+  },
+  {
+    "teacher_course_id": 113,
+    "teacher_id": 64,
+    "course_id": 67
+  },
+  {
+    "teacher_course_id": 114,
+    "teacher_id": 65,
+    "course_id": 60
+  },
+  {
+    "teacher_course_id": 115,
+    "teacher_id": 65,
+    "course_id": 59
+  },
+  {
+    "teacher_course_id": 116,
+    "teacher_id": 66,
+    "course_id": 78
+  },
+  {
+    "teacher_course_id": 117,
+    "teacher_id": 67,
+    "course_id": 68
+  },
+  {
+    "teacher_course_id": 118,
+    "teacher_id": 67,
+    "course_id": 78
+  },
+  {
+    "teacher_course_id": 119,
+    "teacher_id": 22,
+    "course_id": 90
+  },
+  {
+    "teacher_course_id": 120,
+    "teacher_id": 22,
+    "course_id": 75
+  },
+  {
+    "teacher_course_id": 121,
+    "teacher_id": 68,
+    "course_id": 58
+  },
+  {
+    "teacher_course_id": 122,
+    "teacher_id": 69,
+    "course_id": 59
+  },
+  {
+    "teacher_course_id": 123,
+    "teacher_id": 70,
+    "course_id": 59
+  },
+  {
+    "teacher_course_id": 124,
+    "teacher_id": 71,
+    "course_id": 67
+  },
+  {
+    "teacher_course_id": 125,
+    "teacher_id": 71,
+    "course_id": 94
+  },
+  {
+    "teacher_course_id": 126,
+    "teacher_id": 72,
+    "course_id": 83
+  },
+  {
+    "teacher_course_id": 127,
+    "teacher_id": 73,
+    "course_id": 79
+  },
+  {
+    "teacher_course_id": 128,
+    "teacher_id": 74,
+    "course_id": 95
+  },
+  {
+    "teacher_course_id": 129,
+    "teacher_id": 75,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 130,
+    "teacher_id": 76,
+    "course_id": 68
+  },
+  {
+    "teacher_course_id": 131,
+    "teacher_id": 77,
+    "course_id": 84
+  },
+  {
+    "teacher_course_id": 132,
+    "teacher_id": 78,
+    "course_id": 75
+  },
+  {
+    "teacher_course_id": 133,
+    "teacher_id": 79,
+    "course_id": 69
+  },
+  {
+    "teacher_course_id": 134,
+    "teacher_id": 79,
+    "course_id": 81
+  },
+  {
+    "teacher_course_id": 135,
+    "teacher_id": 80,
+    "course_id": 67
+  },
+  {
+    "teacher_course_id": 136,
+    "teacher_id": 81,
+    "course_id": 71
+  },
+  {
+    "teacher_course_id": 137,
+    "teacher_id": 81,
+    "course_id": 63
+  },
+  {
+    "teacher_course_id": 138,
+    "teacher_id": 15,
+    "course_id": 87
+  },
+  {
+    "teacher_course_id": 139,
+    "teacher_id": 15,
+    "course_id": 76
+  },
+  {
+    "teacher_course_id": 140,
+    "teacher_id": 14,
+    "course_id": 66
+  },
+  {
+    "teacher_course_id": 141,
+    "teacher_id": 14,
+    "course_id": 83
+  },
+  {
+    "teacher_course_id": 142,
+    "teacher_id": 14,
+    "course_id": 86
+  },
+  {
+    "teacher_course_id": 143,
+    "teacher_id": 82,
+    "course_id": 75
+  },
+  {
+    "teacher_course_id": 144,
+    "teacher_id": 83,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 145,
+    "teacher_id": 84,
+    "course_id": 59
+  },
+  {
+    "teacher_course_id": 146,
+    "teacher_id": 85,
+    "course_id": 95
+  },
+  {
+    "teacher_course_id": 147,
+    "teacher_id": 86,
+    "course_id": 56
+  },
+  {
+    "teacher_course_id": 148,
+    "teacher_id": 87,
+    "course_id": 60
+  },
+  {
+    "teacher_course_id": 149,
+    "teacher_id": 87,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 150,
+    "teacher_id": 30,
+    "course_id": 90
+  },
+  {
+    "teacher_course_id": 151,
+    "teacher_id": 30,
+    "course_id": 84
+  },
+  {
+    "teacher_course_id": 152,
+    "teacher_id": 30,
+    "course_id": 75
+  },
+  {
+    "teacher_course_id": 153,
+    "teacher_id": 88,
+    "course_id": 88
+  },
+  {
+    "teacher_course_id": 154,
+    "teacher_id": 89,
+    "course_id": 80
+  },
+  {
+    "teacher_course_id": 155,
+    "teacher_id": 89,
+    "course_id": 69
+  },
+  {
+    "teacher_course_id": 156,
+    "teacher_id": 25,
+    "course_id": 67
+  },
+  {
+    "teacher_course_id": 157,
+    "teacher_id": 25,
+    "course_id": 84
+  },
+  {
+    "teacher_course_id": 158,
+    "teacher_id": 90,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 159,
+    "teacher_id": 91,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 160,
+    "teacher_id": 29,
+    "course_id": 94
+  },
+  {
+    "teacher_course_id": 161,
+    "teacher_id": 92,
+    "course_id": 59
+  },
+  {
+    "teacher_course_id": 162,
+    "teacher_id": 93,
+    "course_id": 80
+  },
+  {
+    "teacher_course_id": 163,
+    "teacher_id": 93,
+    "course_id": 66
+  },
+  {
+    "teacher_course_id": 164,
+    "teacher_id": 93,
+    "course_id": 83
+  },
+  {
+    "teacher_course_id": 165,
+    "teacher_id": 94,
+    "course_id": 71
+  },
+  {
+    "teacher_course_id": 166,
+    "teacher_id": 94,
+    "course_id": 72
+  },
+  {
+    "teacher_course_id": 167,
+    "teacher_id": 95,
+    "course_id": 93
+  },
+  {
+    "teacher_course_id": 168,
+    "teacher_id": 96,
+    "course_id": 54
+  },
+  {
+    "teacher_course_id": 169,
+    "teacher_id": 28,
+    "course_id": 80
+  },
+  {
+    "teacher_course_id": 170,
+    "teacher_id": 28,
+    "course_id": 82
+  },
+  {
+    "teacher_course_id": 171,
+    "teacher_id": 28,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 172,
+    "teacher_id": 28,
+    "course_id": 77
+  },
+  {
+    "teacher_course_id": 173,
+    "teacher_id": 97,
+    "course_id": 59
+  },
+  {
+    "teacher_course_id": 174,
+    "teacher_id": 97,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 175,
+    "teacher_id": 98,
+    "course_id": 78
+  },
+  {
+    "teacher_course_id": 176,
+    "teacher_id": 99,
+    "course_id": 89
+  },
+  {
+    "teacher_course_id": 177,
+    "teacher_id": 100,
+    "course_id": 77
+  },
+  {
+    "teacher_course_id": 178,
+    "teacher_id": 101,
+    "course_id": 83
+  },
+  {
+    "teacher_course_id": 179,
+    "teacher_id": 102,
+    "course_id": 69
+  },
+  {
+    "teacher_course_id": 180,
+    "teacher_id": 8,
+    "course_id": 66
+  },
+  {
+    "teacher_course_id": 181,
+    "teacher_id": 8,
+    "course_id": 51
+  },
+  {
+    "teacher_course_id": 182,
+    "teacher_id": 103,
+    "course_id": 84
+  },
+  {
+    "teacher_course_id": 183,
+    "teacher_id": 103,
+    "course_id": 75
+  },
+  {
+    "teacher_course_id": 184,
+    "teacher_id": 103,
+    "course_id": 78
+  },
+  {
+    "teacher_course_id": 185,
+    "teacher_id": 104,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 186,
+    "teacher_id": 105,
+    "course_id": 59
+  },
+  {
+    "teacher_course_id": 187,
+    "teacher_id": 105,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 188,
+    "teacher_id": 105,
+    "course_id": 75
+  },
+  {
+    "teacher_course_id": 189,
+    "teacher_id": 17,
+    "course_id": 75
+  },
+  {
+    "teacher_course_id": 190,
+    "teacher_id": 106,
+    "course_id": 90
+  },
+  {
+    "teacher_course_id": 191,
+    "teacher_id": 106,
+    "course_id": 84
+  },
+  {
+    "teacher_course_id": 192,
+    "teacher_id": 107,
+    "course_id": 85
+  },
+  {
+    "teacher_course_id": 193,
+    "teacher_id": 107,
+    "course_id": 96
+  },
+  {
+    "teacher_course_id": 194,
+    "teacher_id": 108,
+    "course_id": 67
+  },
+  {
+    "teacher_course_id": 195,
+    "teacher_id": 108,
+    "course_id": 94
+  },
+  {
+    "teacher_course_id": 196,
+    "teacher_id": 109,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 197,
+    "teacher_id": 110,
+    "course_id": 67
+  },
+  {
+    "teacher_course_id": 198,
+    "teacher_id": 110,
+    "course_id": 75
+  },
+  {
+    "teacher_course_id": 199,
+    "teacher_id": 111,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 200,
+    "teacher_id": 112,
+    "course_id": 75
+  },
+  {
+    "teacher_course_id": 201,
+    "teacher_id": 113,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 202,
+    "teacher_id": 114,
+    "course_id": 69
+  },
+  {
+    "teacher_course_id": 203,
+    "teacher_id": 115,
+    "course_id": 95
+  },
+  {
+    "teacher_course_id": 204,
+    "teacher_id": 116,
+    "course_id": 78
+  },
+  {
+    "teacher_course_id": 205,
+    "teacher_id": 117,
+    "course_id": 95
+  },
+  {
+    "teacher_course_id": 206,
+    "teacher_id": 118,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 207,
+    "teacher_id": 119,
+    "course_id": 59
+  },
+  {
+    "teacher_course_id": 208,
+    "teacher_id": 119,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 209,
+    "teacher_id": 120,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 210,
+    "teacher_id": 121,
+    "course_id": 56
+  },
+  {
+    "teacher_course_id": 211,
+    "teacher_id": 122,
+    "course_id": 73
+  },
+  {
+    "teacher_course_id": 212,
+    "teacher_id": 122,
+    "course_id": 79
+  },
+  {
+    "teacher_course_id": 213,
+    "teacher_id": 123,
+    "course_id": 59
+  },
+  {
+    "teacher_course_id": 214,
+    "teacher_id": 123,
+    "course_id": 78
+  },
+  {
+    "teacher_course_id": 215,
+    "teacher_id": 124,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 216,
+    "teacher_id": 125,
+    "course_id": 71
+  },
+  {
+    "teacher_course_id": 217,
+    "teacher_id": 125,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 218,
+    "teacher_id": 125,
+    "course_id": 72
+  },
+  {
+    "teacher_course_id": 219,
+    "teacher_id": 126,
+    "course_id": 92
+  },
+  {
+    "teacher_course_id": 220,
+    "teacher_id": 126,
+    "course_id": 53
+  },
+  {
+    "teacher_course_id": 221,
+    "teacher_id": 127,
+    "course_id": 77
+  },
+  {
+    "teacher_course_id": 222,
+    "teacher_id": 127,
+    "course_id": 75
+  },
+  {
+    "teacher_course_id": 223,
+    "teacher_id": 127,
+    "course_id": 83
+  },
+  {
+    "teacher_course_id": 224,
+    "teacher_id": 128,
+    "course_id": 90
+  },
+  {
+    "teacher_course_id": 225,
+    "teacher_id": 128,
+    "course_id": 91
+  },
+  {
+    "teacher_course_id": 226,
+    "teacher_id": 129,
+    "course_id": 95
+  },
+  {
+    "teacher_course_id": 227,
+    "teacher_id": 130,
+    "course_id": 79
+  },
+  {
+    "teacher_course_id": 228,
+    "teacher_id": 131,
+    "course_id": 81
+  },
+  {
+    "teacher_course_id": 229,
+    "teacher_id": 131,
+    "course_id": 52
+  },
+  {
+    "teacher_course_id": 230,
+    "teacher_id": 132,
+    "course_id": 95
+  },
+  {
+    "teacher_course_id": 231,
+    "teacher_id": 133,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 232,
+    "teacher_id": 134,
+    "course_id": 67
+  },
+  {
+    "teacher_course_id": 233,
+    "teacher_id": 135,
+    "course_id": 95
+  },
+  {
+    "teacher_course_id": 234,
+    "teacher_id": 136,
+    "course_id": 77
+  },
+  {
+    "teacher_course_id": 235,
+    "teacher_id": 136,
+    "course_id": 83
+  },
+  {
+    "teacher_course_id": 236,
+    "teacher_id": 137,
+    "course_id": 79
+  },
+  {
+    "teacher_course_id": 237,
+    "teacher_id": 137,
+    "course_id": 75
+  },
+  {
+    "teacher_course_id": 238,
+    "teacher_id": 138,
+    "course_id": 95
+  },
+  {
+    "teacher_course_id": 239,
+    "teacher_id": 139,
+    "course_id": 80
+  },
+  {
+    "teacher_course_id": 240,
+    "teacher_id": 139,
+    "course_id": 90
+  },
+  {
+    "teacher_course_id": 241,
+    "teacher_id": 139,
+    "course_id": 91
+  },
+  {
+    "teacher_course_id": 242,
+    "teacher_id": 140,
+    "course_id": 57
+  },
+  {
+    "teacher_course_id": 243,
+    "teacher_id": 140,
+    "course_id": 97
+  },
+  {
+    "teacher_course_id": 244,
+    "teacher_id": 141,
+    "course_id": 75
+  },
+  {
+    "teacher_course_id": 245,
+    "teacher_id": 142,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 246,
+    "teacher_id": 143,
+    "course_id": 75
+  },
+  {
+    "teacher_course_id": 247,
+    "teacher_id": 143,
+    "course_id": 62
+  },
+  {
+    "teacher_course_id": 248,
+    "teacher_id": 144,
+    "course_id": 59
+  },
+  {
+    "teacher_course_id": 249,
+    "teacher_id": 144,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 250,
+    "teacher_id": 145,
+    "course_id": 94
+  },
+  {
+    "teacher_course_id": 251,
+    "teacher_id": 146,
+    "course_id": 77
+  },
+  {
+    "teacher_course_id": 252,
+    "teacher_id": 146,
+    "course_id": 75
+  },
+  {
+    "teacher_course_id": 253,
+    "teacher_id": 147,
+    "course_id": 67
+  },
+  {
+    "teacher_course_id": 254,
+    "teacher_id": 148,
+    "course_id": 95
+  },
+  {
+    "teacher_course_id": 255,
+    "teacher_id": 149,
+    "course_id": 64
+  },
+  {
+    "teacher_course_id": 256,
+    "teacher_id": 149,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 257,
+    "teacher_id": 150,
+    "course_id": 65
+  },
+  {
+    "teacher_course_id": 258,
+    "teacher_id": 151,
+    "course_id": 55
+  },
+  {
+    "teacher_course_id": 259,
+    "teacher_id": 151,
+    "course_id": 75
+  }
 ]

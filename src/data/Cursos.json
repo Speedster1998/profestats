@@ -280,5 +280,305 @@
     "name": "Derecho Civil I",
     "faculty_id": 11,
     "ciclo": 10
+  },
+  {
+    "course_id": 48,
+    "name": "Analítica con Big Data",
+    "faculty_id": 1,
+    "ciclo": 8
+  },
+  {
+    "course_id": 49,
+    "name": "Analítica de Negocios",
+    "faculty_id": 1,
+    "ciclo": 9
+  },
+  {
+    "course_id": 50,
+    "name": "Análisis y Diseño de Algoritmos",
+    "faculty_id": 1,
+    "ciclo": 7
+  },
+  {
+    "course_id": 51,
+    "name": "Aprendizaje de Máquina / Machine Learning",
+    "faculty_id": 1,
+    "ciclo": 3
+  },
+  {
+    "course_id": 52,
+    "name": "Arquitectura Empresarial",
+    "faculty_id": 1,
+    "ciclo": 8
+  },
+  {
+    "course_id": 53,
+    "name": "Arquitectura de Computadoras",
+    "faculty_id": 1,
+    "ciclo": 7
+  },
+  {
+    "course_id": 54,
+    "name": "Arquitectura de Software",
+    "faculty_id": 1,
+    "ciclo": 7
+  },
+  {
+    "course_id": 55,
+    "name": "Arquitectura de Tecnologías de la Información",
+    "faculty_id": 1,
+    "ciclo": 6
+  },
+  {
+    "course_id": 56,
+    "name": "Auditoría y Control de Sistemas",
+    "faculty_id": 1,
+    "ciclo": 6
+  },
+  {
+    "course_id": 57,
+    "name": "Ciberseguridad / Cybersecurity",
+    "faculty_id": 1,
+    "ciclo": 6
+  },
+  {
+    "course_id": 58,
+    "name": "Computación en la Nube",
+    "faculty_id": 1,
+    "ciclo": 4
+  },
+  {
+    "course_id": 59,
+    "name": "Cálculo II",
+    "faculty_id": 1,
+    "ciclo": 6
+  },
+  {
+    "course_id": 60,
+    "name": "Cálculo III",
+    "faculty_id": 1,
+    "ciclo": 4
+  },
+  {
+    "course_id": 61,
+    "name": "Deep Learning",
+    "faculty_id": 1,
+    "ciclo": 3
+  },
+  {
+    "course_id": 62,
+    "name": "Desarrollo de Competencias Gerenciales",
+    "faculty_id": 1,
+    "ciclo": 5
+  },
+  {
+    "course_id": 63,
+    "name": "DevOps",
+    "faculty_id": 1,
+    "ciclo": 5
+  },
+  {
+    "course_id": 64,
+    "name": "Estadística Aplicada",
+    "faculty_id": 1,
+    "ciclo": 8
+  },
+  {
+    "course_id": 65,
+    "name": "Estructuras Discretas de Computación",
+    "faculty_id": 1,
+    "ciclo": 6
+  },
+  {
+    "course_id": 66,
+    "name": "Estructuras de Datos I",
+    "faculty_id": 1,
+    "ciclo": 5
+  },
+  {
+    "course_id": 67,
+    "name": "Física para Sistemas",
+    "faculty_id": 1,
+    "ciclo": 1
+  },
+  {
+    "course_id": 68,
+    "name": "Gestión de Operaciones",
+    "faculty_id": 1,
+    "ciclo": 7
+  },
+  {
+    "course_id": 69,
+    "name": "Gestión de Proyectos",
+    "faculty_id": 1,
+    "ciclo": 6
+  },
+  {
+    "course_id": 70,
+    "name": "Gestión de Servicios Digitales",
+    "faculty_id": 1,
+    "ciclo": 5
+  },
+  {
+    "course_id": 71,
+    "name": "Ingeniería de Software I",
+    "faculty_id": 1,
+    "ciclo": 8
+  },
+  {
+    "course_id": 72,
+    "name": "Ingeniería de Software II",
+    "faculty_id": 1,
+    "ciclo": 9
+  },
+  {
+    "course_id": 73,
+    "name": "Ingeniería del Conocimiento",
+    "faculty_id": 1,
+    "ciclo": 3
+  },
+  {
+    "course_id": 74,
+    "name": "Innovación Digital",
+    "faculty_id": 1,
+    "ciclo": 1
+  },
+  {
+    "course_id": 75,
+    "name": "Inteligencia Artificial Aplicada",
+    "faculty_id": 1,
+    "ciclo": 4
+  },
+  {
+    "course_id": 76,
+    "name": "Interacción Humano Computadora / Human Computer Interaction",
+    "faculty_id": 1,
+    "ciclo": 3
+  },
+  {
+    "course_id": 77,
+    "name": "Introducción a la Programación",
+    "faculty_id": 1,
+    "ciclo": 2
+  },
+  {
+    "course_id": 78,
+    "name": "Investigación de Operaciones I",
+    "faculty_id": 1,
+    "ciclo": 8
+  },
+  {
+    "course_id": 79,
+    "name": "Modelación e Integración de Sistemas",
+    "faculty_id": 1,
+    "ciclo": 6
+  },
+  {
+    "course_id": 80,
+    "name": "Modelamiento de Base de Datos",
+    "faculty_id": 1,
+    "ciclo": 3
+  },
+  {
+    "course_id": 81,
+    "name": "Planeamiento Estratégico",
+    "faculty_id": 1,
+    "ciclo": 3
+  },
+  {
+    "course_id": 82,
+    "name": "Programación Móvil",
+    "faculty_id": 1,
+    "ciclo": 1
+  },
+  {
+    "course_id": 83,
+    "name": "Programación Orientada a Objetos",
+    "faculty_id": 1,
+    "ciclo": 2
+  },
+  {
+    "course_id": 84,
+    "name": "Propuesta de Investigación",
+    "faculty_id": 1,
+    "ciclo": 5
+  },
+  {
+    "course_id": 85,
+    "name": "Proyecto Integrador de Sistemas",
+    "faculty_id": 1,
+    "ciclo": 9
+  },
+  {
+    "course_id": 86,
+    "name": "Proyecto de Desarrollo de Software",
+    "faculty_id": 1,
+    "ciclo": 10
+  },
+  {
+    "course_id": 87,
+    "name": "Proyecto de Videojuegos",
+    "faculty_id": 1,
+    "ciclo": 3
+  },
+  {
+    "course_id": 88,
+    "name": "Redes Avanzadas",
+    "faculty_id": 1,
+    "ciclo": 8
+  },
+  {
+    "course_id": 89,
+    "name": "Seguridad de Sistemas",
+    "faculty_id": 1,
+    "ciclo": 8
+  },
+  {
+    "course_id": 90,
+    "name": "Seminario de Investigación I",
+    "faculty_id": 1,
+    "ciclo": 3
+  },
+  {
+    "course_id": 91,
+    "name": "Seminario de Investigación II",
+    "faculty_id": 1,
+    "ciclo": 10
+  },
+  {
+    "course_id": 92,
+    "name": "Sistemas Distribuidos",
+    "faculty_id": 1,
+    "ciclo": 6
+  },
+  {
+    "course_id": 93,
+    "name": "Sistemas ERP",
+    "faculty_id": 1,
+    "ciclo": 7
+  },
+  {
+    "course_id": 94,
+    "name": "Sistemas Operativos",
+    "faculty_id": 1,
+    "ciclo": 8
+  },
+  {
+    "course_id": 95,
+    "name": "Sistemas Organizacionales",
+    "faculty_id": 1,
+    "ciclo": 1
+  },
+  {
+    "course_id": 96,
+    "name": "Sistemas de Inteligencia Empresarial",
+    "faculty_id": 1,
+    "ciclo": 3
+  },
+  {
+    "course_id": 97,
+    "name": "Tópicos Avanzados en Ciberseguridad",
+    "faculty_id": 1,
+    "ciclo": 1
   }
 ]

@@ -37,5 +37,605 @@
   { "teacher_college_id": 29, "college_id": 1, "teacher_id": 30},
   { "teacher_college_id": 29, "college_id": 1, "teacher_id": 31},
   { "teacher_college_id": 29, "college_id": 1, "teacher_id": 32},
-  { "teacher_college_id": 29, "college_id": 1, "teacher_id": 33}
+  { "teacher_college_id": 29, "college_id": 1, "teacher_id": 33},
+  {
+    "teacher_college_id": 149,
+    "teacher_id": 15,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 30,
+    "teacher_id": 33,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 31,
+    "teacher_id": 34,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 32,
+    "teacher_id": 35,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 33,
+    "teacher_id": 36,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 34,
+    "teacher_id": 37,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 35,
+    "teacher_id": 38,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 36,
+    "teacher_id": 39,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 37,
+    "teacher_id": 40,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 38,
+    "teacher_id": 41,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 39,
+    "teacher_id": 42,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 40,
+    "teacher_id": 43,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 41,
+    "teacher_id": 44,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 42,
+    "teacher_id": 45,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 43,
+    "teacher_id": 46,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 44,
+    "teacher_id": 47,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 45,
+    "teacher_id": 48,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 46,
+    "teacher_id": 49,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 47,
+    "teacher_id": 50,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 48,
+    "teacher_id": 51,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 49,
+    "teacher_id": 52,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 50,
+    "teacher_id": 53,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 51,
+    "teacher_id": 54,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 52,
+    "teacher_id": 55,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 53,
+    "teacher_id": 56,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 54,
+    "teacher_id": 57,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 55,
+    "teacher_id": 58,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 56,
+    "teacher_id": 59,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 57,
+    "teacher_id": 60,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 58,
+    "teacher_id": 61,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 59,
+    "teacher_id": 62,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 60,
+    "teacher_id": 63,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 61,
+    "teacher_id": 64,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 62,
+    "teacher_id": 65,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 63,
+    "teacher_id": 66,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 64,
+    "teacher_id": 67,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 65,
+    "teacher_id": 68,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 66,
+    "teacher_id": 69,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 67,
+    "teacher_id": 70,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 68,
+    "teacher_id": 71,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 69,
+    "teacher_id": 72,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 70,
+    "teacher_id": 73,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 71,
+    "teacher_id": 74,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 72,
+    "teacher_id": 75,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 73,
+    "teacher_id": 76,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 74,
+    "teacher_id": 77,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 75,
+    "teacher_id": 78,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 76,
+    "teacher_id": 79,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 77,
+    "teacher_id": 80,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 78,
+    "teacher_id": 81,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 79,
+    "teacher_id": 82,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 80,
+    "teacher_id": 83,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 81,
+    "teacher_id": 84,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 82,
+    "teacher_id": 85,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 83,
+    "teacher_id": 86,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 84,
+    "teacher_id": 87,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 85,
+    "teacher_id": 88,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 86,
+    "teacher_id": 89,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 87,
+    "teacher_id": 90,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 88,
+    "teacher_id": 91,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 89,
+    "teacher_id": 92,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 90,
+    "teacher_id": 93,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 91,
+    "teacher_id": 94,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 92,
+    "teacher_id": 95,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 93,
+    "teacher_id": 96,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 94,
+    "teacher_id": 97,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 95,
+    "teacher_id": 98,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 96,
+    "teacher_id": 99,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 97,
+    "teacher_id": 100,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 98,
+    "teacher_id": 101,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 99,
+    "teacher_id": 102,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 100,
+    "teacher_id": 103,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 101,
+    "teacher_id": 104,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 102,
+    "teacher_id": 105,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 103,
+    "teacher_id": 106,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 104,
+    "teacher_id": 107,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 105,
+    "teacher_id": 108,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 106,
+    "teacher_id": 109,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 107,
+    "teacher_id": 110,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 108,
+    "teacher_id": 111,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 109,
+    "teacher_id": 112,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 110,
+    "teacher_id": 113,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 111,
+    "teacher_id": 114,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 112,
+    "teacher_id": 115,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 113,
+    "teacher_id": 116,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 114,
+    "teacher_id": 117,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 115,
+    "teacher_id": 118,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 116,
+    "teacher_id": 119,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 117,
+    "teacher_id": 120,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 118,
+    "teacher_id": 121,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 119,
+    "teacher_id": 122,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 120,
+    "teacher_id": 123,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 121,
+    "teacher_id": 124,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 122,
+    "teacher_id": 125,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 123,
+    "teacher_id": 126,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 124,
+    "teacher_id": 127,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 125,
+    "teacher_id": 128,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 126,
+    "teacher_id": 129,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 127,
+    "teacher_id": 130,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 128,
+    "teacher_id": 131,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 129,
+    "teacher_id": 132,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 130,
+    "teacher_id": 133,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 131,
+    "teacher_id": 134,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 132,
+    "teacher_id": 135,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 133,
+    "teacher_id": 136,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 134,
+    "teacher_id": 137,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 135,
+    "teacher_id": 138,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 136,
+    "teacher_id": 139,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 137,
+    "teacher_id": 140,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 138,
+    "teacher_id": 141,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 139,
+    "teacher_id": 142,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 140,
+    "teacher_id": 143,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 141,
+    "teacher_id": 144,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 142,
+    "teacher_id": 145,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 143,
+    "teacher_id": 146,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 144,
+    "teacher_id": 147,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 145,
+    "teacher_id": 148,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 146,
+    "teacher_id": 149,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 147,
+    "teacher_id": 150,
+    "college_id": 1
+  },
+  {
+    "teacher_college_id": 148,
+    "teacher_id": 151,
+    "college_id": 1
+  }
 ]

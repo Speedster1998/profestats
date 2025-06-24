@@ -25,5 +25,630 @@
   { "teacher_faculty_id": 24, "teacher_id": 24, "faculty_id": 1 },
   { "teacher_faculty_id": 25, "teacher_id": 25, "faculty_id": 1 },
   { "teacher_faculty_id": 26, "teacher_id": 26, "faculty_id": 1 },
-  { "teacher_faculty_id": 27, "teacher_id": 27, "faculty_id": 1 }
+  { "teacher_faculty_id": 27, "teacher_id": 27, "faculty_id": 1 },
+  {
+    "teacher_faculty_id": 27,
+    "teacher_id": 27,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 28,
+    "teacher_id": 28,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 29,
+    "teacher_id": 29,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 30,
+    "teacher_id": 30,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 31,
+    "teacher_id": 31,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 32,
+    "teacher_id": 32,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 33,
+    "teacher_id": 33,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 34,
+    "teacher_id": 34,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 35,
+    "teacher_id": 35,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 36,
+    "teacher_id": 36,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 37,
+    "teacher_id": 37,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 38,
+    "teacher_id": 38,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 39,
+    "teacher_id": 39,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 40,
+    "teacher_id": 40,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 41,
+    "teacher_id": 41,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 42,
+    "teacher_id": 42,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 43,
+    "teacher_id": 43,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 44,
+    "teacher_id": 44,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 45,
+    "teacher_id": 45,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 46,
+    "teacher_id": 46,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 47,
+    "teacher_id": 47,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 48,
+    "teacher_id": 48,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 49,
+    "teacher_id": 49,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 50,
+    "teacher_id": 50,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 51,
+    "teacher_id": 51,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 52,
+    "teacher_id": 52,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 53,
+    "teacher_id": 53,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 54,
+    "teacher_id": 54,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 55,
+    "teacher_id": 55,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 56,
+    "teacher_id": 56,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 57,
+    "teacher_id": 57,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 58,
+    "teacher_id": 58,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 59,
+    "teacher_id": 59,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 60,
+    "teacher_id": 60,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 61,
+    "teacher_id": 61,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 62,
+    "teacher_id": 62,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 63,
+    "teacher_id": 63,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 64,
+    "teacher_id": 64,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 65,
+    "teacher_id": 65,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 66,
+    "teacher_id": 66,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 67,
+    "teacher_id": 67,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 68,
+    "teacher_id": 68,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 69,
+    "teacher_id": 69,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 70,
+    "teacher_id": 70,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 71,
+    "teacher_id": 71,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 72,
+    "teacher_id": 72,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 73,
+    "teacher_id": 73,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 74,
+    "teacher_id": 74,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 75,
+    "teacher_id": 75,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 76,
+    "teacher_id": 76,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 77,
+    "teacher_id": 77,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 78,
+    "teacher_id": 78,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 79,
+    "teacher_id": 79,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 80,
+    "teacher_id": 80,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 81,
+    "teacher_id": 81,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 82,
+    "teacher_id": 82,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 83,
+    "teacher_id": 83,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 84,
+    "teacher_id": 84,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 85,
+    "teacher_id": 85,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 86,
+    "teacher_id": 86,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 87,
+    "teacher_id": 87,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 88,
+    "teacher_id": 88,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 89,
+    "teacher_id": 89,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 90,
+    "teacher_id": 90,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 91,
+    "teacher_id": 91,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 92,
+    "teacher_id": 92,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 93,
+    "teacher_id": 93,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 94,
+    "teacher_id": 94,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 95,
+    "teacher_id": 95,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 96,
+    "teacher_id": 96,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 97,
+    "teacher_id": 97,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 98,
+    "teacher_id": 98,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 99,
+    "teacher_id": 99,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 100,
+    "teacher_id": 100,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 101,
+    "teacher_id": 101,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 102,
+    "teacher_id": 102,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 103,
+    "teacher_id": 103,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 104,
+    "teacher_id": 104,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 105,
+    "teacher_id": 105,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 106,
+    "teacher_id": 106,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 107,
+    "teacher_id": 107,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 108,
+    "teacher_id": 108,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 109,
+    "teacher_id": 109,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 110,
+    "teacher_id": 110,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 111,
+    "teacher_id": 111,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 112,
+    "teacher_id": 112,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 113,
+    "teacher_id": 113,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 114,
+    "teacher_id": 114,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 115,
+    "teacher_id": 115,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 116,
+    "teacher_id": 116,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 117,
+    "teacher_id": 117,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 118,
+    "teacher_id": 118,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 119,
+    "teacher_id": 119,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 120,
+    "teacher_id": 120,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 121,
+    "teacher_id": 121,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 122,
+    "teacher_id": 122,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 123,
+    "teacher_id": 123,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 124,
+    "teacher_id": 124,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 125,
+    "teacher_id": 125,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 126,
+    "teacher_id": 126,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 127,
+    "teacher_id": 127,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 128,
+    "teacher_id": 128,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 129,
+    "teacher_id": 129,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 130,
+    "teacher_id": 130,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 131,
+    "teacher_id": 131,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 132,
+    "teacher_id": 132,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 133,
+    "teacher_id": 133,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 134,
+    "teacher_id": 134,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 135,
+    "teacher_id": 135,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 136,
+    "teacher_id": 136,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 137,
+    "teacher_id": 137,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 138,
+    "teacher_id": 138,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 139,
+    "teacher_id": 139,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 140,
+    "teacher_id": 140,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 141,
+    "teacher_id": 141,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 142,
+    "teacher_id": 142,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 143,
+    "teacher_id": 143,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 144,
+    "teacher_id": 144,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 145,
+    "teacher_id": 145,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 146,
+    "teacher_id": 146,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 147,
+    "teacher_id": 147,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 148,
+    "teacher_id": 148,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 149,
+    "teacher_id": 149,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 150,
+    "teacher_id": 150,
+    "faculty_id": 1
+  },
+  {
+    "teacher_faculty_id": 151,
+    "teacher_id": 151,
+    "faculty_id": 1
+  }
 ]

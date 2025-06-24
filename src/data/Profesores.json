@@ -229,5 +229,831 @@
     "image_url": "https://cris.ulima.edu.pe/files-asset/31904822/atoche.jpg?w=160&f=webp",
     "college_id": 1,
     "description": "Miembra del Grupo de Trabajo encargado de revisar y proponer mejoras al Código Civil (2016). Miembra de la Comisión encargada de elaborar el anteproyecto de reforma del Código Civil (2002."
+  },
+  {
+    "teacher_id": 34,
+    "name": "Aldo Richard Meza Rodriguez",
+    "description": "Apasionado por la enseñanza y la innovación educativa.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 35,
+    "name": "Alejandro Leopol Ortiz Valencia",
+    "description": "Formador de futuros líderes y profesionales.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 36,
+    "name": "Americo Crescencio Leon Marquez",
+    "description": "Investigador activo y docente motivador.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 37,
+    "name": "Ana Elizabeth Valdez Ampuero",
+    "description": "Comprometido con el desarrollo académico de sus estudiantes.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 38,
+    "name": "Angela Gabriela Mayhua Quispe",
+    "description": "Enfocado en la formación integral del estudiante.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 39,
+    "name": "Araken Andres Ingar Cangalaya",
+    "description": "Promotor del pensamiento crítico y analítico.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 40,
+    "name": "Arturo Ernesto Larrea Cardozo",
+    "description": "Con enfoque práctico y dinámico para el aprendizaje.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 41,
+    "name": "Caridad Aguilar Lozano",
+    "description": "Especialista en su campo con amplia experiencia docente.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 42,
+    "name": "Carlo Lopez De Castilla Vasquez",
+    "description": "Entusiasta de la tecnología y su aplicación educativa.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 43,
+    "name": "Carlos Antonio Arcos Barriga",
+    "description": "Docente con experiencia en metodologías ágiles.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 44,
+    "name": "Carlos Humberto Alva Jauregui",
+    "description": "Apasionado por la enseñanza y la innovación educativa.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 45,
+    "name": "Carlos Ortega Mu�oz",
+    "description": "Formador de futuros líderes y profesionales.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 46,
+    "name": "Cesar Eduar Curisinche Estrella",
+    "description": "Investigador activo y docente motivador.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 47,
+    "name": "Cesar Rosales Rosales",
+    "description": "Comprometido con el desarrollo académico de sus estudiantes.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 48,
+    "name": "Charles Martin Miguel Ruiz",
+    "description": "Enfocado en la formación integral del estudiante.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 49,
+    "name": "Christiam Javier Ortiz Pachas",
+    "description": "Promotor del pensamiento crítico y analítico.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 50,
+    "name": "Daniel Ortiz Chamochumbi",
+    "description": "Con enfoque práctico y dinámico para el aprendizaje.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 51,
+    "name": "Diego Norberto Helfer Rodriguez",
+    "description": "Especialista en su campo con amplia experiencia docente.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 52,
+    "name": "Edgar Jesus Huaranga Junco",
+    "description": "Entusiasta de la tecnología y su aplicación educativa.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 53,
+    "name": "Eduardo Aleja Del Solar Vergara",
+    "description": "Docente con experiencia en metodologías ágiles.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 54,
+    "name": "Eduardo Romeo Lopez Sandoval",
+    "description": "Apasionado por la enseñanza y la innovación educativa.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 55,
+    "name": "Edwin Jonatha Escobedo Cardenas",
+    "description": "Formador de futuros líderes y profesionales.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 56,
+    "name": "Edwin Manuel Alvarez Valdivia",
+    "description": "Investigador activo y docente motivador.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 57,
+    "name": "Elias Manuel Soto Zubieta",
+    "description": "Comprometido con el desarrollo académico de sus estudiantes.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 58,
+    "name": "Elmer Luis Tupia De La Cruz",
+    "description": "Enfocado en la formación integral del estudiante.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 59,
+    "name": "Enrique Humberto Palacios Lopez",
+    "description": "Promotor del pensamiento crítico y analítico.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 60,
+    "name": "Enver Gerald Tarazona Vargas",
+    "description": "Con enfoque práctico y dinámico para el aprendizaje.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 61,
+    "name": "Evelyn Mercede Mezarina Beltran",
+    "description": "Especialista en su campo con amplia experiencia docente.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 62,
+    "name": "Ezilda Maria Cabrera Gil Grados",
+    "description": "Entusiasta de la tecnología y su aplicación educativa.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 63,
+    "name": "Fabricio Humber Paredes Larroca",
+    "description": "Docente con experiencia en metodologías ágiles.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 64,
+    "name": "Felipe Danie Argando�a Martinez",
+    "description": "Apasionado por la enseñanza y la innovación educativa.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 65,
+    "name": "Felix Ricardo Villanueva Santos",
+    "description": "Formador de futuros líderes y profesionales.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 66,
+    "name": "Fernando Manue Bresciani Chavez",
+    "description": "Investigador activo y docente motivador.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 67,
+    "name": "Fiorella Capcha Sanchez",
+    "description": "Comprometido con el desarrollo académico de sus estudiantes.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 68,
+    "name": "Francisco Martin Riccio Chavez",
+    "description": "Enfocado en la formación integral del estudiante.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 69,
+    "name": "Francisco Rolan Montero Cordova",
+    "description": "Promotor del pensamiento crítico y analítico.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 70,
+    "name": "Francisco Velasquez Llatas",
+    "description": "Con enfoque práctico y dinámico para el aprendizaje.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 71,
+    "name": "George Edwin Romero Velazco",
+    "description": "Especialista en su campo con amplia experiencia docente.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 72,
+    "name": "Giancarlo Juan Nakashima Chavez",
+    "description": "Entusiasta de la tecnología y su aplicación educativa.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 73,
+    "name": "Gianni Michael Zelada Garcia",
+    "description": "Docente con experiencia en metodologías ágiles.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 74,
+    "name": "Giannina Faride Bibolotti Sabla",
+    "description": "Apasionado por la enseñanza y la innovación educativa.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 75,
+    "name": "Gladys Betty Enriquez Mantilla",
+    "description": "Formador de futuros líderes y profesionales.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 76,
+    "name": "Guillerm Zevallos Luna Victoria",
+    "description": "Investigador activo y docente motivador.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 77,
+    "name": "Guillermo Antonio Davila Calle",
+    "description": "Comprometido con el desarrollo académico de sus estudiantes.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 78,
+    "name": "Gustavo Roberto Susano Urbina",
+    "description": "Enfocado en la formación integral del estudiante.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 79,
+    "name": "Hector German Llanos Punyin",
+    "description": "Promotor del pensamiento crítico y analítico.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 80,
+    "name": "Heiner Ricardo Lopez Sandoval",
+    "description": "Con enfoque práctico y dinámico para el aprendizaje.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 81,
+    "name": "Henry Joe Wong Urquiza",
+    "description": "Especialista en su campo con amplia experiencia docente.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 82,
+    "name": "Hugo Maximil Rodriguez Castillo",
+    "description": "Entusiasta de la tecnología y su aplicación educativa.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 83,
+    "name": "Humberto Emiliano Galvez Perez",
+    "description": "Docente con experiencia en metodologías ágiles.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 84,
+    "name": "Ismenia Soledad Roncal Casanova",
+    "description": "Apasionado por la enseñanza y la innovación educativa.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 85,
+    "name": "Jacquelin Franci Lizarbe Olcese",
+    "description": "Formador de futuros líderes y profesionales.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 86,
+    "name": "Jaddy Si Fernandez Iparraguirre",
+    "description": "Investigador activo y docente motivador.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 87,
+    "name": "Jairo Yamil Esquivel Ortiz",
+    "description": "Comprometido con el desarrollo académico de sus estudiantes.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 88,
+    "name": "Javier Richard Quinto Ancieta",
+    "description": "Enfocado en la formación integral del estudiante.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 89,
+    "name": "Javier Teodocio Roque Espinoza",
+    "description": "Promotor del pensamiento crítico y analítico.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 90,
+    "name": "Jessica Mu�oz Grados De Flores",
+    "description": "Con enfoque práctico y dinámico para el aprendizaje.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 91,
+    "name": "Jesus Ben Cardenas Sanchez Diaz",
+    "description": "Especialista en su campo con amplia experiencia docente.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 92,
+    "name": "Johnny Robert Avenda�o Quiroz",
+    "description": "Entusiasta de la tecnología y su aplicación educativa.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 93,
+    "name": "Jorge Christiam Paredes Chavez",
+    "description": "Docente con experiencia en metodologías ágiles.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 94,
+    "name": "Jorge Luis Irey Nu�ez",
+    "description": "Apasionado por la enseñanza y la innovación educativa.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 95,
+    "name": "Jorge Victor Miranda Pacheco",
+    "description": "Formador de futuros líderes y profesionales.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 96,
+    "name": "Jose Alberto Caballero Ortiz",
+    "description": "Investigador activo y docente motivador.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 97,
+    "name": "Jose Luis Alvarado Rodriguez",
+    "description": "Comprometido con el desarrollo académico de sus estudiantes.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 98,
+    "name": "Jose Luis Ugarte Gomez",
+    "description": "Enfocado en la formación integral del estudiante.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 99,
+    "name": "Jose Raul Diaz Parra",
+    "description": "Promotor del pensamiento crítico y analítico.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 100,
+    "name": "Juan Alberto Puerta Arce",
+    "description": "Con enfoque práctico y dinámico para el aprendizaje.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 101,
+    "name": "Juan Carlos Edu Romaina Acevedo",
+    "description": "Especialista en su campo con amplia experiencia docente.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 102,
+    "name": "Juan Francisco Lopez Aleman",
+    "description": "Entusiasta de la tecnología y su aplicación educativa.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 103,
+    "name": "Juan Manuel Machuca De Pina",
+    "description": "Docente con experiencia en metodologías ágiles.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 104,
+    "name": "Julio Cesar Ramos Ramirez",
+    "description": "Apasionado por la enseñanza y la innovación educativa.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 105,
+    "name": "Karla E Perez Colan De Bardales",
+    "description": "Formador de futuros líderes y profesionales.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 106,
+    "name": "Lourdes Ramirez Cerna",
+    "description": "Investigador activo y docente motivador.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 107,
+    "name": "Luis Armando Raygada Vargas",
+    "description": "Comprometido con el desarrollo académico de sus estudiantes.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 108,
+    "name": "Luis Ernesto Castillo Mesias",
+    "description": "Enfocado en la formación integral del estudiante.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 109,
+    "name": "Luis Felipe Montesinos Ruiz",
+    "description": "Promotor del pensamiento crítico y analítico.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 110,
+    "name": "Luis Manuel Gonzales Calderon",
+    "description": "Con enfoque práctico y dinámico para el aprendizaje.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 111,
+    "name": "Luis Ramon Olguin Galarza",
+    "description": "Especialista en su campo con amplia experiencia docente.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 112,
+    "name": "Lutzgar Saavedra Sanchez Davila",
+    "description": "Entusiasta de la tecnología y su aplicación educativa.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 113,
+    "name": "Manuel Luis Chilca Alva",
+    "description": "Docente con experiencia en metodologías ágiles.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 114,
+    "name": "Marco Anton Fernandez Del Pomar",
+    "description": "Apasionado por la enseñanza y la innovación educativa.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 115,
+    "name": "Marco Antonio Henrich Saavedra",
+    "description": "Formador de futuros líderes y profesionales.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 116,
+    "name": "Mari Avila Gonzales De Trinidad",
+    "description": "Investigador activo y docente motivador.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 117,
+    "name": "Maria Claudia Aguilar Vigo",
+    "description": "Comprometido con el desarrollo académico de sus estudiantes.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 118,
+    "name": "Maria Del Pilar Garces Madrid",
+    "description": "Enfocado en la formación integral del estudiante.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 119,
+    "name": "Martha Medalit Campos Villegas",
+    "description": "Promotor del pensamiento crítico y analítico.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 120,
+    "name": "Martin Guille Cornejo Sarmiento",
+    "description": "Con enfoque práctico y dinámico para el aprendizaje.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 121,
+    "name": "Miguel Jacinto Casma Salcedo",
+    "description": "Especialista en su campo con amplia experiencia docente.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 122,
+    "name": "Miriam Elizabeth Amable Ciudad",
+    "description": "Entusiasta de la tecnología y su aplicación educativa.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 123,
+    "name": "Moises Daniel Guerra Huaman",
+    "description": "Docente con experiencia en metodologías ágiles.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 124,
+    "name": "Myrna Manco Caycho",
+    "description": "Apasionado por la enseñanza y la innovación educativa.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 125,
+    "name": "Nehil Indalicio Mu�oz Casildo",
+    "description": "Formador de futuros líderes y profesionales.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 126,
+    "name": "Octavio V Jara Villavicencio",
+    "description": "Investigador activo y docente motivador.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 127,
+    "name": "Pablo Alberto Rojas Jaen",
+    "description": "Comprometido con el desarrollo académico de sus estudiantes.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 128,
+    "name": "Paulo Nazareno Maia Sampaio",
+    "description": "Enfocado en la formación integral del estudiante.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 129,
+    "name": "Pedro Cesar Carre�o Bardales",
+    "description": "Promotor del pensamiento crítico y analítico.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 130,
+    "name": "Pedro Humberto Saravia Torres",
+    "description": "Con enfoque práctico y dinámico para el aprendizaje.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 131,
+    "name": "Percy Diez Qui�ones Panduro",
+    "description": "Especialista en su campo con amplia experiencia docente.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 132,
+    "name": "Rafael Mart Aita Ramirez Gaston",
+    "description": "Entusiasta de la tecnología y su aplicación educativa.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 133,
+    "name": "Renato Oswaldo Martinez Lopez",
+    "description": "Docente con experiencia en metodologías ágiles.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 134,
+    "name": "Rene Negron Huaman",
+    "description": "Apasionado por la enseñanza y la innovación educativa.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 135,
+    "name": "Renzo Soriano Vergara",
+    "description": "Formador de futuros líderes y profesionales.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 136,
+    "name": "Roberto Leonardo Tello Yuen",
+    "description": "Investigador activo y docente motivador.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 137,
+    "name": "Rocio Del Pilar Checa Fernandez",
+    "description": "Comprometido con el desarrollo académico de sus estudiantes.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 138,
+    "name": "Ronny Fischer",
+    "description": "Enfocado en la formación integral del estudiante.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 139,
+    "name": "Rosario Marybel Guzman Jimenez",
+    "description": "Promotor del pensamiento crítico y analítico.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 140,
+    "name": "Sandro Juan Garcia Durante",
+    "description": "Con enfoque práctico y dinámico para el aprendizaje.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 141,
+    "name": "Segundo Oswaldo Pastor Huaman",
+    "description": "Especialista en su campo con amplia experiencia docente.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 142,
+    "name": "Sergio Raul Cabrera Tejada",
+    "description": "Entusiasta de la tecnología y su aplicación educativa.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 143,
+    "name": "Sofia Margarita Piscoya Chavez",
+    "description": "Docente con experiencia en metodologías ágiles.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 144,
+    "name": "Sonia Alanya Perez",
+    "description": "Apasionado por la enseñanza y la innovación educativa.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 145,
+    "name": "Victor Hugo Marcelo Sanchez",
+    "description": "Formador de futuros líderes y profesionales.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 146,
+    "name": "Victor Humberto Gomez Razza",
+    "description": "Investigador activo y docente motivador.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 147,
+    "name": "Victor Manuel Sotelo Neyra",
+    "description": "Comprometido con el desarrollo académico de sus estudiantes.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 148,
+    "name": "Victor Ricardo Agama Anduaga",
+    "description": "Enfocado en la formación integral del estudiante.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 149,
+    "name": "Vilma Susana Romero Romero",
+    "description": "Promotor del pensamiento crítico y analítico.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 150,
+    "name": "Walter Edwin Marticorena Ramos",
+    "description": "Con enfoque práctico y dinámico para el aprendizaje.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
+  },
+  {
+    "teacher_id": 151,
+    "name": "Winston Lewis Fuentes",
+    "description": "Especialista en su campo con amplia experiencia docente.",
+    "image_url": "https://cdn-icons-png.flaticon.com/512/8331/8331248.png",
+    "college_id": 1
   }
 ]
